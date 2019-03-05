@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+{% load breakfast_template_tags %} 
+{% load staticfiles %}
+<html> 
+    <head>
+        <title> 
+            Breakfast -
+            {% block title_block %}
+                World of Breakfast
+            {% endblock %} 
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <style>
+                /*Remove the navbar's default margin-bottom and rounded borders */ 
+                .navbar {
+                  margin-bottom: 0;
+                  border-radius: 0;
+                  height: 60px;
+                  background-color: #00394d;
+                }
+                /* Add a gray background color and some padding to the footer */
+                footer {
+                  background-color: #00394d;
+                  padding: 25px;
+                  font-style: italic;
+                  
+                }
+              </style>
+    </head> 
+    <body>
+            <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>                        
+                        </button>
+                        <a class="navbar-brand" href="#">World of Breakfast</a>
+                      </div>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                          <li class="#"><a href="#">Home</a></li>
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Contact us</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> SignIn</a></li>
+                              </ul>
+                        <form class="navbar-form navbar-right" role="search">
+                                <div class="form-group input-group">
+                                  <input type="text" class="form-control" placeholder="Search.." size="60">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                      <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                  </span>        
+                                </div>
+                              </form>
+    
+                      </div>
+                    </div>
+                  </nav>
+        <div>
+            {% block body_block %} 
+            {% endblock %}
+        </div> 
+        <div>
+          <br> 
+        </div>
+        <footer class="container-fluid text-center">
+            <font color="white">
+                <p>World of Breakfast</p>
+                <p>"Start your day the global way"</p>
+                </font>
+              </footer>
+    </body> 
+
+</html>
