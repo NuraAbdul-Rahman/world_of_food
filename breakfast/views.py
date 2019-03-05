@@ -1,6 +1,8 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from breakfast.models import Continent
+
 
 # Create your views here.
 def home(request):
@@ -21,7 +23,12 @@ def sign_up(request):
 def my_account(request):
     return render(request, 'breakfast/my_account.html', {})
 
-def continent_page(request):
+def continent_page(request, Continent_name_slug):
+    context_dict {}
+
+    try:
+        continent = Continent.objects.get[slug=Continent_name_slug]
+
     return render(request, 'breakfast/continent_page.html', {})
 
 def recipe_page(request):
