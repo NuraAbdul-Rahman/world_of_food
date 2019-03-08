@@ -4,6 +4,7 @@ from breakfast.models import Continent
 from breakfast.models import Recipe
 
 
+
 # Create your views here.
 def home(request):
     return render(request, 'breakfast/home.html', {})
