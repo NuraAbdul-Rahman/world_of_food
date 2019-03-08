@@ -20,7 +20,9 @@ class Recipe(models.Model):
     name = models.CharField(max_length=128, unique=True)
     continent = models.ForeignKey(Continent)
     description = models.TextField
+    short_description = models.TextField
     ingredients = models.TextField
+    steps = models.TextField
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     image = models.ImageField
@@ -53,7 +55,8 @@ class Favourites(models.Model):
     def __str__(self):
         return self.account
 
-
+    
+""" Laimonous reported an error here for log in creation, so User class commented
 class User(models.Model):
     name = models.CharField(max_length=128)
     account = models.CharField(max_length=128, unique=True)
@@ -61,6 +64,7 @@ class User(models.Model):
     password = models.CharField(max_length=16)
     # I changed the field type of favourites to URL since I thought it should save a set of recipes
     favourites = models.URLField(max_length=256)
+"""
 
 
 class UserProfile(models.Model):
