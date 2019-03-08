@@ -1,0 +1,52 @@
+{% extends 'breakfast/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Contact_Us
+{% endblock %}
+{% block body_block %}
+<style>
+    .page-header {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    
+  }
+</style>
+
+<img src="{{ MEDIA_URL}}contact-us.jpg" style="width:100%; height: 400px;" >
+<div>
+<h1 class="page-header text-center" > Contact Us</h1>
+</div>
+<div id="contact" class="container-fluid bg-grey">
+        <p></p>
+        <div class="row">
+          <div class="col-sm-5">
+            <p></p>
+            <p>Contact us and we'll get back to you within 24 hours.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Glasgow, UK</p>
+            <p><span class="glyphicon glyphicon-phone"></span> +44 1515151515</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+          </div>
+          <div class="col-sm-7 slideanim">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+              </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="8"></textarea><br>
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button class="btn btn-primary pull-right" type="submit">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}

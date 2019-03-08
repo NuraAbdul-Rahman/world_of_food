@@ -65,12 +65,12 @@
                     <h3>Select a Continent To View Recipes</h3><br>  
                 <img src="{{ MEDIA_URL}}worldMap.jpg"  style="width:100%" alt="worldMap" usemap="#worldMap">
                 <map name="worldMap">
-                    <area shape="rect" coords="70,10,320,250" alt="North America" href="#">
-                    <area shape="rect" coords="160,260,300,400" alt="Latin America" href="#">
-                    <area shape="rect" coords="320,200,430,350" alt="Africa" href="#">
-                    <area shape="rect" coords="350,110,450,170" alt="Europe" href="#">
-                    <area shape="rect" coords="470,20,650,230" alt="Asia" href="#">
-                    <area shape="rect" coords="590,300,680,380" alt="Oceania" href="#">
+                    <area shape="rect" coords="70,10,320,250" alt="North America" href="{% url 'continent_page' %}">
+                    <area shape="rect" coords="160,260,300,400" alt="Latin America" href="{% url 'continent_page' %}">
+                    <area shape="rect" coords="320,200,430,350" alt="Africa" href="{% url 'continent_page' %}">
+                    <area shape="rect" coords="350,110,450,170" alt="Europe" href="{% url 'continent_page' %}">
+                    <area shape="rect" coords="470,20,650,230" alt="Asia" href="{% url 'continent_page' %}">
+                    <area shape="rect" coords="590,300,680,380" alt="Oceania" href="{% url 'continent_page' %}">
                 </map>
               </div>
               <div class="col-sm-4"> 

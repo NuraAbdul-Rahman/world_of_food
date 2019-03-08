@@ -15,6 +15,45 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<!-- <link rel="stylesheet" href="css/animate.css"> -->
+	<!-- Icomoon Icon Fonts-->
+	<!-- <link rel="stylesheet" href="css/icomoon.css"> -->
+	<!-- Themify Icons-->
+	<!-- <link rel="stylesheet" href="css/themify-icons.css"> -->
+	<!-- Bootstrap  -->
+	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+
+	<!-- Magnific Popup -->
+	<!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
+
+	<!-- Bootstrap DateTimePicker -->
+	<!-- <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"> -->
+
+
+
+	<!-- Owl Carousel  -->
+	<!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+
+	<!-- Theme style  -->
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+
+	<!-- Modernizr JS -->
+	<!-- <script src="js/modernizr-2.6.2.min.js"></script> -->
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+  <script src="js/respond.min.js"></script>
+  	<![endif]-->
+
+
+
         <style>
                 /*Remove the navbar's default margin-bottom and rounded borders */ 
                 .navbar {
@@ -28,7 +67,6 @@
                   background-color: #00394d;
                   padding: 25px;
                   font-style: italic;
-                  
                 }
               </style>
     </head> 
@@ -45,12 +83,12 @@
                       </div>
                       <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                          <li class="#"><a href="#">Home</a></li>
-                          <li><a href="#">About</a></li>
-                          <li><a href="#">Contact us</a></li>
+                          <li class="#"><a href="{% url 'home' %}">Home</a></li>
+                          <li><a href="{% url 'about' %}">About</a></li>
+                          <li><a href="{% url 'contact_us' %}">Contact us</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> SignIn</a></li>
+                                <li><a href="{% url 'sign_up' %}""><span class="glyphicon glyphicon-user"></span> SignIn</a></li>
                               </ul>
                         <form class="navbar-form navbar-right" role="search">
                                 <div class="form-group input-group">
@@ -62,7 +100,6 @@
                                   </span>        
                                 </div>
                               </form>
-    
                       </div>
                     </div>
                   </nav>
