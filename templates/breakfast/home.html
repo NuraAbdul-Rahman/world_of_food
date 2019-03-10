@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-{% extends 'breakfast/base.html' %} {% load staticfiles %} {% block title_block %} Home {% endblock %} {% block body_block %}
+ {% extends 'breakfast/base.html' %} {% load staticfiles %} {% block title_block %} Home {% endblock %} {% block body_block %}
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -13,47 +12,17 @@
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <img id="carousel-pic" src="{{ MEDIA_URL}}pic1.jpg">
-=======
-
-{% extends 'breakfast/base.html' %}
-{% load staticfiles %}
-{% block title_block %}
-    Home
-{% endblock %}
-{% block body_block %}
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-    
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img id= "carousel-pic" src="{{ MEDIA_URL}}pic1.jpg">
->>>>>>> 3ec4fb4abd927f876fd8decfb0ea2cd46eebd425
             <div class="carousel-caption">
                 <!-- <h3>Sell $</h3>
               <p>M</p> -->
-<<<<<<< HEAD
             </div>
         </div>
 
         <div class="item">
-=======
-            </div>      
-          </div>
-    
-          <div class="item">
->>>>>>> 3ec4fb4abd927f876fd8decfb0ea2cd46eebd425
             <img id="carousel-pic" src="{{ MEDIA_URL}}pic11.jpg" alt="Image">
             <div class="carousel-caption">
                 <!-- <h3>More Sell $</h3>
               <p>Lorem ipsum...</p> -->
-<<<<<<< HEAD
             </div>
         </div>
         <div class="item">
@@ -67,57 +36,18 @@
             <img id="carousel-pic" src="{{ MEDIA_URL}}pic13.jpg" alt="Image">
             <div class="carousel-caption">
                 <!-- <h3>More Sell $</h3>
-=======
-            </div>      
-          </div>
-          <div class="item">
-                <img id="carousel-pic" src="{{ MEDIA_URL}}pic16.jpg" alt="Image">
-                <div class="carousel-caption">
-                  <!-- <h3>More Sell $</h3>
-                  <p>Lorem ipsum...</p> -->
-                </div>      
-              </div>
-              <div class="item">
-                    <img id="carousel-pic" src="{{ MEDIA_URL}}pic13.jpg" alt="Image">
-                    <div class="carousel-caption">
-                      <!-- <h3>More Sell $</h3>
->>>>>>> 3ec4fb4abd927f876fd8decfb0ea2cd46eebd425
                       <p>Lorem ipsum...</p> -->
             </div>
         </div>
     </div>
-<<<<<<< HEAD
+    <div class="container">
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-<div class="container">
+        <div class="row">
 
-    <div class="row">
-
-        <div class="col-sm-8 text-center">
-            <h3>Select a Continent To View Recipes</h3><br>
-            <img id="mappic" src="{{ MEDIA_URL}}worldMap.jpg" alt="worldMap" usemap="#worldMap"> {% if continents %} {% for continent in continents %}
-            <map name="worldMap">
-=======
-    <div class="container"> 
-       
-            <div class="row">
-      
-              <div class="col-sm-8 text-center">
-                    <h3>Select a Continent To View Recipes</h3><br>  
-                <img id="mappic" src="{{ MEDIA_URL}}worldMap.jpg"  alt="worldMap" usemap="#worldMap" >
-                {% if continents %} 
-                {% for continent in continents %}  
+            <div class="col-sm-8 text-center">
+                <h3>Select a Continent To View Recipes</h3><br>
+                <img id="mappic" src="{{ MEDIA_URL}}worldMap.jpg" alt="worldMap" usemap="#worldMap"> {% if continents %} {% for continent in continents %}
                 <map name="worldMap">
->>>>>>> 3ec4fb4abd927f876fd8decfb0ea2cd46eebd425
                   {% if continent.name == "North America" %}
                     <area shape="rect" coords="70,10,320,250" alt="North America" href="{% url 'continent_page' continent.slug %}">{{continent.name}}
                     {% endif %} 
@@ -136,44 +66,22 @@
                     {% if continent.name == "Oceania" %}
                     <area shape="rect" coords="590,300,680,380" alt="Oceania" href="{% url 'continent_page' continent.slug  %}">{{continent.name}}
                     {% endif %} 
-<<<<<<< HEAD
                 </map> {% endfor %} {% endif %}
-        </div>
-        <div class="col-sm-4">
-            <h3>Getting Started</h3><br>
-            <div class="well">
-                <p> Hover your mouse on any of the continents</p>
-                <p>Click on a continent to get to its recipe page</p>
-                <p>Each continent has a list of 5 most popular break fast dishes</p>
-                <p>Sign up to get access to build your own recipe book and be the first to know about our new recipes</p>
-                <p> You also get a chance to engage with our community of users</p>
             </div>
+            <div class="col-sm-4">
+                <h3>Getting Started</h3><br>
+                <div class="well">
+                    <p> Hover your mouse on any of the continents</p>
+                    <p>Click on a continent to get to its recipe page</p>
+                    <p>Each continent has a list of 5 most popular break fast dishes</p>
+                    <p>Sign up to get access to build your own recipe book and be the first to know about our new recipes</p>
+                    <p> You also get a chance to engage with our community of users</p>
+                </div>
+            </div>
+            <form>
+                <button type="button" class="btn btn-primary" onclick="openWin()">Sign Up</button>
+            </form>
         </div>
-        <form>
-            <button type="button" class="btn btn-primary" onclick="openWin()">Sign Up</button>
-        </form>
     </div>
-</div>
-=======
-                </map>
-                {% endfor %} 
-                {% endif %} 
-              </div>
-              <div class="col-sm-4"> 
-                    <h3>Getting Started</h3><br> 
-                    <div class="well">
-                            <p> Hover your mouse on any of the continents</p>
-                            <p>Click on a continent to get to its recipe page</p>
-                            <p>Each continent has a list of 5 most popular break fast dishes</p>
-                            <p>Sign up to get access to build your own recipe book and be the first to know about our new recipes</p>
-                            <p> You also get a chance to engage with our community of users</p>
-                           </div>    
-                  </div>
-                  <form>
-                  <button type="button" class="btn btn-primary" onclick="openWin()">Sign Up</button>
-                  </form>
-              </div>
-              </div>
->>>>>>> 3ec4fb4abd927f876fd8decfb0ea2cd46eebd425
 
-{% endblock %}
+    {% endblock %}
