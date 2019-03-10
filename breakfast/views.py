@@ -24,7 +24,7 @@ def sign_up(request):
 def my_account(request):
     return render(request, 'breakfast/my_account.html', {})
 
-def continent_page(request, continent_name_slug):
+def continent(request, continent_name_slug):
     
     context_dict = {}
 
@@ -38,9 +38,9 @@ def continent_page(request, continent_name_slug):
         context_dict['category'] = None
         context_dict['recipe'] = None
 
-    return render(request, 'breakfast/continent_page.html', context_dict)
+    return render(request, 'breakfast/continent.html', context_dict)
 
-def recipe_page(request, recipe_name_slug):
+def recipe(request, recipe_name_slug):
 
     context_dict = {}
 
@@ -60,6 +60,6 @@ def recipe_page(request, recipe_name_slug):
         context_dict['description'] = None
         context_dict['ingredients'] = None
         
-    return render(request, 'breakfast/recipe_page.html', context_dict)
+    return render(request, 'breakfast/recipe.html', context_dict)
    
 

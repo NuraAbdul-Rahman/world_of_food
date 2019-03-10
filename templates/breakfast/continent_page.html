@@ -1,10 +1,4 @@
-{% extends 'breakfast/base.html' %}
-{% load staticfiles %}
-
-{% block title_block %}
-    Recipes
-{% endblock %}
-{% block body_block %}
+{% extends 'breakfast/base.html' %} {% load staticfiles %} {% block title_block %} Recipes {% endblock %} {% block body_block %}
 <!-- <style> 
 .overlay {
   position: absolute;
@@ -39,7 +33,6 @@
 #recipeLabel{
     color: #006699;
 }
-
 </style> -->
 
 
@@ -54,114 +47,114 @@
         <div class="row">
 
             <div class="col-lg-4 col-md-4 col-sm-4">
-                    <figure id="recipe" class="fh5co-card-item image-popup">
-                        
-                        <img src="{{ MEDIA_URL}}about2.jpg" alt="Image" class="img-responsive">
-                        <div class="overlay">
-                                <div class="text">Fresh Mushrooms 
-                                    <p> Description:</p>
-                                    <p>his is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
-                                    <p></p>
-                                     </div>
+                <figure id="recipe" class="fh5co-card-item image-popup">
+
+                    <img src="{{ MEDIA_URL}}about2.jpg" alt="Image" class="img-responsive">
+                    <div class="overlay">
+                        <div class="text">Fresh Mushrooms
+                            <p> Description:</p>
+                            <p>his is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
+                            <p></p>
                         </div>
-                    </figure>
+                    </div>
+                </figure>
                 div class="fh5co-text" id="recipeLabel">
-                      <!----< <a href="{% url 'recipe_page' %}">
+                <!----< <a href="{% url 'recipe_page' %}">
                            
                        </a> !---->
-                       <h4>Fresh Mushrooms</h4>
-                        <button type="button" class="btn btn-primary">View Recipe</button>
-                </div>
+                <h4>Fresh Mushrooms</h4>
+                <button type="button" class="btn btn-primary">View Recipe</button>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                        <figure id="recipe" class="fh5co-card-item image-popup">                        
-                        <img src="{{ MEDIA_URL}}about1.jpg" alt="Image" class="img-responsive">
-                        <div class="overlay">
-                                <div class="text">Cheese & Garlic Toast
-                                        <p> Description:</p>
-                                        <p>This is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
-                                </div>
-                        </div>
-                    </figure>
-                    <div class="fh5co-text" id="recipeLabel">
-                        <h4>Cheese and Garlic Toast</h4>
-                        <button type="button" class="btn btn-primary">View Recipe</button>
-                        <p></p>
-
-
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                        <figure id="recipe" class="fh5co-card-item image-popup">                        
-                        <img src="{{ MEDIA_URL}}about3.jpg" alt="Image" class="img-responsive">
-                        <div class="overlay">
-                                <div class="text">This is a common recipe and sjflkjskjfksjfkskjfksdjk </div>
-                        </div>
-                    </figure>
-                    <div class="fh5co-text" id="recipeLabel">
-                        <h4>Grilled Chiken Salad </h4>
-                        <button type="button" class="btn btn-primary">View Recipe</button>
-                        <p></p>
-
-
-                    </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                            <figure id="recipe" class="fh5co-card-item image-popup">                        
-                        <img src="{{ MEDIA_URL}}about2.jpg" alt="Image" class="img-responsive">
-                        <div class="overlay">
-                                <div class="text">Organic Egg
-                                        <p> Description:</p>
-                                        <p>This is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
-                                        <p></p>
-                                     </div>
-                        </div>
-                    </figure>
-                    <div class="fh5co-text" id="recipeLabel">
-                        <h4>Organic Egg </h4>
-                        <button type="button" class="btn btn-primary">View Recipe</button>
-                    </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <figure id="recipe" class="fh5co-card-item image-popup">                        
-                        <img src="{{ MEDIA_URL}}about4.jpg" alt="Image" class="img-responsive">
-                        <div class="overlay">
-                                <div class="text">Tomato Soup with Chicken
-                                        <p> Description:</p>
-                                        <p>This is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
-                                        <p></p>
-                                </div>
-                        </div>
-                    </figure>
-                    <div class="fh5co-text">
-                        <h4>Tomato Soup with Chicken</h4>
-                        <button type="button" class="btn btn-primary">View Recipe</button>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                    <figure id="recipe" class="fh5co-card-item image-popup">                        
-                        <img src="{{ MEDIA_URL}}about1.jpg" alt="Image" class="img-responsive">
-                        <div class="overlay">
-                                <div class="text">Salad with Crispy Chicken
-                                        <p> Description:</p>
-                                        <p>This is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
-                                        <p></p>
-                                </div>
-                        </div>
-                    </figure>
-                    <div class="fh5co-text" id="recipeLabel ">
-                        <h4>Salad with Crispy Chicken</h4>
-                        <button type="button" class="btn btn-primary">View Recipe</button>
-                    </div>
-                </a>
-            </div>
-
         </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <figure id="recipe" class="fh5co-card-item image-popup">
+                <img src="{{ MEDIA_URL}}about1.jpg" alt="Image" class="img-responsive">
+                <div class="overlay">
+                    <div class="text">Cheese & Garlic Toast
+                        <p> Description:</p>
+                        <p>This is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
+                    </div>
+                </div>
+            </figure>
+            <div class="fh5co-text" id="recipeLabel">
+                <h4>Cheese and Garlic Toast</h4>
+                <button type="button" class="btn btn-primary">View Recipe</button>
+                <p></p>
+
+
+            </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <figure id="recipe" class="fh5co-card-item image-popup">
+                <img src="{{ MEDIA_URL}}about3.jpg" alt="Image" class="img-responsive">
+                <div class="overlay">
+                    <div class="text">This is a common recipe and sjflkjskjfksjfkskjfksdjk </div>
+                </div>
+            </figure>
+            <div class="fh5co-text" id="recipeLabel">
+                <h4>Grilled Chiken Salad </h4>
+                <button type="button" class="btn btn-primary">View Recipe</button>
+                <p></p>
+
+
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <figure id="recipe" class="fh5co-card-item image-popup">
+                <img src="{{ MEDIA_URL}}about2.jpg" alt="Image" class="img-responsive">
+                <div class="overlay">
+                    <div class="text">Organic Egg
+                        <p> Description:</p>
+                        <p>This is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
+                        <p></p>
+                    </div>
+                </div>
+            </figure>
+            <div class="fh5co-text" id="recipeLabel">
+                <h4>Organic Egg </h4>
+                <button type="button" class="btn btn-primary">View Recipe</button>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <figure id="recipe" class="fh5co-card-item image-popup">
+                <img src="{{ MEDIA_URL}}about4.jpg" alt="Image" class="img-responsive">
+                <div class="overlay">
+                    <div class="text">Tomato Soup with Chicken
+                        <p> Description:</p>
+                        <p>This is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
+                        <p></p>
+                    </div>
+                </div>
+            </figure>
+            <div class="fh5co-text">
+                <h4>Tomato Soup with Chicken</h4>
+                <button type="button" class="btn btn-primary">View Recipe</button>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <figure id="recipe" class="fh5co-card-item image-popup">
+                <img src="{{ MEDIA_URL}}about1.jpg" alt="Image" class="img-responsive">
+                <div class="overlay">
+                    <div class="text">Salad with Crispy Chicken
+                        <p> Description:</p>
+                        <p>This is a common recipe and sjflkjskjfksjfkskjfksdjk </p>
+                        <p></p>
+                    </div>
+                </div>
+            </figure>
+            <div class="fh5co-text" id="recipeLabel ">
+                <h4>Salad with Crispy Chicken</h4>
+                <button type="button" class="btn btn-primary">View Recipe</button>
+            </div>
+            </a>
+        </div>
+
     </div>
+</div>
 </div>
 
 
