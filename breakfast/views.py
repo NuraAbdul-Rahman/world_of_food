@@ -2,7 +2,10 @@
 from django.shortcuts import render
 from breakfast.models import Continent
 from breakfast.models import Recipe
-
+from breakfast.forms import UserForm
+from breakfast.forms import UserProfileForm
+from breakfast.forms import ContinentForm
+from breakfast.forms import RecipeForm
 
 
 # Create your views here.
@@ -61,5 +64,15 @@ def recipe_page(request, recipe_name_slug):
         context_dict['ingredients'] = None
         
     return render(request, 'breakfast/recipe_page.html', context_dict)
-   
-
+ 
+# add_recipe used to add recipes from admin page, but there is no "add_recipe" template, so here it returns to "recipe_page"
+def add_recipe(request):
+    form = RecipeForm()
+    if request.method == 'POST':
+        form = RecipeForm(request.POST)
+        if form.is_valid():
+            form.save(commit=True)
+            return home(request)
+        else:
+            print(form.errors)
+    return render(request, 'breakfast/recipe_page.html', {'form': form})
