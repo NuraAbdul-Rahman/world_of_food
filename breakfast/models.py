@@ -48,7 +48,7 @@ class Review(models.Model):
     rating = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.recipe
+        return self.review_text
 
 
 class Favourites(models.Model):
@@ -62,15 +62,14 @@ class Favourites(models.Model):
         return self.account
 
     
-
+"""
 class User(models.Model):
     name = models.CharField(max_length=128)
     account = models.CharField(max_length=128, unique=True)
     email = models.EmailField(max_length=256)
     password = models.CharField(max_length=16)
-    # I changed the field type of favourites to URL since I thought it should save a set of recipes
     favourites = models.URLField(max_length=256)
-
+"""
 
 
 class UserProfile(models.Model):
