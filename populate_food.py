@@ -76,7 +76,7 @@ def populate():
                 "\nASSEMBLE SOUP:\n1. Prepare noodles according to packet directions (if using noodles). Place in serving bowl with cooked wontons and blanched vegetables.\n"
                 "2. Ladle over soup. Serve!", "views": 0, "likes": 0, "image": "HongKong-WontonSoup.jpg"},
                 {"recipe_name": "Japanese Traditional Style Breakfast", 
-                "short-description": "A traditional Japanese breakfast is likely different from any other kind of breakfast you'll ever experience. It consists of foods that make up"
+                "short_description": "A traditional Japanese breakfast is likely different from any other kind of breakfast you'll ever experience. It consists of foods that make up"
                 "a complete meal that one could conceivably enjoy at lunch or dinner.",
                 "description": "Typically, a traditional Japanese breakfast consists of steamed rice, miso soup, a protein such as grilled fish, and various side dishes. Familiar side"
                 " dishes may include tsukemono (Japanese pickles), nori (dried seasoned seaweed), natto (fermented soybeans), kobachi (small side dishes which usually consist of vegetables),"
@@ -97,8 +97,8 @@ def populate():
                 "characteristic of a Japanese omelette.\n4. Flip the 'package' over and cook for a further two minutes. Cut into quarters.\nTo serve:\nJapanese etiquette decrees that you place the bowl of rice on your left "
                 "and the bowl of miso soup on your right. Serve the fish on a separate plate, the pickles in a small bowl, and the omelette on another small plate. Now test your hungover skills with chopsticks.",
                 "views": 0, "likes": 0, "image": "JapaneseTraditionalStyleBreakfast.jpg"},
-                {"recipes_name": "Soy Milk and Chinese Fried Dough",
-                "short-description": "This breakfast set usually appears together in Chinese socities. The two components soybean milk and fried dough are the most common breakfast combination. Some locals also like to have "
+                {"recipe_name": "Soy Milk and Chinese Fried Dough",
+                "short_description": "This breakfast set usually appears together in Chinese socities. The two components soybean milk and fried dough are the most common breakfast combination. Some locals also like to have "
                 "deep-fried dough sticks with rice congee.",
                 "description": "Soybean milk is made with a blender. You can find freshly blended or boiled soy milk in disposable cups at most breakfast stalls. Deep-fried dough sticks are long, brown, deep-fried sticks of dough."
                 " You can eat one as it is or dip it in some soybean milk, which has a better taste.If you can not find unsweetened soy milk, you can buy a soy milk maker.you can find dried soy beans at your local Asian mart. Soak "
@@ -108,7 +108,7 @@ def populate():
                 "there are two possible culprits: you might be over-frying it, or you did not press the two parts tightly together enough.\n3. Before assembling the youtiao, the dough must be completely back to room temperature and very soft to the touch."
                 "4. If you have leftovers after frying, freeze the cooked youtiao in a ziplock bag. Reheat them in the toaster over or oven until just warmed through.\n5. Don't twist the dough into any new shapes as it will strain their "
                 "'growth' during the frying process.\n6. Making this is a labor of love. But it's worth it.",
-                "steps": "1. Using your electric mixer with the dough hook attachment, first mix the flour, egg, salt, baking powder, milk, and softened butter together on the lowest setting. Keeping the speed at "stir," slowly add the water "
+                "steps": "1. Using your electric mixer with the dough hook attachment, first mix the flour, egg, salt, baking powder, milk, and softened butter together on the lowest setting. Keeping the speed at stir, slowly add the water "
                 "in a few separate batches. Knead the dough for 15 minutes. The dough should feel very soft, but should not stick to the bowl. Cover the dough, and let rest for 10 minutes. By the way, all of this can be done by hand if you don’t "
                 "have a mixer. Just knead the dough for 5-10 minutes longer.\n2. On a clean, lightly floured surface, form the dough into a long flat loaf shape, about 1/4-inch thick and 4 inches wide. Take the time to make it truly uniform. Place "
                 "it in the center of a large piece of plastic wrap on a baking sheet or long, flat plate, and wrap the dough, tucking the two ends of the plastic under the loaf, and ensuring that the dough is completely covered. Refrigerate overnight."
@@ -122,7 +122,7 @@ def populate():
                 "the dough into the fryer and one to roll the dough around once it’s in the oil.\nEnjoy these!",
                 "views": 0, "likes": 0, "image": "SoyMilkChineseFriedDough.jpg"},
                 {"recipe_name": "Taiwan Seafood Congee",
-                "short-description": "Congee is probably the most common mainstay of the Chinese breakfast. It is a mild-flavored rice porridge that has been cooked for a long time with plenty of water to soften the rice. To give the congee some flavor, it is usually "
+                "short_description": "Congee is probably the most common mainstay of the Chinese breakfast. It is a mild-flavored rice porridge that has been cooked for a long time with plenty of water to soften the rice. To give the congee some flavor, it is usually "
                 "served with different toppings that vary by region. Here our toppings are a handful of dried scallop and a few pieces of shrimp.",
                 "description": "Seafood congee has such a rich flavor that you can hardly imagine it contains just water, and no chicken stock.\n The star of this dish is dried scallop (conpoy).\nDried scallop is made from the adductor muscles of scallops.Pungent and "
                 "compact, it has a highly concentrated flavor of the sea. Different from dried shrimp, conpoy is known for its sweet and delicate aroma.\nThere are two main types of conpoy: one made from river scallops and one made from sea scallops (also known as hotate "
@@ -138,7 +138,7 @@ def populate():
                 "Stir well. Drizzle with sesame oil and scatter with green onion.\n8. Serve warm.\nThe nutrition facts are calculated based on 1 of the 4 servings generated by this recipe.",
                 "views": 0, "likes": 0, "image": "TaiwanSeafoodCongee.jpg"},
                 {"recipe_name": "Thai Bananna Pancakes",
-                "short-description": "Most people know roti as an Indian savoury flatbread to mop up curries, but in Thailand it is often served as a sweet pastry. They are irresistible, especially when stuffed with banana and served with a good drizzle of sweetened condensed milk and a sprinkling of sugar.",
+                "short_description": "Most people know roti as an Indian savoury flatbread to mop up curries, but in Thailand it is often served as a sweet pastry. They are irresistible, especially when stuffed with banana and served with a good drizzle of sweetened condensed milk and a sprinkling of sugar.",
                 "description": "Thai roti is one of THE most popular snacks/desserts amongst visitors to Thailand! It can also served as breakfast.You can see roti carts at many tourist attractions around the country, and nowadays, vendors offer so many different filling options like bananas, "
                 "chocolate sauce, nutella, apples, etc. which, by the way, were not available when I was a kid, so roti has come a long way! If you go to non-touristy parts of Thailand you may still see some old-school roti vendors that still don’t offer many fancy fillings.\nNo one will ever "
                 "say roti is good for you, but by making it at home, you can make it a little less bad! Street vendor rotis are tasty, but they don’t usually use the best of ingredients. You’ll notice that many vendors use what looks like butter, but it’s really margarine which is full of trans "
