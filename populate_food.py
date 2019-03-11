@@ -76,7 +76,7 @@ def populate():
                 "\nASSEMBLE SOUP:\n1. Prepare noodles according to packet directions (if using noodles). Place in serving bowl with cooked wontons and blanched vegetables.\n"
                 "2. Ladle over soup. Serve!", "views": 0, "likes": 0, "image": "HongKong-WontonSoup.jpg"},
                 {"recipe_name": "Japanese Traditional Style Breakfast", 
-                "short-description": "A traditional Japanese breakfast is likely different from any other kind of breakfast you'll ever experience. It consists of foods that make up"
+                "short_description": "A traditional Japanese breakfast is likely different from any other kind of breakfast you'll ever experience. It consists of foods that make up"
                 "a complete meal that one could conceivably enjoy at lunch or dinner.",
                 "description": "Typically, a traditional Japanese breakfast consists of steamed rice, miso soup, a protein such as grilled fish, and various side dishes. Familiar side"
                 " dishes may include tsukemono (Japanese pickles), nori (dried seasoned seaweed), natto (fermented soybeans), kobachi (small side dishes which usually consist of vegetables),"
@@ -97,8 +97,8 @@ def populate():
                 "characteristic of a Japanese omelette.\n4. Flip the 'package' over and cook for a further two minutes. Cut into quarters.\nTo serve:\nJapanese etiquette decrees that you place the bowl of rice on your left "
                 "and the bowl of miso soup on your right. Serve the fish on a separate plate, the pickles in a small bowl, and the omelette on another small plate. Now test your hungover skills with chopsticks.",
                 "views": 0, "likes": 0, "image": "JapaneseTraditionalStyleBreakfast.jpg"},
-                {"recipes_name": "Soy Milk and Chinese Fried Dough",
-                "short-description": "This breakfast set usually appears together in Chinese socities. The two components soybean milk and fried dough are the most common breakfast combination. Some locals also like to have "
+                {"recipe_name": "Soy Milk and Chinese Fried Dough",
+                "short_description": "This breakfast set usually appears together in Chinese socities. The two components soybean milk and fried dough are the most common breakfast combination. Some locals also like to have "
                 "deep-fried dough sticks with rice congee.",
                 "description": "Soybean milk is made with a blender. You can find freshly blended or boiled soy milk in disposable cups at most breakfast stalls. Deep-fried dough sticks are long, brown, deep-fried sticks of dough."
                 " You can eat one as it is or dip it in some soybean milk, which has a better taste.If you can not find unsweetened soy milk, you can buy a soy milk maker.you can find dried soy beans at your local Asian mart. Soak "
@@ -108,7 +108,7 @@ def populate():
                 "there are two possible culprits: you might be over-frying it, or you did not press the two parts tightly together enough.\n3. Before assembling the youtiao, the dough must be completely back to room temperature and very soft to the touch."
                 "4. If you have leftovers after frying, freeze the cooked youtiao in a ziplock bag. Reheat them in the toaster over or oven until just warmed through.\n5. Don't twist the dough into any new shapes as it will strain their "
                 "'growth' during the frying process.\n6. Making this is a labor of love. But it's worth it.",
-                "steps": "1. Using your electric mixer with the dough hook attachment, first mix the flour, egg, salt, baking powder, milk, and softened butter together on the lowest setting. Keeping the speed at "stir," slowly add the water "
+                "steps": "1. Using your electric mixer with the dough hook attachment, first mix the flour, egg, salt, baking powder, milk, and softened butter together on the lowest setting. Keeping the speed at stir, slowly add the water "
                 "in a few separate batches. Knead the dough for 15 minutes. The dough should feel very soft, but should not stick to the bowl. Cover the dough, and let rest for 10 minutes. By the way, all of this can be done by hand if you don’t "
                 "have a mixer. Just knead the dough for 5-10 minutes longer.\n2. On a clean, lightly floured surface, form the dough into a long flat loaf shape, about 1/4-inch thick and 4 inches wide. Take the time to make it truly uniform. Place "
                 "it in the center of a large piece of plastic wrap on a baking sheet or long, flat plate, and wrap the dough, tucking the two ends of the plastic under the loaf, and ensuring that the dough is completely covered. Refrigerate overnight."
@@ -122,7 +122,7 @@ def populate():
                 "the dough into the fryer and one to roll the dough around once it’s in the oil.\nEnjoy these!",
                 "views": 0, "likes": 0, "image": "SoyMilkChineseFriedDough.jpg"},
                 {"recipe_name": "Taiwan Seafood Congee",
-                "short-description": "Congee is probably the most common mainstay of the Chinese breakfast. It is a mild-flavored rice porridge that has been cooked for a long time with plenty of water to soften the rice. To give the congee some flavor, it is usually "
+                "short_description": "Congee is probably the most common mainstay of the Chinese breakfast. It is a mild-flavored rice porridge that has been cooked for a long time with plenty of water to soften the rice. To give the congee some flavor, it is usually "
                 "served with different toppings that vary by region. Here our toppings are a handful of dried scallop and a few pieces of shrimp.",
                 "description": "Seafood congee has such a rich flavor that you can hardly imagine it contains just water, and no chicken stock.\n The star of this dish is dried scallop (conpoy).\nDried scallop is made from the adductor muscles of scallops.Pungent and "
                 "compact, it has a highly concentrated flavor of the sea. Different from dried shrimp, conpoy is known for its sweet and delicate aroma.\nThere are two main types of conpoy: one made from river scallops and one made from sea scallops (also known as hotate "
@@ -138,7 +138,7 @@ def populate():
                 "Stir well. Drizzle with sesame oil and scatter with green onion.\n8. Serve warm.\nThe nutrition facts are calculated based on 1 of the 4 servings generated by this recipe.",
                 "views": 0, "likes": 0, "image": "TaiwanSeafoodCongee.jpg"},
                 {"recipe_name": "Thai Bananna Pancakes",
-                "short-description": "Most people know roti as an Indian savoury flatbread to mop up curries, but in Thailand it is often served as a sweet pastry. They are irresistible, especially when stuffed with banana and served with a good drizzle of sweetened condensed milk and a sprinkling of sugar.",
+                "short_description": "Most people know roti as an Indian savoury flatbread to mop up curries, but in Thailand it is often served as a sweet pastry. They are irresistible, especially when stuffed with banana and served with a good drizzle of sweetened condensed milk and a sprinkling of sugar.",
                 "description": "Thai roti is one of THE most popular snacks/desserts amongst visitors to Thailand! It can also served as breakfast.You can see roti carts at many tourist attractions around the country, and nowadays, vendors offer so many different filling options like bananas, "
                 "chocolate sauce, nutella, apples, etc. which, by the way, were not available when I was a kid, so roti has come a long way! If you go to non-touristy parts of Thailand you may still see some old-school roti vendors that still don’t offer many fancy fillings.\nNo one will ever "
                 "say roti is good for you, but by making it at home, you can make it a little less bad! Street vendor rotis are tasty, but they don’t usually use the best of ingredients. You’ll notice that many vendors use what looks like butter, but it’s really margarine which is full of trans "
@@ -165,11 +165,37 @@ def populate():
         
         oceania_recipes = [
                 {"recipe_name": "vegemite on toast",
-                "short_description": "vegemite on toast",
-                "description": "It's vegemite on toast",
-                "ingredients": "Vegemite, bread, butter",
-                "steps": "1. Toast bread.\n2. Spead butter.\n3. Spread vegemite",
-                "views": 0, "likes": 0, "image": "vegemite.jpg"} ]
+                "short_description": "No Aussie breakfast is complete without vegemite…that ubiquitous yeast mix that the rest of the world loves to hate. It is ours and ours alone. Spread onto a slice of hot toast, it is Australian all the way!",
+                "description": "Vegemite is a yeast extract obtained from the leftovers after brewing beer. It is essentially the same product as Marmite, but many people argue about which is better. For all intents and purposes, they are pretty similar in substance. While Australians will seriously caution against ever eating Vegemite on "
+                "its own, they will equally encourage how delicious it is when used properly. By learning the proper proportional use and what dishes are enhanced with Vegemite, you can learn to enjoy just as much as any Aussie.  If you often eat toast for breakfast but you get tired of the blandness of butter alone, or you want a salty "
+                "alternative to jam, Vegemite is a great alternative. It complements the blandness of butter very well while adding a rich, salty taste. ",
+                "ingredients": "Vegemite\nbread,\nbutter",
+                "steps": "1. Toast bread.\n2. Spead butter.\n3. Spread vegemite sparingly",
+                "views": 0, "likes": 0, "image": "vegemite.jpg"},
+                {"recipe_name": "Ricotta Hotcakes with Honeycomb Butter",
+                "short_description": "Super, super tender and moist hotcakes that are sugar free and perfect for breakfast or brunch",
+                "description": "Unlike regular pancake batters where flour forms the bulk, these hotcakes get their body from ricotta and whipped egg whites. It keeps them sublimely light and tender but as I also said this morning whilst digging into a thick stack “They’re hella filling” (it’s all that protein!). I adapted the recipe a tiny "
+                "bit, using less ricotta than stated (just cos 1 1/2 tubs seemed excessive to me) and also by only partially mixing it in. That way you get little nuggets of creamy ricotta every so often. Turns out my suspicions were right about the honeycomb butter, it’s literally crushed honeycomb candy mixed with unsalted butter. For the "
+                "sake of convenience I bought a Crunchie bar, cut off the chocolate coating and used the honeycomb from that. It may not seem like this butter is necessary (I probably would have skipped past it had I not tried it at the restaurant) but I adore it here, adding a dulcet hint of vanilla to each bite. Recipe adapted slightly from "
+                "Bill Granger’s recipe",
+                "ingredients": "For the Honeycomb butter\nOne 40 g Crunchie bar, (or 20 g /~1 oz of honeycomb candy)\n50 g unsalted butter\n1 tsp honey\nFor the hotcake batter:\n4 eggs, separated\n3/4 cup (185 ml) milk, any kind\n1 cup (125 g) plain flour\n1 heaped tsp baking powder\n1/4 tsp salt\n1 1/3 cups (300 g/10.7 oz) ricotta",
+                "steps": "To make the honeycomb butter:\nCut the Crunchie bar into chunks and then use a sharp knife to slice off the outer layer of chocolate (you only want the middle honeycomb part). Place the honeycomb into a sandwich bag and bash with a rolling pin so that it's the texture of coarse breadcrumbs. Pour into a bowl along with "
+                "the butter and honey. Cream together until well mixed then form into a log and wrap in clingfilm (or form individual scoops using a small, mechanical ice cream scoop). Chill until needed.\nTo make the hotcakes:\nIn a large jug, stir together the egg yolks, milk, flour, baking powder and salt with a fork. Add the ricotta to the "
+                "jug and mix just a little (seriously like 3 stirs; you want tasty ricotta lumps). In a large bowl, whisk the egg whites until stiff. Pour the contents of the jug into the large bowl and fold in using a rubber spatula. There should be some lumps of ricotta throughout. Heat a large frying pan over a medium heat with enough vegetable "
+                "oil to coat the pan. Scoop about 1/3 cup of batter into the pan to make 1 hotcake (depending on the size of your pan you can cook around 2 or 3 at a time). Use a metal spatula to check when the underside of the hotcake is golden, then flip and cook on the other side until golden as well. Remove to a plate and serve warm with the "
+                "honeycomb butter, maple syrup and fresh fruit.",
+                "views": 0, "likes": 0, "image": "RicottaHotcakes.jpg"},
+                {"recipe_name": "Corn Fritters with Avocardo Salsa",
+                "short_description": "Not just another corn fritter – these are Bill Granger’s famous corn fritters! This really is restaurant quality food made in your own home. The flavour will knock your socks off!",
+                "description": "These are the legendary Bill Granger Corn Fritters with Avocado Salsa. The extra step that makes these corn fritters really special is blending some of the corn and cilantro (coriander) into the batter - it makes the whole fritter truly taste of corn, rather than just bursts of it when you bite into kernels. This recipe "
+                "makes 12 fritters and serves 4.",
+                "ingredients": "3 cups (525g / 18oz) fresh corn kernels (~ 3 large corn cobs)\n1 small red onion chopped\n2 Eggs\n1/4 cup cilantro/coriander leaves and some stems (lightly packed)\n1 tsp sea salt\nFreshly ground Black pepper\n1 cup plain flour\n1 tsp baking powder\n3 tbsp olive oil\nAvocado Salsa:\n1 large (or 2 small) ripe avocado, stone "
+                "removed and diced\n1 1/2 tomatoes , seeded and diced (about 3/4 cup, diced)\n2 tbsp coriander/cilantro , roughly chopped\n2 tbsp lemon or lime juice\n2 tbsp finely chopped spring onions scallions or red onion\n1 dash Tabasco sauce , optional\n1/2 tsp sea salt\nFreshly ground Black pepper",
+                "steps": "1. Turn on the oven to very low - just to keep the fritters warm.\n2. Place 2 cups of the corn kernels and the onion, eggs, coriander, salt and pepper in a bowl and whizz with a stick blender until most of the corn is pureed (but still lumpy, not completely smooth). You can also do this step in a blender or food processor.\n3. Stir "
+                "through remaining corn, flour and baking powder until just combined.\n4. Heat 1 tablespoon of the oil in a skillet/fry pan over a medium high heat.\n5. When the oil is hot, drop 2 heaped tablespoons of mixture per fritter into the pan and cook in batches for 1 1/2 minutes each side, or until golden.\n6. Transfer to a baking tray and keep "
+                "warm in the oven while you are making the rest of the fritters.\n7.To serve, stack 3 corn fritters on each plate and top with avocado salsa and extra cilantro/coriander leaves if desired.\nAvocado Salsa:\nCombine all ingredients, toss very gently.\nRecipe Notes:\n1. Fresh corn is best but you can use defrosted frozen or well drained canned "
+                "corn kernels.\n2. Recipe very slightly adapted from this one by Bill Granger. The change I made was to stir through the flour after pureeing the corn because otherwise, there is a risk of over beating the flour which will make the fritters tough.",
+                "views": 0, "likes": 0, "image": "CornFritters.jpg"}, ]
 
         Continents = {"North America": {"recipes": north_america_recipes},
                         "Latin America": {"recipes": latin_america_recipes},
