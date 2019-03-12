@@ -164,14 +164,14 @@ def populate():
                 "views": 20, "likes": 13, "image": "ThaiBananaPancakes.jpg"} ]
         
         oceania_recipes = [
-                {"recipe_name": "vegemite on toast",
+                {"recipe_name": "Vegemite on Toast",
                 "short_description": "No Aussie breakfast is complete without vegemite…that ubiquitous yeast mix that the rest of the world loves to hate. It is ours and ours alone. Spread onto a slice of hot toast, it is Australian all the way!",
                 "description": "Vegemite is a yeast extract obtained from the leftovers after brewing beer. It is essentially the same product as Marmite, but many people argue about which is better. For all intents and purposes, they are pretty similar in substance. While Australians will seriously caution against ever eating Vegemite on "
                 "its own, they will equally encourage how delicious it is when used properly. By learning the proper proportional use and what dishes are enhanced with Vegemite, you can learn to enjoy just as much as any Aussie.  If you often eat toast for breakfast but you get tired of the blandness of butter alone, or you want a salty "
                 "alternative to jam, Vegemite is a great alternative. It complements the blandness of butter very well while adding a rich, salty taste. ",
                 "ingredients": "Vegemite\nbread,\nbutter",
                 "steps": "1. Toast bread.\n2. Spead butter.\n3. Spread vegemite sparingly",
-                "views": 18, "likes": 16, "image": "vegemite.jpg"},
+                "views": 18, "likes": 16, "image": "Vegemite.jpg"},
                 {"recipe_name": "Ricotta Hotcakes with Honeycomb Butter",
                 "short_description": "Super, super tender and moist hotcakes that are sugar free and perfect for breakfast or brunch",
                 "description": "Unlike regular pancake batters where flour forms the bulk, these hotcakes get their body from ricotta and whipped egg whites. It keeps them sublimely light and tender but as I also said this morning whilst digging into a thick stack “They’re hella filling” (it’s all that protein!). I adapted the recipe a tiny "
