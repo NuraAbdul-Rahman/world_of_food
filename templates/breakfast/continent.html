@@ -1,7 +1,7 @@
 {% extends 'breakfast/base.html' %} 
     {% load staticfiles %} 
         {% block title_block %} 
-            Recipes 
+            ContinentRecipes 
         {% endblock %} 
         
         {% block body_block %}
@@ -23,7 +23,7 @@
                                 </figure>
                                 <div id="recipeLabel">
                                     <h4>{{ recipe.recipe_name }}</h4>
-                                    <button type="button" class="btn btn-primary">View Recipe</button>
+                                    <a href="{% url 'show_recipe' continent.slug recipe.slug %}" class="btn btn-primary" role="button">view recipe</a>
                                 </div>
                             </div>
                         {% endfor %} 

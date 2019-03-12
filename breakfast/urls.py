@@ -14,7 +14,7 @@ urlpatterns=[
         views.show_continent, 
         name='show_continent'),
    
-    url(r'^(?P<continent_name_slug>[\w\-]+)/(?P<recipe_name_slug>[\w\-]+)',
+    url(r'^(?P<continent_name_slug>[\w\-]+)/(?P<recipe_name_slug>[\w\-]+)/$',
         views.show_recipe, 
         name='show_recipe'),
 
