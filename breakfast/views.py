@@ -110,12 +110,12 @@ def show_continent(request, continent_name_slug):
 
 
 
-def show_recipe(request, recipe_name_slug):
+def show_recipe(request, continent_name_slug, recipe_name_slug):
 
     context_dict = {}
 
     try:
-        recipe = Recipe.object.getall()
+        recipe = Recipe.objects.filter(slug=recipe_name_slug)
         context_dict['recipe'] = recipe
         
     except Recipe.DoesNotExist:

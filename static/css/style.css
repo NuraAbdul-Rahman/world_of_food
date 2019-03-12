@@ -13,6 +13,9 @@ h2 {
     margin-left: 15px;
     font-weight: bold;
 }
+h4 {
+    font-weight: bold;
+}
 /* Add a gray background color and some padding to the footer */
 
 footer {
