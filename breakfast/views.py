@@ -10,7 +10,9 @@ from breakfast.forms import RecipeForm
 
 # Create your views here.
 def home(request):
-    return render(request, 'breakfast/home.html', {})
+    continent_list = Continent.objects.all()
+    context_dict = {'continents': continent_list}
+    return render(request, 'breakfast/home.html', context_dict)
    
 def about(request):
     return render(request, 'breakfast/about.html', {})
@@ -27,7 +29,7 @@ def sign_up(request):
 def my_account(request):
     return render(request, 'breakfast/my_account.html', {})
 
-def continent_page(request, continent_name_slug):
+def show_continent(request, continent_name_slug):
     
     context_dict = {}
 
@@ -35,15 +37,15 @@ def continent_page(request, continent_name_slug):
         continent = Continent.objects.get(slug=continent_name_slug)
         recipe = Recipe.objects.filter(continent=continent)
 
-        context_dict['recipe'] = recipe
+        context_dict['recipes'] = recipe
         context_dict['continent'] = continent
     except Continent.DoesNotExist:
-        context_dict['category'] = None
-        context_dict['recipe'] = None
+        context_dict['continent'] = None
+        context_dict['recipes'] = None
 
-    return render(request, 'breakfast/continent_page.html', context_dict)
+    return render(request, 'breakfast/continent.html', context_dict)
 
-def recipe_page(request, recipe_name_slug):
+def show_recipe(request, recipe_name_slug):
 
     context_dict = {}
 
@@ -63,7 +65,7 @@ def recipe_page(request, recipe_name_slug):
         context_dict['description'] = None
         context_dict['ingredients'] = None
         
-    return render(request, 'breakfast/recipe_page.html', context_dict)
+    return render(request, 'breakfast/recipe.html', context_dict)
  
 # add_recipe used to add recipes from admin page, but there is no "add_recipe" template, so here it returns to "recipe_page"
 def add_recipe(request):
@@ -75,4 +77,4 @@ def add_recipe(request):
             return home(request)
         else:
             print(form.errors)
-    return render(request, 'breakfast/recipe_page.html', {'form': form})
+    return render(request, 'breakfast/recipe.html', {'form': form})
