@@ -19,13 +19,13 @@ class Continent(models.Model):
 class Recipe(models.Model):
     recipe_name = models.CharField(max_length=128, unique=True)
     continent = models.ForeignKey(Continent)
-    description = models.TextField
-    short_description = models.TextField
-    ingredients = models.TextField
-    steps = models.TextField
+    short_description = models.CharField(max_length=1280)
+    description = models.CharField(max_length=1280)
+    ingredients = models.CharField(max_length=1280)
+    steps = models.CharField(max_length=1280)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
-    image = models.ImageField
+    image = models.CharField(max_length=128)
     slug = models.SlugField(unique=True)
 
     def save(self, *args, **kwargs):
@@ -38,7 +38,7 @@ class Recipe(models.Model):
 
 class Review(models.Model):
     recipe_name = models.ForeignKey(Recipe)
-    review_text = models.TextField
+    review_text = models.CharField(max_length=1280)
     rating = models.IntegerField(default=0)
 
     def __str__(self):

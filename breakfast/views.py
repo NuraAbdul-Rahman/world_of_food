@@ -10,7 +10,9 @@ from django.contrib.auth.decorators import login_required
 # from registration.backends.simple.views import RegistrationView
 
 def home(request):
-    return render(request, 'breakfast/home.html', {})
+    continent_list = Continent.objects.all()
+    context_dict = {'continents': continent_list}
+    return render(request, 'breakfast/home.html', context_dict)
 
 
 def about(request):
@@ -89,7 +91,7 @@ def user_logout(request):
     return HttpResponseRedirect(reverse('home'))
 
 
-def continent_page(request, continent_name_slug):
+def show_continent(request, continent_name_slug):
     
     context_dict = {}
 
@@ -97,28 +99,17 @@ def continent_page(request, continent_name_slug):
         continent = Continent.objects.get(slug=continent_name_slug)
         recipe = Recipe.objects.filter(continent=continent)
 
-        context_dict['recipe'] = recipe
+        context_dict['recipes'] = recipe
         context_dict['continent'] = continent
     except Continent.DoesNotExist:
-        context_dict['category'] = None
-        context_dict['recipe'] = None
+        context_dict['continent'] = None
+        context_dict['recipes'] = None
 
-    return render(request, 'breakfast/continent_page.html', context_dict)
-
-
-def add_recipe(request):
-    form = RecipeForm()
-    if request.method == 'POST':
-        form = RecipeForm(request.POST)
-        if form.is_valid():
-            form.save(commit=True)
-            return home(request)
-        else:
-            print(form.errors)
-    return render(request, 'breakfast/recipe_page.html', {'form': form})
+    return render(request, 'breakfast/continent.html', context_dict)
 
 
-def recipe_page(request, recipe_name_slug):
+
+def show_recipe(request, recipe_name_slug):
 
     context_dict = {}
 
@@ -138,6 +129,18 @@ def recipe_page(request, recipe_name_slug):
         context_dict['description'] = None
         context_dict['ingredients'] = None
         
-    return render(request, 'breakfast/recipe_page.html', context_dict)
+    return render(request, 'breakfast/recipe.html', context_dict)
+
+
+def add_recipe(request):
+    form = RecipeForm()
+    if request.method == 'POST':
+        form = RecipeForm(request.POST)
+        if form.is_valid():
+            form.save(commit=True)
+            return home(request)
+        else:
+            print(form.errors)
+    return render(request, 'breakfast/recipe_page.html', {'form': form})
    
 
