@@ -20,68 +20,66 @@
         <script src="{% static "js/breakfast.js" %}"></script>
     </head> 
     <body>
-            <nav class="navbar navbar-inverse">
-                    <div class="container-fluid">
-                      <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>                        
-                        </button>
-                        <a class="navbar-brand" href="#">World of Breakfast</a>
-                      </div>
-                      <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                          <li class="#"><a href="{% url 'home' %}">Home</a></li>
-                          <li><a href="{% url 'about' %}">About</a></li>
-                          <li><a href="{% url 'contact_us' %}">Contact us</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                                <li><input type="button" value="Sign in" onclick="location.href='http://127.0.0.1:8000/breakfast/sign_in/'"</input></li>
-                              </ul>
-                        <form class="navbar-form navbar-right" role="search">
-                                <div class="form-group input-group">
-                                  <input type="text" class="form-control" placeholder="Search.." size="60">
-                                  <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                      <span class="glyphicon glyphicon-search"></span>
-                                    </button>
-                                  </span>        
-                                </div>
-                              </form>
-                            <div class="form-popup" id="myForm">
-                              <div align="center">
-                                  <form class="form-container" action="#" method="POST">
-                                      <h1>Sign In</h1>
-                                      <p>Please fill in this form to sign into your account </p>
-                                      <hr>
-                                      {% csrf_token %}
-                                      <label for="email"><b>Email</b></label>
-                                      <input id="text" type="text" placeholder="Enter Email" name="email" required>
-                          
-                                      <label for="psw"><b>Password</b></label>
-                                      <input id="text" type="password" placeholder="Enter Password" name="psw" required>                              
-                                      <div class="clearfix">
-                                        <button type="button" class="cancelbtn" onclick="closeForm()">Close</button>
-                                        <button type="submit" class="signupbtn" >Sign In</button>
-                                      </div>
-                                  </form>
-                                </div> 
-                              </div>
-                      </div>
-                    </div>
-                  </nav>
-        <div>
-            {% block body_block %} 
-            {% endblock %}
-        </div> 
-        <div>
-          <br> 
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="{% url 'home' %}"><strong>World of Breakfast</strong></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="#"><a href="{% url 'home' %}"><strong>Home</strong></a></li>
+              <li><a href="{% url 'about' %}"><strong>About</strong></a></li>
+              <li><a href="{% url 'contact_us' %}"><strong>Contact us</strong></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><input type="button" value="Sign in" onclick="location.href='http://127.0.0.1:8000/breakfast/sign_in/'"</input></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group input-group">
+                <input type="text" class="form-control" placeholder="Search.." size="60">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </span>        
+              </div>
+            </form>
+            <div class="form-popup" id="myForm">
+              <div align="center">
+                <form class="form-container" action="#" method="POST">
+                  <h1>Sign In</h1>
+                  <p>Please fill in this form to sign into your account </p>
+                  <hr>
+                  {% csrf_token %}
+                  <label for="email"><b>Email</b></label>
+                  <input id="text" type="text" placeholder="Enter Email" name="email" required>
+                  <label for="psw"><b>Password</b></label>
+                  <input id="text" type="password" placeholder="Enter Password" name="psw" required>                              
+                  <div class="clearfix">
+                    <button type="button" class="cancelbtn" onclick="closeForm()">Close</button>
+                    <button type="submit" class="signupbtn" >Sign In</button>
+                  </div>
+                </form>
+              </div> 
+            </div>
+          </div>
         </div>
-        <footer class="container-fluid text-center">
-                <p>World of Breakfast</p>
-                <p>"Start your day the global way"</p>
-              </footer>
+      </nav>
+      <div>
+        {% block body_block %} 
+        {% endblock %}
+      </div> 
+      <div>
+        <br> 
+      </div>
+      <footer class="container-fluid text-center">
+        <p>World of Breakfast</p>
+        <p>"Start your day the global way"</p>
+      </footer>
     </body> 
-
 </html>

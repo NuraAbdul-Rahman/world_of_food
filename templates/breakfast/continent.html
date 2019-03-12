@@ -1,41 +1,38 @@
-{% extends 'breakfast/base.html' %} {% load staticfiles %} {% block title_block %} Recipes {% endblock %} {% block body_block %}
-
-<div class="gtco-section">
-    <div id="gtco" class="gtco-container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                {% if continent %}
-                <h2 class="cursive-font primary-color">{{ continent.name }}</h2>
-            </div>
-        </div>
-        <div class="row">
-            {% if recipes %} {% for recipe in recipes %}
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <figure id="recipe" class="fh5co-card-item image-popup">
-
-                    <img src="{{ MEDIA_URL}}{{ recipe.image }}" alt="Image" class="img-responsive">
-                    <div class="overlay">
-                        <div class="text">{{ recipe.recipe_name }}
-                            <p> Description:</p>
-                            <p>{{ recipe.short_description }}</p>
-                            <p></p>
-                        </div>
-                    </div>
-                </figure>
-
-                <div class="fh5co-text" id="recipeLabel">
-
-                    <h4>{{ recipe.recipe_name }}</h4>
-                    <button type="button" class="btn btn-primary">View Recipe</button>
+{% extends 'breakfast/base.html' %} 
+    {% load staticfiles %} 
+        {% block title_block %} 
+            Recipes 
+        {% endblock %} 
+        
+        {% block body_block %}
+             {% if continent %}
+             <div class="container-fluid">
+                <div>
+                    <h2>{{ continent.name }}</h2>
                 </div>
-
+                <div class="row">
+                    {% if recipes %} 
+                        {% for recipe in recipes %}
+                            <div id="recipe" class="col-md-3">
+                                <figure id="recipe-box" class="fh5co-card-item image-popup">
+                                    <img src="{{ MEDIA_URL}}{{ recipe.image }}" alt="Image" class="img-responsive">
+                                    <div class="overlay">
+                                        <strong>{{ recipe.recipe_name }}</strong>
+                                        <p>{{ recipe.short_description }}</p>
+                                    </div>
+                                </figure>
+                                <div id="recipeLabel">
+                                    <h4>{{ recipe.recipe_name }}</h4>
+                                    <button type="button" class="btn btn-primary">View Recipe</button>
+                                </div>
+                            </div>
+                        {% endfor %} 
+                    {% else %}
+                        <strong>No recipes currently in saved.</strong> 
+                    {% endif %} 
+            {% else %}
+                <strong>The specified continent does not exist.</strong> 
+            {% endif %}
+                </div>
             </div>
-            {% endfor %} {% else %}
-            <strong>No recipes currently in saved.</strong> {% endif %} {% else %}
-            <strong>The specified continent does not exist.</strong> {% endif %}
-
-        </div>
-    </div>
-
-
-    {% endblock %}
+        {% endblock %}
