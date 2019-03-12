@@ -25,7 +25,7 @@ class RecipeForm(forms.ModelForm):
 	# steps = forms.CharField(max_length=1280, help_text="Please enter the steps of the recipe.")
 	# image = models.ImageField(upload_to='recipe_images', help_text="Please upload the picture of the recipe." )
 
-	"""
+
 	def clean(self):
 		cleaned_data = self.cleaned_data
 		url = cleaned_data.get('url')
@@ -36,7 +36,7 @@ class RecipeForm(forms.ModelForm):
 			cleaned_data['url'] = url
 
 		return cleaned_data
-	"""
+
 	class Meta:
 		model = Recipe
 		exclude = ('continent',)
@@ -51,6 +51,8 @@ class UserForm(forms.ModelForm):
 
 
 class UserProfileForm(forms.ModelForm):
+	picture = forms.ImageField(required=False)
+	
 	class Meta:
 		model = UserProfile
 		fields = ( 'picture',)

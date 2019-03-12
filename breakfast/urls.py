@@ -1,3 +1,4 @@
+
 from django.conf.urls import url
 from breakfast import views
 
@@ -8,12 +9,13 @@ urlpatterns=[
     url(r'^sign_in/$', views.sign_in, name='sign_in'),
     url(r'^sign_up/$', views.sign_up, name='sign_up'),
     url(r'^sign_in/my_account/$', views.my_account, name='my_account'),
+    # url(r'^restricted/', views.restricted, name='restricted'),
     url(r'^(?P<continent_name_slug>[\w\-]+)/$',
-        views.show_continent, 
-        name='show_continent'),
+        views.continent_page, 
+        name='continent_page'),
+   
     url(r'^(?P<continent_name_slug>[\w\-]+)/(?P<recipe_name_slug>[\w\-]+)',
-        views.show_continent, 
-        name='show_continent'),
-
+        views.recipe_page, 
+        name='recipe_page'),
 
 ]

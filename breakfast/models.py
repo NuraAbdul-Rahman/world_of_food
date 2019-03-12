@@ -12,9 +12,6 @@ class Continent(models.Model):
         self.slug = slugify(self.name)
         super(Continent, self).save(*args, **kwargs)
 
-    class Meta:
-        verbose_name_plural = 'Continents'
-
     def __str__(self):
         return self.name
 
@@ -34,9 +31,6 @@ class Recipe(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.recipe_name)
         super(Recipe, self).save(*args, **kwargs)
-
-    class Meta:
-        verbose_name_plural = 'Recipes'
 
     def __str__(self):
         return self.recipe_name
@@ -62,12 +56,13 @@ class Favourites(models.Model):
         return self.account
 
     
-"""
+""" Laimonous reported an error here for log in creation, so User class commented
 class User(models.Model):
     name = models.CharField(max_length=128)
     account = models.CharField(max_length=128, unique=True)
     email = models.EmailField(max_length=256)
     password = models.CharField(max_length=16)
+    # I changed the field type of favourites to URL since I thought it should save a set of recipes
     favourites = models.URLField(max_length=256)
 """
 
@@ -75,7 +70,7 @@ class User(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
     picture = models.ImageField(upload_to='profile_images', blank=True)
-
+    
     def __str__(self):
         return self.user.username
 
