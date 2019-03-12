@@ -1,0 +1,82 @@
+{% extends 'breakfast/base.html' %} {% load staticfiles %} {% block title_block %} Recipes {% endblock %} {% block body_block %}
+<!-- <style> 
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color:  #006699;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+#recipe:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+#recipe {
+  position: relative;
+  width: 100%;
+}
+.text {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+#recipeLabel{
+    color: #006699;
+}
+</style> -->
+
+
+<div class="gtco-section">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+            {% if continent %}
+                <h2 class="cursive-font primary-color">{{ continent.name }}</h2>
+            </div>
+        </div>
+        <div class="row">
+            {% if recipes %}
+                {% for recipe in recipes %}
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <figure id="recipe" class="fh5co-card-item image-popup">
+
+                        <img src="{{ MEDIA_URL}}{{ recipe.image }}" alt="Image" class="img-responsive">
+                        <div class="overlay">
+                            <div class="text">{{ recipe.recipe_name }}
+                                <p> Description:</p>
+                                {{ recipe.short_description }}
+                                <p></p>
+                            </div>
+                        </div>
+                    </figure>
+            
+            <div class="fh5co-text" id="recipeLabel">
+              
+                <h4>{{ recipe.recipe_name }}</h4>
+                <button type="button" class="btn btn-primary">View Recipe</button>
+            </div>
+                
+        </div>
+        {% endfor %} 
+            {% else %}
+                <strong>No recipes currently in saved.</strong>
+            {% endif %}
+            {% else %}
+                <strong>The specified continent does not exist.</strong>
+            {% endif %}
+       
+</div>
+</div>
+
+
+{% endblock %}

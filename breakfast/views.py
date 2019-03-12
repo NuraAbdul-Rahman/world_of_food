@@ -141,6 +141,6 @@ def add_recipe(request):
             return home(request)
         else:
             print(form.errors)
-    return render(request, 'breakfast/recipe_page.html', {'form': form})
+    return render(request, 'breakfast/recipe.html', {'form': form})
    
 
