@@ -1,4 +1,4 @@
- {% extends 'breakfast/base.html' %} {% load staticfiles %} {% block title_block %} Home {% endblock %} {% block body_block %}
+{% extends 'breakfast/base.html' %} {% load staticfiles %} {% block title_block %} Home {% endblock %} {% block body_block %}
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -6,82 +6,82 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img id="carousel-pic" src="{{ MEDIA_URL}}pic1.jpg">
+            <img id="carousel-pic" src="{{ MEDIA_URL}}WelcomeSlide.jpg" alt="World Of Breakfast">
             <div class="carousel-caption">
-                <!-- <h3>Sell $</h3>
-              <p>M</p> -->
+                <h3>Welcome to the World of Breakfast!</h3>
+                <h4>These are some of our most popular recipes.</h4>
             </div>
         </div>
-
+        {% if recipes %} {% for recipe in recipes %}
         <div class="item">
-            <img id="carousel-pic" src="{{ MEDIA_URL}}pic11.jpg" alt="Image">
+            <img id="carousel-pic" src="{{ MEDIA_URL}}{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
             <div class="carousel-caption">
-                <!-- <h3>More Sell $</h3>
-              <p>Lorem ipsum...</p> -->
+                <h3>{{ recipe.recipe_name }}</h3>
+                <h4>{{ recipe.continent }}</h4>
             </div>
         </div>
-        <div class="item">
-            <img id="carousel-pic" src="{{ MEDIA_URL}}pic16.jpg" alt="Image">
-            <div class="carousel-caption">
-                <!-- <h3>More Sell $</h3>
-                  <p>Lorem ipsum...</p> -->
-            </div>
-        </div>
-        <div class="item">
-            <img id="carousel-pic" src="{{ MEDIA_URL}}pic13.jpg" alt="Image">
-            <div class="carousel-caption">
-                <!-- <h3>More Sell $</h3>
-                      <p>Lorem ipsum...</p> -->
-            </div>
-        </div>
+        {% endfor %} {% endif %}
     </div>
-    <div class="container">
 
-        <div class="row">
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container ">
 
-            <div class="col-sm-8 text-center">
-                <h3>Select a Continent To View Recipes</h3><br>
-                <img id="mappic" src="{{ MEDIA_URL}}worldMap.jpg" alt="worldMap" usemap="#worldMap"> 
-                <map name="worldMap">
+    <div class="row">
+
+        <div class="col-sm-8 text-center">
+            <h3>Select a Continent To View Recipes</h3><br>
+            <img id="mappic" src="{{ MEDIA_URL}}worldMap.jpg" alt="worldMap" usemap="#worldMap">
+            <map name="worldMap">
                 {% if continents %} 
                     {% for continent in continents %}
                         {% if continent.name == "North America" %}
-                            <area shape="rect" coords="70,10,320,250" alt="North America"href="{% url 'show_continent' continent.slug %}">
+                            <area shape="rect" coords="70,10,320,250" alt="North America" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
                         {% elif continent.name == "Latin America" %}
-                             <area shape="rect" coords="160,260,300,400" alt="Latin America" href="{% url 'show_continent' continent.slug %}">
+                             <area shape="rect" coords="160,260,300,400" alt="Latin America" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
                         {% elif continent.name == "Africa" %}
-                            <area shape="rect" coords="320,200,430,350" alt="Africa" href="{% url 'show_continent' continent.slug %}">
+                            <area shape="rect" coords="320,200,430,350" alt="Africa" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
                         {% elif continent.name == "Europe" %}
-                            <area shape="rect" coords="350,110,450,170" alt="Europe" href="{% url 'show_continent' continent.slug %}">
+                            <area shape="rect" coords="350,110,450,170" alt="Europe" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
                         {% elif continent.name == "Asia" %}
-                            <area shape="rect" coords="470,20,650,230" alt="Asia" href="{% url 'show_continent' continent.slug %}">
+                            <area shape="rect" coords="470,20,650,230" alt="Asia" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
                         {% elif continent.name == "Oceania" %}
-                            <area shape="rect" coords="590,300,680,380" alt="Oceania" href="{% url 'show_continent' continent.slug  %}">
+                            <area shape="rect" coords="590,300,680,380" alt="Oceania" class="img-responsive" href="{% url 'show_continent' continent.slug  %}">
                         {% endif %} 
                     {% endfor %} 
                 {% endif %}
-                 </map> 
-            </div>
-            <div class="col-sm-4">
-                <h3>Getting Started</h3><br>
-                <div class="well">
-                    <p> Hover your mouse on any of the continents</p>
-                    <p>Click on a continent to get to its recipe page</p>
-                    <p>Each continent has a list of 5 most popular break fast dishes</p>
-                    <p>Sign up to get access to build your own recipe book and be the first to know about our new recipes</p>
-                    <p> You also get a chance to engage with our community of users</p>
-                </div>
-            </div>
-            <form>
-                <!--button type="button" class="btn btn-primary" onclick="openWin()">Sign Up</button-->
-				<input type="button" value="Sign up" onclick="location.href='http://127.0.0.1:8000/breakfast/sign_up/'"</input>
-            </form>
+                 </map>
         </div>
+        <div class="col-sm-4">
+            <h3>Getting Started</h3><br>
+            <div class="well">
+                <p> Hover your mouse on any of the continents</p>
+                <p>Click on a continent to get to its recipe page</p>
+                <p>Each continent has a list of 5 most popular break fast dishes</p>
+                <p>Sign up to get access to build your own recipe book and be the first to know about our new recipes</p>
+                <p> You also get a chance to engage with our community of users</p>
+            </div>
+        </div>
+        <form>
+            <!--button type="button" class="btn btn-primary" onclick="openWin()">Sign Up</button-->
+            <input type="button" value="Sign up" onclick="location.href='http://127.0.0.1:8000/breakfast/sign_up/'" </input>
+        </form>
     </div>
+</div>
 
-    {% endblock %}
+{% endblock %}

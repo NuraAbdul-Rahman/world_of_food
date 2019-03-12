@@ -11,7 +11,8 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     continent_list = Continent.objects.all()
-    context_dict = {'continents': continent_list}
+    recipe_list = Recipe.objects.order_by('-likes')[:5]
+    context_dict = {'continents': continent_list, 'recipes': recipe_list}
     return render(request, 'breakfast/home.html', context_dict)
 
 
@@ -114,20 +115,11 @@ def show_recipe(request, recipe_name_slug):
     context_dict = {}
 
     try:
-        recipe = Recipe.object.get(slug=recipe_name_slug)
-        continent = Recipe.object.get(continent)
-        description = Recipe.object.get(description)
-        ingredients = Recipe.object.get(ingredients)
-
+        recipe = Recipe.object.getall()
         context_dict['recipe'] = recipe
-        context_dict['continent'] = continent
-        context_dict['description'] = description
-        context_dict['ingredients'] = ingredients
+        
     except Recipe.DoesNotExist:
         context_dict['recipe'] = None
-        context_dict['continent'] = None
-        context_dict['description'] = None
-        context_dict['ingredients'] = None
         
     return render(request, 'breakfast/recipe.html', context_dict)
 
