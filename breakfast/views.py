@@ -1,10 +1,11 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
-from breakfast.models import Continent, Recipe, Favourites, Review
+from breakfast.models import Continent, Recipe, Favourites, Review, UserProfile
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import PasswordChangeForm
+from registration.backends.simple.views import RegistrationView
 from breakfast.forms import UserForm,UserProfileForm,ContinentForm,RecipeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -89,6 +90,23 @@ def sign_up(request):
                    'registered': registered
                   })
 
+@login_required
+def register_profile(request):
+    form = UserProfileForm()
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            user_profile = form.save(commit=False)
+            user_profile.user = request.user
+            user_profile.save()
+            
+            return redirect('home')
+        else:
+            print(form.errors)
+
+    context_dict = {'form':form}
+    
+    return render(request, 'breakfast/profile_registration.html', context_dict)
 
 def some_view(request):
     if not request.user.is_authenticated():
@@ -96,16 +114,34 @@ def some_view(request):
     else:
         return HttpResponse("You are not logged in.")
 
+class BreakfastRegistrationView(RegistrationView):
+    def get_success_url(self, user):
+        return reverse('register_profile')
 
-def my_account(request):
-    return render(request, 'breakfast/my_account.html', {})
-
+@login_required
+def my_account(request, username):
+    try:
+        user = User.objects.get(username=username)
+    except User.DoesNotExist:
+        return redirect('home')
+    
+    userprofile = UserProfile.objects.get_or_create(user=user)[0]
+    form = UserProfileForm({'picture': userprofile.picture})
+    
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES, instance=userprofile)
+        if form.is_valid():
+            form.save(commit=True)
+            return redirect('my_account', user.username)
+        else:
+            print(form.errors)
+    
+    return render(request, 'breakfast/my_account.html', {'userprofile': userprofile, 'selecteduser': user, 'form': form})
 
 @login_required
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('home'))
-
 
 def show_continent(request, continent_name_slug):
     
