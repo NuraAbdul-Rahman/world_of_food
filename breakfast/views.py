@@ -7,6 +7,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import PasswordChangeForm
 from breakfast.forms import UserForm,UserProfileForm,ContinentForm,RecipeForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
 # from registration.backends.simple.views import RegistrationView
 
 def home(request):
@@ -23,7 +25,6 @@ def about(request):
 def contact_us(request):
     return render(request, 'breakfast/contact_us.html', {})
 
-
 def sign_in(request):
     # return render(request, 'breakfast/sign_in.html', {})
     if request.method == 'POST':
@@ -35,12 +36,21 @@ def sign_in(request):
                 login(request, user)
                 return HttpResponseRedirect(reverse('home'))
             else:
-                return HttpResponse("Your Breakfast account is disabled.")
+                messages.info(request,'Your Breakfast account is disabled.')
+                return HttpResponseRedirect(reverse('sign_in'))
         else:
-            return HttpResponse("Invalid login details supplied. Please check your username and password!")
+            messages.error(request,'Invalid login details supplied. Please check your username and password!')
+            return HttpResponseRedirect(reverse('sign_in'))
 
     else:
-        return render(request, 'breakfast/login.html', {})
+        return render(request, 'breakfast/sign_in.html', {})
+
+@login_required
+def sign_out(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('home'))
+
+
 
 
 def sign_up(request):
@@ -60,15 +70,20 @@ def sign_up(request):
             if 'picture' in request.FILES:
                 profile.picture = request.FILES['picture']
                 profile.save()
-                registered = True
-            else:
-                print(user_form.errors, profile_form.errors)
+            registered = True
+            messages.success(request, 'You have sign up successfully!')  
+
+        else:
+            messages.error(request,'User already exists, enter new details')
+            print(user_form.errors, profile_form.errors)
+
+
     else:
         user_form = UserForm()
         profile_form = UserProfileForm()
 
     return render(request,
-                  'breakfast/register.html',
+                  'breakfast/sign_up.html',
                   {'user_form': user_form,
                    'profile_form': profile_form,
                    'registered': registered

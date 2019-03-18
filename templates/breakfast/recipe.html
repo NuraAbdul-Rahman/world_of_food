@@ -12,33 +12,39 @@
                 <div class="col-lg-12 col-md-12 col-sm-12">
                         <div>
                                 <h2>{{ recipe.recipe_name }}</h2>
+                                <br>
                         </div>
                         <div class= "col-lg-4 col-md-4 col-sm-4" > 
-                                <div class="well"  style="height: 500px;">
+                                <div class="well" id="recipedetails">
                                         <p></p>
                                         <img src="{{ MEDIA_URL}}{{ recipe.image }}" alt="Image" class="img-responsive">
                                         <p></p>
-                                        <span class="heart fa fa-heart-o " style="font-size:18px;color:red">Add Favourites</span>
+                                       <!-- <button type="button" class="btn btn-danger><span class="heart fa fa-heart-o" style="font-size:18px;color:red">Add Favourites</span></button> -->
+                                       <button class="btn btn-danger">
+                                        <i class="fa fa-heart"></i>
+                                        <span style="font-size:15px;color:white">Add to Favourites</span>
+                                      </button>
                                         <p></p>
                                         <strong>Rating</strong>
                                         <p></p>
-                                        <a href="#">View Comments</a>
+                                        <a href="#"><span class ="fa fa-star" style="font-size:18px;">Reviews</span></a>
                                 </div>    
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4"> 
-                                <div class="well" style="height: 500px;">
+                                <div class="well" id="recipedetails">
                                         <h4>Description</h4>
                                         {{ recipe.description }}
                                 </div>    
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4"> 
-                                <div class="well" style="height: 500px;">
+                                <div class="well" id="recipedetails">
                                         <h4>Ingredients</h4>
                                         {{ recipe.ingredients }}{{ value|linebreaks }}
                                 </div>    
                         </div>
+                </div>
                         <div class = "col-lg-12 col-md-12 col-sm-12">
-                                <div class="well" style="height: 500px;">
+                                <div class="well" >
                                         <h4>Instructions</h4>
                                         {{ recipe.steps }}
                                 </div>    

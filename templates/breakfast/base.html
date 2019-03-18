@@ -28,7 +28,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="{% url 'home' %}"><strong>World of Breakfast</strong></a>
+            <li class="active"><a class="navbar-brand" href="{% url 'home' %}" style="background-color: #00394d;"><strong>World of Breakfast</strong></a></li>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -37,36 +37,24 @@
               <li><a href="{% url 'contact_us' %}"><strong>Contact us</strong></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><input type="button" value="Sign in" onclick="location.href='{% url 'sign_in' %}'"</input></li>
+                {% if user.is_authenticated %}
+                  <li><a href="{% url 'sign_out' %}"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+                  <li class="active"><a href="#" style="background-color: #00394d;"><span class="glyphicon glyphicon-user"></span> Hi,{{ user.username }} || Account </a></li>
+                {% else %}
+              <li><li><a href="{% url 'sign_in' %}"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li></li>
+                {% endif %}
             </ul>
-            <form class="navbar-form navbar-right" role="search">
-              <div class="form-group input-group">
-                <input type="text" class="form-control" placeholder="Search.." size="60">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">
-                    <span class="glyphicon glyphicon-search"></span>
-                  </button>
-                </span>        
-              </div>
-            </form>
-            <div class="form-popup" id="myForm">
-              <div align="center">
-                <form class="form-container" action="#" method="POST">
-                  <h1>Sign In</h1>
-                  <p>Please fill in this form to sign into your account </p>
-                  <hr>
-                  {% csrf_token %}
-                  <label for="email"><b>Email</b></label>
-                  <input id="text" type="text" placeholder="Enter Email" name="email" required>
-                  <label for="psw"><b>Password</b></label>
-                  <input id="text" type="password" placeholder="Enter Password" name="psw" required>                              
-                  <div class="clearfix">
-                    <button type="button" class="cancelbtn" onclick="closeForm()">Close</button>
-                    <button type="submit" class="signupbtn" >Sign In</button>
-                  </div>
-                </form>
-              </div> 
-            </div>
+            <form class="navbar-form navbar-right" role="search" style="width: 500px;">
+                <div class="form-group input-group">
+                  <input type="text" class="form-control" placeholder="Search.." style="width: 400px;">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                      <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                  </span>        
+                </div>
+              </form>
+              <ul></ul>
           </div>
         </div>
       </nav>
@@ -77,9 +65,9 @@
       <div>
         <br> 
       </div>
-      <footer class="container-fluid text-center">
+      <!-- <footer class="container-fluid text-center">
         <p>World of Breakfast</p>
         <p>"Start your day the global way"</p>
-      </footer>
+      </footer> -->
     </body> 
 </html>

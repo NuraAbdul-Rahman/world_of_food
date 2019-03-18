@@ -4,8 +4,13 @@ function openForm() {
   
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
+    
   }
   function openWin() {
-    window.open("sign_up");
-  //  Location.href="{% url 'sign_up' %}";
+    //window.open("sign_up");
+   Location.href="{% url 'sign_up' %}";
+   
+  }
+  function myFunction() {
+    document.getElementById("user_form").reset();
   }

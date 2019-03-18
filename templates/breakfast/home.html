@@ -20,7 +20,7 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img id="carousel-pic" src="{{ MEDIA_URL}}WelcomeSlide.jpg" alt="World Of Breakfast">
+                        <img id="defaultcarousel-pic" src="{{ MEDIA_URL}}WelcomeSlide.jpg" alt="World Of Breakfast">
                         <div class="carousel-caption">
                             <h3>Welcome to the World of Breakfast!</h3>
                             <h4>These are some of our most popular recipes.</h4>
@@ -64,13 +64,13 @@
                                 {% elif continent.name == "Latin America" %}
                                     <area shape="rect" coords="160,260,300,400" alt="Latin America" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
                                 {% elif continent.name == "Africa" %}
-                                    <area shape="rect" coords="320,200,430,350" alt="Africa" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
+                                    <area shape="rect" coords="320,200,530,400" alt="Africa" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
                                 {% elif continent.name == "Europe" %}
-                                    <area shape="rect" coords="350,110,450,170" alt="Europe" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
+                                    <area shape="rect" coords="350,50,500,180" alt="Europe" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
                                 {% elif continent.name == "Asia" %}
-                                    <area shape="rect" coords="470,20,650,230" alt="Asia" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
+                                    <area shape="rect" coords="470,10,800,250" alt="Asia" class="img-responsive" href="{% url 'show_continent' continent.slug %}">
                                 {% elif continent.name == "Oceania" %}
-                                    <area shape="rect" coords="590,300,680,380" alt="Oceania" class="img-responsive" href="{% url 'show_continent' continent.slug  %}">
+                                    <area shape="rect" coords="520,260,850,500" alt="Oceania" class="img-responsive" href="{% url 'show_continent' continent.slug  %}">
                                 {% endif %} 
                             {% endfor %} 
                         {% endif %}
@@ -78,7 +78,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>Getting Started</h3><br>
-                        <div class="well">
+                        <div class="well" id="getStarted">
                             <p> Hover your mouse on any of the continents</p>
                             <p>Click on a continent to get to its recipe page</p>
                             <p>Each continent has a list of 5 most popular break fast dishes</p>
@@ -87,8 +87,8 @@
                         </div>
                     </div>
                     <form>
-                        <!--button type="button" class="btn btn-primary" onclick="openWin()">Sign Up</button-->
-                        <input type="button" value="Sign up" onclick="location.href='http://127.0.0.1:8000/breakfast/sign_up/'" </input>
+                        <!-- <button type="button" class="btn btn-primary" onclick="openWin()">Sign Up</button> -->
+                    <button type="button" class="btn btn-primary" value="Sign up" onclick="location.href='{% url 'sign_up' %}'" >Sign Up</button>
                     </form>
                 </div>
             </div>

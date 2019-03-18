@@ -9,6 +9,7 @@ urlpatterns=[
     url(r'^sign_in/$', views.sign_in, name='sign_in'),
     url(r'^sign_up/$', views.sign_up, name='sign_up'),
     url(r'^sign_in/my_account/$', views.my_account, name='my_account'),
+    url(r'^sign_out/$', views.sign_out, name='sign_out'),
     # url(r'^restricted/', views.restricted, name='restricted'),
     url(r'^(?P<continent_name_slug>[\w\-]+)/$',
         views.show_continent, 
