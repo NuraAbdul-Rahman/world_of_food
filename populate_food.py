@@ -1,3 +1,4 @@
+
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'World_Of_Food.settings')
 
@@ -140,14 +141,37 @@ def populate():
                 "6. Cook the eggs to the desired doneness and season with salt and pepper to taste."
                 "7. Serve warm with arepas or other bread choices.",
                 "views": 5, "likes": 2, "image": "VenezuelanPerico.jpg"} ]
-
-        africa_recipes = [
-                {"recipe_name": "Special Museli",
-                "short_description": "Museli with special stuff",
-                "description": "Very special museli with extra special stuff",
-                "ingredients": "museli",
-                "steps": "1. Mix it up.\n2. Add some milk",
-                "views": 0, "likes": 0, "image": "museli.jpg"} ]
+     africa_recipes = [
+                {"recipe_name": "Hausa Koko",
+                "short_description": "Hausa Koko, a soured and spicy smooth porridge.",
+                "description": "Hausa Koko is simply a thick flowing tasty solution made from millet with a few local spices added to give it a particular taste and colour.\n It is called “Hausa Koko” because of it’s popularity in the northern areas and is believed to have been first made by the Hausas. Sugar,milk and groundnuts are added to give it a very delicious taste.\n Hausa Koko is mostly served with “Koose”, a millet based paste which is made into balls and fried in vegetable oil.",
+                "ingredients": "1/2 cup corn dough \n 3 cups water (divided use)\n 1/4 teaspoon cloves \n 1/2 teaspoon ginger \n 1/4 teaspoon hot chili powder \n Optional: sugar to taste \n 1 pinch salt",
+                "steps": "1. Gather the ingredients.Scoop about 1/2 a cup of corn dough and place into a pan.\n 2. Add 1 cup of cold water and crumble up the corn dough to make a smooth paste with the water. Turn on the heat to high and stir continuously.\n 3.Add 2 cups of boiling water to the pot and bring to the boil whilst stirring continuously. At this point, the corn dough begins to thicken and form gelatinous looking lumps. I normally keep a whisk handy to aid in the smoothing out of the porridge.\n 4. Add a pinch of salt, the ground cloves, ginger, and pepper. Stir and allow to simmer for 10 minutes on a low heat.\n 5. When ready to serve, pour into a bowl, add the desired amount of sugar and stir. For an added touch of luxury, pour in some evaporated milk.",
+                "views": 20, "likes": 15, "image": "hausakoko.jpg"},
+                {"recipe_name": "Mahamri (Swahili Doughnuts)",
+                "short_description": "These are perfect for breakfast with a cup of tea, and go really well as an accompaniment to many meals especially grilled meats.",
+                "description": "Mahamri is a favourite treat amongst Kenyan households especially in the coastal region.\n Mahamris are miniature with a bulging square or triangular dough which is fried until they attain a golden brown hue.\n They are great for breakfast when eaten with beans in coconut sauce or with a cup of chai.",
+                "ingredients": "3 cups plain flour \n 1 cup coconut milk powder \n 3/4 cup warm milk \n 1 teaspoon ground cardamom \n 1 tablespoon instant yeast \n 1/4 cup warm water \n 1/2 cup sugar \n Oil for deep frying",
+                "steps": "1. Mix the yeast, a pinch of sugar, a pinch of plain flour and the ¼ cup of warm water. Leave the yeast to rise (the addition of sugar and flour helps in the rising process). \n 2. Knead the flour, sugar, cardamom, coconut powder, warm milk and yeast mixture to form a smooth dough.\n 3. Let the dough rest in a warm place – preferably overnight or until double in size (the dough could rise in a few hours if you live in a warm climate).\n 4. Divide dough into 8 balls.\n 5. Roll each ball into a 6 inch circle and cut into quarters.\n 6. Pour the oil in a deep frying pan on medium heat. You want the oil hot enough when you start frying the dough.\n 7. Drop the three to four triangles into the hot oil. If the oil is hot enough the dough will quickly float to the top and puff up. \n 7. Turn the mahamri as soon as it is a light brown and turn.\n 8. Cook on the other side for another minute and remove from the deep fryer with a slated spoon.\n 8. The doughnuts should be a light golden brown.",
+                "views": 13, "likes": 10, "image": "mahamri.jpg"},
+                {"recipe_name": "Baked Plantains & Egg Muffin",
+                "short_description": "Baked Plantain Frittata aka  plantain and eggs- A healthier  and delicious take on fried plantains and eggs",
+                "description": "Fried plantain and egg is one of my favorite weekend breakfast. It is one of the many traditional breakfasts found throughout West Africa.\n No one will ever guess that this nutritious, mouthwatering breakfast Frittata is lighter!\n Plantain makes  it a hearty, and the eggs and veggies pile on color and wonderful flavor.",
+                "ingredients": "1 tablespoon canola oil & 1/2 medium onion thinly sliced. \n 1 scotch bonnet pepper diced sub hot sauce \n 1/2 red/green bell pepper stem, ribs, and seeds removed, then thinly sliced in strips \n 1 small tomatoes \n 1 teaspoon minced garlic & 1 teaspoon Fresh thyme or any herb \n 2-3 ripe plantains \n Coarse salt & ground pepper \n 6 large eggs \n 1 avocado optional \n optional: 1/2 -1 cup sausage chopped",
+                "steps": "1. Adjust the oven rack to the middle position and preheat oven to 350 degrees F. Grease a 10- inch baking pan or muffin pan, set aside.\n 2. Using a sharp knife cut both ends off the plantain. This will make it easy to grab the skin of the plantains. Slit a shallow line down the long seam of the plantain, peel only as deep as the peel. Remove plantain peel by pulling it back. Slice the plantains into desired shape and size. \n 3. Place them on the baking sheets in a single layer; spray lightly over the plantains using the canola oil spray and bake, turning over slices, after 8 minutes for about 12- 20 minutes or till golden brown, depending on your oven. \n 4. While the plantains is baking, heat a medium sauce pan over medium high heat and drizzle with 1 Tablespoons of canola oil. Add the onions, tomatoes, green pepper and cook for about 4-5 minutes.\n 5. In a large bowl whisk eggs, add sauté vegetable mixture, season with salt and pepper according to preference.\n 6.Pour mixture into a greased 10-inch baking pan. Layer the baked plantains and sprinkle the parsley in the baking pan.\n 7. Bake in the oven for about 30-40 minutes; until mixture is firm in the center.\n 8. Let it cool for a few minutes; top with avocado if desired",
+                "views": 33, "likes": 20, "image": "bakedPlantainFrittata.jpg"},
+                {"recipe_name": "Shakshuka",
+                "short_description": "Shakshuka is a popular breakfast in North Africa and the Middle East",
+                "description": "Braising eggs in a flavoursome, aromatic sauce is all the rage. It is warming and comforting, ideal for the morning when you are not normally up for a great culinary challenge.\n In North Africa they have known this dish for many years. There, according to region, they have many variations on this theme, with sauces varying in spiciness, sweetness and sharpness.\n You can add preserved lemon to your shakshuka, harissa paste, olives or a salty ewe's cheese. \n A spicy sausage – such as merguez or chorizo – is also suitable.",
+                "ingredients": "3 tbsp olive oil & 2 large onions, thinly sliced \n 2 red peppers, cut into long slices &2 green peppers, cut into long slices \n 4 garlic cloves, finely chopped \n 1/2 tsp cumin seeds & 1/2 tsp caraway seeds \n 1/2 tsp cayenne pepper & 1 tbsp tomato or red pepper purée \n 2 x 400g tins tomatoes & 1 small bunch fresh coriander, roughly chopped \n 1 small bunch fresh parsley, roughly chopped & 8 free-range eggs \n 85g/3oz feta, crumbled & 8 tbsp thick natural yoghurt or labneh \n salt & freshly ground black pepper",
+                "steps": "1. Preheat oven to 375°F.Heat the oil in a large heavy skillet, preferably cast iron, over medium heat. Add the onions and zucchini, and sauté for 8–10 minutes until tender. Add the garlic and cook for 1 minute, then add the cumin, paprika and cayenne, and cook for 1 more minute.\n 2. Add the tomatoes, salt and pepper and simmer until the tomatoes have thickened, about 10 minutes. Stir in the cheese. \n 3.Gently crack the eggs into the skillet, spreading them evenly over the tomatoes. Season with a pinch of coarse salt, if desired. Transfer the skillet to the oven and bake until eggs are just set, 7–8 minutes (they will continue to cook for a couple of minutes after you remove them from the oven). Sprinkle with the fresh herbs and serve immediately. \n 4. Do Ahead Or Delegate: Halve and slice the onion and zucchini, slice the garlic, combine the dry spices, chop the tomatoes, or fully prepare the recipe without the eggs and refrigerate or freeze it.\n 5.Flavor Booster: Use smoked paprika instead of regular paprika. Serve with hot pepper sauce such as Tabasco, sriracha or harissa, if you have it.",
+                "views": 33, "likes": 25, "image": "shakshuka.jpg"},
+                {"recipe_name": "Injera",
+                "short_description": "Injera is a Flat round fermented sourdough bread- bread like no other, with a unique, slightly spongy texture",
+                "description": "Injera is a Flat round fermented sourdough bread- bread like no other, with a unique, slightly spongy texture.\n Always present during mealtime, in countries like Ethiopia, Eritrea, Somalia, Yemen, Djibouti and Sudan with each country having it’s own variation.",
+                "ingredients": "1 cup corn flour \n 2 1/2 cup sorghum or whole wheat \n 1 Tablespoon sugar & 1 Tablespoon dry yeast \n 1 1/4 cup warm water \n 4 cups all purpose flour \n 6 teaspoons baking powder \n 4 teaspoons salt \n 1/4 cup sugar \n 4 cups warm water",
+                "steps": "1. Combine corn flour , sorghum or  whole wheat , sugar yeast and water , mix and let it rise for about an hour.\n 2. In Large bowl combine flour , salt, baking powder and sugar. \n 3. Add the starter mixture to the flour, thoroughly mix and start adding water a little at a time until water has been completely used up, thoroughly miss to eliminate any lumps. You may use the blender to aid in the process. \n 4. Let it rise for about 2 hours.",
+                "views": 23, "likes": 20, "image": "injera.jpg"}]
 
         europe_recipes = [
                 {"recipe_name": "Bacon and eggs",
@@ -354,4 +378,3 @@ if __name__=='__main__':
 populate()
 
         
-

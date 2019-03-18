@@ -5,6 +5,9 @@
     height: 60px;
     background-color: #00394d;
 }
+.myAcc{
+    background-color: #00394d;
+}
 
 h1 {
     text-align: center;
@@ -20,19 +23,23 @@ h4 {
 
 footer {
     background-color: #00394d;
-    padding: 25px;
+    padding: 15px;
     font-style: italic;
     color: white
 }
 
 #myCarousel {
     width: 100%;
-    height: 300px;
+    height: 450px;
 }
 
 #carousel-pic {
-    width: 300px;
-    height: 300px;
+    width: 40%;
+    height: 450px;
+}
+#defaultcarousel-pic{
+    width: 100%;
+    height: 450px;
 }
 
 .carousel-inner > .item > img{
@@ -40,7 +47,11 @@ footer {
     }
 
 #mappic {
-    width: 100%;
+    width: 90%;
+}
+#getStarted{
+    width: 90%;
+    height: 350px;
 }
 
 .overlay {
@@ -53,6 +64,9 @@ footer {
     width: 0;
     height: 100%;
     transition: .5s ease;
+}
+#recipeDes{
+    color: white;
 }
 
 #recipe:hover .overlay {
@@ -69,6 +83,7 @@ footer {
     position: relative;
     width: 300px;
     height: 300px;
+    
 }
 
 .text {
@@ -85,6 +100,7 @@ footer {
 
 #recipeLabel {
     color: #006699;
+    
 }
 
 body {
@@ -235,4 +251,14 @@ input[type=password]:focus {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 70px;
+}
+#recipedetails{
+    width: 100%;
+    height: 550px;
+}
+.myAlert-top{
+    position: fixed;
+    top: 80px; 
+    left:10%;
+    width: 80%;
 }
