@@ -141,7 +141,8 @@ def populate():
                 "6. Cook the eggs to the desired doneness and season with salt and pepper to taste."
                 "7. Serve warm with arepas or other bread choices.",
                 "views": 5, "likes": 2, "image": "VenezuelanPerico.jpg"} ]
-     africa_recipes = [
+        
+        africa_recipes = [
                 {"recipe_name": "Hausa Koko",
                 "short_description": "Hausa Koko, a soured and spicy smooth porridge.",
                 "description": "Hausa Koko is simply a thick flowing tasty solution made from millet with a few local spices added to give it a particular taste and colour.\n It is called “Hausa Koko” because of it’s popularity in the northern areas and is believed to have been first made by the Hausas. Sugar,milk and groundnuts are added to give it a very delicious taste.\n Hausa Koko is mostly served with “Koose”, a millet based paste which is made into balls and fried in vegetable oil.",
