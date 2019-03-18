@@ -38,10 +38,10 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
-                  <li><a href="{% url 'sign_out' %}"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
-                  <li class="active"><a href="#" style="background-color: #00394d;"><span class="glyphicon glyphicon-user"></span> Hi,{{ user.username }} || Account </a></li>
+                  <li><a href="{% url 'auth_logout' %}?next=/breakfast/"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+                  <li class="active"><a href="{% url 'my_account' user.username %}" style="background-color: #00394d;"><span class="glyphicon glyphicon-user"></span> Hi,{{ user.username }} || Account </a></li>
                 {% else %}
-              <li><li><a href="{% url 'sign_in' %}"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li></li>
+              <li><li><a href="{% url 'auth_login' %}"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li></li>
                 {% endif %}
             </ul>
             <form class="navbar-form navbar-right" role="search" style="width: 500px;">
