@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'breakfast',
+    'registration'
 ]
 
 MIDDLEWARE = [
@@ -136,7 +137,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_URL = '/breakfast/login/'
+
+REGISTRATION_OPEN = True
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/breakfast/'
+LOGIN_URL = '/accounts/login/'
 #Media files
 MEDIA_ROOT= MEDIA_DIR
 MEDIA_URL= '/media/'

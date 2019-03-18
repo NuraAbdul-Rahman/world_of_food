@@ -10,5 +10,7 @@ urlpatterns = [
     url(r'^$',views.home,name='home'),
     url(r'^breakfast/', include('breakfast.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
+    url(r'^accounts/register/$', views.BreakfastRegistrationView.as_view(), name='registration_register'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
