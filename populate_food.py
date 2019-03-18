@@ -1,3 +1,4 @@
+
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'World_Of_Food.settings')
 
@@ -16,14 +17,131 @@ def populate():
                 "views": 0, "likes": 0, "image": "pancakes.jpg"} ]
 
         latin_america_recipes = [
-                {"recipe_name": "Hot Chilli Flakes",
-                "short_description": "Really hot",
-                "description": "They really are very hot",
-                "ingredients": "Chilli",
-                "steps": "1.Mixed up the chilli",
-                "views": 0, "likes": 0, "image": "ChilliFlakes.jpg"} ]
-
-        africa_recipes = [
+                {"recipe_name": "Ham and Cheese Empanadas",
+                "short_description":"Although these are not traditional empanadas because they are made with puff "
+                "pastry dough, they are still very popular, especially for breakfast. They are often "
+                "shaped as a square, maybe to distinguish them from the classic round empanadas.",
+                "description": "The light and flaky pastry combines perfectly with the melted cheese and ham. If\nyou've been resorting to commercially-prepared hot pockets for quick breakfasts, " 
+                "lunches, and snacks, this can be your go-to alternative. You can make these\n empanadas and freeze them unbaked, then take them straight from the freezer to "
+                "the oven for a quick hot treat.",
+                "ingredients": "2 tablespoons butter\n1/2 cup flour\n1 cup milk\n2 eggs"
+                "1/2 cup cheese (grated smoked gouda, edam, or similar)\n4 tablespoons parmesan (grated)"
+                "1 pinch cayenne pepper\n1 pinch salt (to taste)\n1 package puff pastry dough (frozen)"
+                "1/4 pound ham (deli)\n1 egg yolk\n1 tablespoon water​",
+                "steps": "1. Gather the ingredients\n2. Preheat oven to 400 F.\n3. In a saucepan, melt butter over medium-low heat."
+                "4. Whisk the flour into the melted butter, and increase the heat to medium. Cook, stirring, for 1 to 2 minutes."
+                "5. Whisk the milk into the flour/butter mixture and bring it to boil, stirring. The sauce will thicken slightly."
+                "6. Whisk 2 eggs into mixture and cook, stirring, for 1 to 2 minutes more or until sauce has thickened."
+                "7. Add grated cheese and parmesan and stir until melted. Remove from heat and add cayenne pepper and salt to taste."
+                "8. Roll out 1 sheet of puff pastry dough on a floured surface to 12 inches square. With a pizza cutter or sharp knife, cut dough into 12 3-inch-by-4-inch rectangles."
+                "9. Mix the egg yolk with the water, and brush the edges of half of the rectangles with the egg yolk mixture."
+                "10. Place a piece of ham in the center of each rectangle that has been brushed with the egg yolk mixture. "
+                "There should be an edge of dough all around the ham. Top ham the ham with 2 tablespoons of the cheese mixture."
+                "11. Cover the ham and cheese with one of the plain rectangles, and firmly press down around the edges to seal."
+                "12. Cover the ham and cheese with one of the plain rectangles, and firmly press down around the edges to seal."
+                "13. When ready to bake, prick the top of the empanadas several times with a fork, and brush tops lightly with the egg yolk mixture."
+                "14. Bake 20 minutes, or until puffed and golden brown.\n15. Serve hot or at room temperature.",
+                "views": 7, "likes": 3, "image": "Ham&Cheese Empanadas.jpg"},
+                {"recipe_name": "Homemade South American Arepas",
+                "short_description": "Arepas, a staple food in both Venezuela and Colombia, are corncakes that are \nmade from a special precooked corn flour. You can find this cornmeal/flour in Latin food "
+                "stores, labeled masarepa, or 'masa al instante.'",
+                "description": "Arepas are scrumptious slathered with butter or cream cheese for breakfast or as an accompaniment to any meal."
+                "Colombian arepas tend to be thinner than the Venezuelan variety. \nVenezuelan arepas are often stuffed with meat and cheese to make sandwiches, "
+                "such as the famous reina pepiada. Arepas can also be grilled or deep-fried and are \nsometimes prepared with other grains such as fresh corn, hominy or quinoa.",
+                "ingredients": "1 teaspoon salt\n2 1/2 cups masarepa cornmeal\n2 3/4 to 3 1/2 cups hot water"
+                "2 tablespoons melted vegetable butter\n1/2 tablespoon vegetable butter or vegetable oil",
+                "steps": "1. Stir the salt into the masarepa cornmeal.\n2. Pour 2 3/4 cups of hot water over the flour and mix well with a wooden spoon."
+                "3. Stir in the melted butter. Cover dough with plastic wrap and let rest 15 minutes. \n4. If you want thicker arepas, separate the dough into 12 pieces."
+                "5. Shape each piece into a smooth ball.  Add more water if needed -- the dough should be"
+                "moist enough so that you can shape the arepas without the dough forming lots of cracks around the edges."
+                "6. Place each ball in between 2 sheets of plastic wrap or 2 ziplock bags and flatten gently with the bottom of a pot."
+                "7. Use your fingers to smooth out any cracks along the edges.\n8. Place the shaped arepas on a cookie sheet covered with plastic wrap."
+                "9. Heat a cast iron skillet on low heat. Put 1/2 tablespoon butter or vegetable oil in the skillet."
+                "10. Place several arepas in the pan, leaving room to turn them."
+                "11. Cook the arepas about 5 minutes on each side. The surface should dry and form a crust."
+                "12. The thinner arepas are done when they have formed a nice crust but are still soft on the inside."
+                "13. The thicker, Venezuelan-style arepas finish cooking in the oven. After they have formed a crust "
+                "and are just a bit browned, place them on a cookie sheet and heat for 8 to 10 minutes at 350 F."
+                "13. Serve both thin and thick arepas hot.",
+                "views": 12, "likes": 5, "image": "HomemadeSouthAmericanArepas.jpg"},
+                {"recipe_name": "Rosca de Coco: Braided Coconut Ring",
+                "short_description": "This sweet braided bread ring has a creamy coconut filling and sugary glaze. "
+                "The dough is buttery and brioche-like, similar to sweet roll dough, and is very easy to work with.",
+                "description": "In addition to a braided ring, the dough can be shaped in the same manner as "
+                "cinnamon rolls - by rolling the dough out into a large rectangle, spreading most of "
+                "the filling over the dough, rolling it into a cylinder, and cutting the cylinder into "
+                "spiral slices. Place the rolls in a 9x13 inch pan to rise and bake, then glaze the rolls "
+                "with the remaining filling when they are out of the oven. "
+                "Any leftovers are especially tasty when toasted and spread with butter. ",
+                "ingredients": "For the Dough:\n1 cup milk\n1/4 ​coconut cream\n3/4 cup sugar\n5 tablespoons butter"
+                "2 teaspoons active dry yeast\n3 eggs\n1/2 teaspoon salt (or to taste)\n1 teaspoon vanilla"
+                "1/2 teaspoon coconut flavoring\n4 1/2 to 5 cups all-purpose flour"
+                "For the Filling/Glaze:\n1 1/2 cups coconut (sweetened shredded)\n4 tablespoons butter"
+                "1 can condensed milk\n1/2 cup cream\n12 teaspoon coconut flavoring\n1 pinch salt\n1 egg",
+                "steps": "1. Preheat the oven to 300 degrees.  Place the shredded coconut in a shallow baking dish " "and toast in the oven, stirring occasionally, until golden brown.  Once cool, place the coconut in a" "food processor and pulse briefly to finely chop (or chop by hand).  Set aside."
+                "2. Place the milk in a small saucepan with the cream of coconut and the "
+                "sugar. bring the mixture to a simmer, then remove from heat. "
+                "3. Place the butter in the bowl of a standing mixer fitted with the dough hook attachment. "
+                "Pour the warm milk and sugar mixture over the butter and let cool briefly."
+                "4. Add the eggs, 1 cup of flour, the salt, the vanilla, and the coconut flavoring, and mix on low "
+                "speed until flour is incorporated. Add 3 more cups of flour, 1 cup at a time, and mix well."
+                "5. Transfer dough to an oiled bowl and cover loosely. Set dough aside to rise in a warm place for about an hour. "
+                "6. Place the condensed milk, 3 tablespoons butter, cream, toasted coconut, and a pinch of salt into a small saucepan. "
+                "7. Shape the braided ring:  Turn dough out onto a lightly floured surface and divide the dough into 3 equal pieces. "
+                "8. Extend each piece of dough into a long cylinder by rolling it on the counter, "
+                "with your hands starting in the middle and rolling out to each side. "
+                "9. Loosely braid the 3 pieces of dough then attach the ends to form a ring. "
+                "10. Crack the egg into a small bowl and mix with 1 tablespoon of water.  Brush the egg wash over the braid.  "
+                "11. Bake the bread until it is golden brown and puffed, about 40-45 minutes.  "
+                "12. Serve warm or at room temperature. ",
+                "views": 6, "likes": 1, "image": "RoscaDeCoco.jpg"},
+                {"recipe_name": "Sausage and Egg Breakfast Casserole",
+                "short_description": "This overnight breakfast (or brunch) casserole is full of flavor, with eggs, bread, "
+                "sausage, cheese, and seasonings. It's the perfect egg casserole recipe for a holiday or weekend morning meal.",
+                "description": "One thing that makes this casserole and other similar casseroles so perfect for a busy "
+                "weekend or holiday morning is that it is prepared the night before. All you have to do in the morning "
+                "is remove it from the refrigerator, let it stand to warm up a bit, and then pop it into a preheated oven."
+                "Serve it along with fresh diced or sliced melon or grapes, or a warmed fruit compote mixture. "
+                "Sliced tomatoes go nicely with egg dishes as well.",
+                "ingredients": "7 slices white bread (crusts removed, or use Italian bread)\n1 tablespoon butter (softened)"
+                "1 pound ground sausage\n4 cups cheddar cheese (shredded)\n6 large eggs\n1 teaspoon salt"
+                "1 teaspoon dry mustard\n2 cups half and half (or milk)",
+                "steps": "1.Gather ingredients.\n2. Lightly butter each slice of bread and then cut the slices in half. "
+                "Arrange the bread slices in a 9-by-13-by-2-inch baking pan."
+                "3. In a large skillet or saute pan, brown the sausage. Use a spatula or spoon to break it up. Drain and pat with paper towels."
+                "Sprinkle the sausage over the bread. Top the sausage with the shredded cheese."
+                "4. In a mixing bowl, whisk together the eggs, salt, dry mustard, and the milk until well blended. Pour" "egg mixture over bread, sausage, and cheese."
+                "5. Cover the pan with foil and refrigerate overnight."
+                "6. Remove the casserole from the refrigerator and let it stand at room temperature for about 20 minutes."
+                "7. Preheat the oven to 350 F."
+                "8. Remove the foil from pan and bake the casserole for 45 minutes, or until it is bubbly around the edges "
+                "and lightly browned on top. It might take a bit longer if it's still quite cold. "
+                "9. Remove the breakfast casserole to a rack and let it stand for 15 to 20 minutes before serving."
+                "10. Serve and enjoy!",
+                "views": 18, "likes": 7, "image": "Sausage&EggBreakfastCasserole.jpg"},
+                {"recipe_name": "Venezuelan Perico",
+                "short_description": "Perico is a savory Venezuelan breakfast dish of scrambled eggs seasoned with "
+                "sauteed onions, tomatoes, and peppers. It's often served inside arepas, a "
+                "Venezuelan egg McMuffin of sorts.",
+                "description": "If you don't want to make arepas, serve with corn or poppyseed muffins, English "
+                "muffins or multigrain or whole wheat toast. A side of bacon or sausage, just like "
+                "with any egg dish, makes a nice addition for a weekend breakfast or brunch."
+                "Perico means parakeet in English. Some believe the name for this dish derives from "
+                "its colorful presentation of the red in the tomatoes, the green in the pepper and "
+                "the yellow of the eggs. Perico is made most often at home, and every family has its "
+                "own version it likes best, similar to omelets in the U.S.",
+                "ingredients": "4 to 6 eggs\n3 tablespoons cream\n2 tablespoons butter\n1 tablespoon vegetable oil"
+                "1 medium onion, chopped fine\n1 medium tomato, chopped fine\nOptional: 1 green pepper, chopped fine"
+                "Salt and pepper to taste",
+                "steps": "1. Whisk the eggs together with the cream. Set aside."
+                "2. Melt the butter with the oil in a large nonstick skillet."
+                "3. Add the chopped onions to the pan and saute over medium heat until they are translucent."
+                "4. Add the tomatoes and green pepper and cook over medium heat until soft, 8 to 10 minutes."
+                "5. Pour the egg and cream mixture into the skillet and cook gently, stirring them lightly and flipping them as they cook."
+                "6. Cook the eggs to the desired doneness and season with salt and pepper to taste."
+                "7. Serve warm with arepas or other bread choices.",
+                "views": 5, "likes": 2, "image": "VenezuelanPerico.jpg"} ]
+     africa_recipes = [
                 {"recipe_name": "Hausa Koko",
                 "short_description": "Hausa Koko, a soured and spicy smooth porridge.",
                 "description": "Hausa Koko is simply a thick flowing tasty solution made from millet with a few local spices added to give it a particular taste and colour.\n It is called “Hausa Koko” because of it’s popularity in the northern areas and is believed to have been first made by the Hausas. Sugar,milk and groundnuts are added to give it a very delicious taste.\n Hausa Koko is mostly served with “Koose”, a millet based paste which is made into balls and fried in vegetable oil.",
@@ -260,4 +378,3 @@ if __name__=='__main__':
 populate()
 
         
-
