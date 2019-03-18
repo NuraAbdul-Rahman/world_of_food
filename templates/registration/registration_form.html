@@ -1,0 +1,45 @@
+{% extends 'breakfast/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Home
+{% endblock %}
+{% block body_block %}
+{% if messages %}
+  {% for message in messages %}
+    {% if message.tag == error %}
+<div class="myAlert-top alert alert-danger" id="ss">
+  <a href="#" class="close" data-dismiss="alert">&times;</a>
+  <strong>Error!</strong> {{message}} <a href="{% url 'sign_in' %}"></a><br/>
+</div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if registered %}
+<div class="myAlert-top alert alert-success" id="ss">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong> Thank you for signing up <a href="{% url 'auth_login' %}">Proceed to Sign In.</a><br/>
+</div>
+ {% else %}
+<div class="container"> 
+        <div align="center">
+        <form class="formcontainer" id="user_form" method="post" action="{% url 'registration_register' %}">
+            <h1>Sign Up</h1>
+            <p style="text-align: center;">Please fill in this form to create an account.</p>
+            <hr>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <div class="clearfix">
+              <button type="button" class="cancelbtn" onclick="location.href='{% url 'home' %}'">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+        </form>
+      </div>
+  </div>
+ 
+{% endif %}
+{% endblock %}
