@@ -1,0 +1,31 @@
+{% extends 'breakfast/base.html' %}
+
+{% block body_block %}
+   
+    <form id="search" method="get" action="."> 
+        <div class="col-md-3">
+            <h4>Search for your favourite breakfasts!</h4><br>
+            <p>Just type in your favourite recipe, ingredients,
+                style or dietry requirment, to see what we have.</p>
+            <br>
+            <div>
+                {{ form.as_table }}
+            </div>
+            <div>
+                <input type="submit" value="Search">
+            </div>
+        </div>
+
+        {% if query %}
+            {% for result in page.object_list %}
+                <div class="col-md-3">
+                    {{ result.rendered|safe }}
+                </div>
+            {% empty %}
+                <div id="noneFound">
+                    No results found.
+                </div>
+            {% endfor %}
+        {% endif %}
+    </form>
+{% endblock %}

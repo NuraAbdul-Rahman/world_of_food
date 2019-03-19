@@ -17,12 +17,14 @@ class Continent(models.Model):
 
 
 class Recipe(models.Model):
+    text = models.CharField(max_length=12)
     recipe_name = models.CharField(max_length=128, unique=True)
     continent = models.ForeignKey(Continent)
     short_description = models.CharField(max_length=1280)
     description = models.CharField(max_length=1280)
     ingredients = models.CharField(max_length=1280)
     steps = models.CharField(max_length=1280)
+    labels = models.CharField(max_length=500)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     image = models.CharField(max_length=128)

@@ -42,8 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'haystack',
     'breakfast',
-    'registration'
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,7 @@ MEDIA_URL = '/media/'
 
 WSGI_APPLICATION = 'World_Of_Food.wsgi.application'
 
+SEARCH_URL='/search/'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -93,6 +95,15 @@ DATABASES = {
     }
 }
 
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'woosh_index')
+    }
+}
+
+#triggers real time update/delete of trigger model in search index
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

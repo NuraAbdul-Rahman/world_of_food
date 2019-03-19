@@ -1,0 +1,3 @@
+{{ object.recipe_name}}
+{{ object.short_description }}
+{{ object.ingredients }}
