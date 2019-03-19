@@ -9,15 +9,16 @@ from breakfast.models import Continent, Recipe
 def populate():
 
         north_america_recipes =[
-                {"recipe_name": "Pancakes",
+                {"text": "breakfast", "recipe_name": "Pancakes",
                 "short_description": "Some lovely pancakes",
                 "description": "Loads of lovely pancakes",
                 "ingredients": "panacakes",
                 "steps": "1. Make pancakes.\n2. Eat pancakes",
+                "keywords": "vegetarian",
                 "views": 0, "likes": 0, "image": "pancakes.jpg"} ]
 
         latin_america_recipes = [
-                {"recipe_name": "Ham and Cheese Empanadas",
+                {"text": "breakfast", "recipe_name": "Ham and Cheese Empanadas",
                 "short_description":"Although these are not traditional empanadas because they are made with puff "
                 "pastry dough, they are still very popular, especially for breakfast. They are often "
                 "shaped as a square, maybe to distinguish them from the classic round empanadas.",
@@ -41,8 +42,9 @@ def populate():
                 "12. Cover the ham and cheese with one of the plain rectangles, and firmly press down around the edges to seal."
                 "13. When ready to bake, prick the top of the empanadas several times with a fork, and brush tops lightly with the egg yolk mixture."
                 "14. Bake 20 minutes, or until puffed and golden brown.\n15. Serve hot or at room temperature.",
+                "keywords": "meat",
                 "views": 7, "likes": 3, "image": "Ham&Cheese Empanadas.jpg"},
-                {"recipe_name": "Homemade South American Arepas",
+                {"text": "breakfast", "recipe_name": "Homemade South American Arepas",
                 "short_description": "Arepas, a staple food in both Venezuela and Colombia, are corncakes that are \nmade from a special precooked corn flour. You can find this cornmeal/flour in Latin food "
                 "stores, labeled masarepa, or 'masa al instante.'",
                 "description": "Arepas are scrumptious slathered with butter or cream cheese for breakfast or as an accompaniment to any meal."
@@ -63,8 +65,9 @@ def populate():
                 "13. The thicker, Venezuelan-style arepas finish cooking in the oven. After they have formed a crust "
                 "and are just a bit browned, place them on a cookie sheet and heat for 8 to 10 minutes at 350 F."
                 "13. Serve both thin and thick arepas hot.",
+                "keywords": "vegetarian",
                 "views": 12, "likes": 5, "image": "HomemadeSouthAmericanArepas.jpg"},
-                {"recipe_name": "Rosca de Coco: Braided Coconut Ring",
+                {"text": "breakfast", "recipe_name": "Rosca de Coco: Braided Coconut Ring",
                 "short_description": "This sweet braided bread ring has a creamy coconut filling and sugary glaze. "
                 "The dough is buttery and brioche-like, similar to sweet roll dough, and is very easy to work with.",
                 "description": "In addition to a braided ring, the dough can be shaped in the same manner as "
@@ -94,8 +97,9 @@ def populate():
                 "10. Crack the egg into a small bowl and mix with 1 tablespoon of water.  Brush the egg wash over the braid.  "
                 "11. Bake the bread until it is golden brown and puffed, about 40-45 minutes.  "
                 "12. Serve warm or at room temperature. ",
+                "keywords": "vegetarian",
                 "views": 6, "likes": 1, "image": "RoscaDeCoco.jpg"},
-                {"recipe_name": "Sausage and Egg Breakfast Casserole",
+                {"text": "breakfast", "recipe_name": "Sausage and Egg Breakfast Casserole",
                 "short_description": "This overnight breakfast (or brunch) casserole is full of flavor, with eggs, bread, "
                 "sausage, cheese, and seasonings. It's the perfect egg casserole recipe for a holiday or weekend morning meal.",
                 "description": "One thing that makes this casserole and other similar casseroles so perfect for a busy "
@@ -118,8 +122,9 @@ def populate():
                 "and lightly browned on top. It might take a bit longer if it's still quite cold. "
                 "9. Remove the breakfast casserole to a rack and let it stand for 15 to 20 minutes before serving."
                 "10. Serve and enjoy!",
+                "keywords": "meat",
                 "views": 18, "likes": 7, "image": "Sausage&EggBreakfastCasserole.jpg"},
-                {"recipe_name": "Venezuelan Perico",
+                {"text": "breakfast", "recipe_name": "Venezuelan Perico",
                 "short_description": "Perico is a savory Venezuelan breakfast dish of scrambled eggs seasoned with "
                 "sauteed onions, tomatoes, and peppers. It's often served inside arepas, a "
                 "Venezuelan egg McMuffin of sorts.",
@@ -140,50 +145,57 @@ def populate():
                 "5. Pour the egg and cream mixture into the skillet and cook gently, stirring them lightly and flipping them as they cook."
                 "6. Cook the eggs to the desired doneness and season with salt and pepper to taste."
                 "7. Serve warm with arepas or other bread choices.",
+                "keywords": "vegetarian",
                 "views": 5, "likes": 2, "image": "VenezuelanPerico.jpg"} ]
         
         africa_recipes = [
-                {"recipe_name": "Hausa Koko",
+                {"text": "breakfast", "recipe_name": "Hausa Koko",
                 "short_description": "Hausa Koko, a soured and spicy smooth porridge.",
                 "description": "Hausa Koko is simply a thick flowing tasty solution made from millet with a few local spices added to give it a particular taste and colour.\n It is called “Hausa Koko” because of it’s popularity in the northern areas and is believed to have been first made by the Hausas. Sugar,milk and groundnuts are added to give it a very delicious taste.\n Hausa Koko is mostly served with “Koose”, a millet based paste which is made into balls and fried in vegetable oil.",
-                "ingredients": "1/2 cup corn dough \n 3 cups water (divided use)\n 1/4 teaspoon cloves \n 1/2 teaspoon ginger \n 1/4 teaspoon hot chili powder \n Optional: sugar to taste \n 1 pinch salt",
+                "ingredients": "1/2 cup corn dough \n 3 cups water (divided use)\n 1/4 teaspoon cloves \n 1/2 teaspoon ginger \n 1/4 teaspoon hot chilli powder \n Optional: sugar to taste \n 1 pinch salt",
                 "steps": "1. Gather the ingredients.Scoop about 1/2 a cup of corn dough and place into a pan.\n 2. Add 1 cup of cold water and crumble up the corn dough to make a smooth paste with the water. Turn on the heat to high and stir continuously.\n 3.Add 2 cups of boiling water to the pot and bring to the boil whilst stirring continuously. At this point, the corn dough begins to thicken and form gelatinous looking lumps. I normally keep a whisk handy to aid in the smoothing out of the porridge.\n 4. Add a pinch of salt, the ground cloves, ginger, and pepper. Stir and allow to simmer for 10 minutes on a low heat.\n 5. When ready to serve, pour into a bowl, add the desired amount of sugar and stir. For an added touch of luxury, pour in some evaporated milk.",
+                "keywords": "vegan",
                 "views": 20, "likes": 15, "image": "hausakoko.jpg"},
-                {"recipe_name": "Mahamri (Swahili Doughnuts)",
+                {"text": "breakfast", "recipe_name": "Mahamri (Swahili Doughnuts)",
                 "short_description": "These are perfect for breakfast with a cup of tea, and go really well as an accompaniment to many meals especially grilled meats.",
                 "description": "Mahamri is a favourite treat amongst Kenyan households especially in the coastal region.\n Mahamris are miniature with a bulging square or triangular dough which is fried until they attain a golden brown hue.\n They are great for breakfast when eaten with beans in coconut sauce or with a cup of chai.",
                 "ingredients": "3 cups plain flour \n 1 cup coconut milk powder \n 3/4 cup warm milk \n 1 teaspoon ground cardamom \n 1 tablespoon instant yeast \n 1/4 cup warm water \n 1/2 cup sugar \n Oil for deep frying",
                 "steps": "1. Mix the yeast, a pinch of sugar, a pinch of plain flour and the ¼ cup of warm water. Leave the yeast to rise (the addition of sugar and flour helps in the rising process). \n 2. Knead the flour, sugar, cardamom, coconut powder, warm milk and yeast mixture to form a smooth dough.\n 3. Let the dough rest in a warm place – preferably overnight or until double in size (the dough could rise in a few hours if you live in a warm climate).\n 4. Divide dough into 8 balls.\n 5. Roll each ball into a 6 inch circle and cut into quarters.\n 6. Pour the oil in a deep frying pan on medium heat. You want the oil hot enough when you start frying the dough.\n 7. Drop the three to four triangles into the hot oil. If the oil is hot enough the dough will quickly float to the top and puff up. \n 7. Turn the mahamri as soon as it is a light brown and turn.\n 8. Cook on the other side for another minute and remove from the deep fryer with a slated spoon.\n 8. The doughnuts should be a light golden brown.",
+                "keywords": "vegetarian, meat",
                 "views": 13, "likes": 10, "image": "mahamri.jpg"},
-                {"recipe_name": "Baked Plantains & Egg Muffin",
+                {"text": "breakfast", "recipe_name": "Baked Plantains & Egg Muffin",
                 "short_description": "Baked Plantain Frittata aka  plantain and eggs- A healthier  and delicious take on fried plantains and eggs",
                 "description": "Fried plantain and egg is one of my favorite weekend breakfast. It is one of the many traditional breakfasts found throughout West Africa.\n No one will ever guess that this nutritious, mouthwatering breakfast Frittata is lighter!\n Plantain makes  it a hearty, and the eggs and veggies pile on color and wonderful flavor.",
                 "ingredients": "1 tablespoon canola oil & 1/2 medium onion thinly sliced. \n 1 scotch bonnet pepper diced sub hot sauce \n 1/2 red/green bell pepper stem, ribs, and seeds removed, then thinly sliced in strips \n 1 small tomatoes \n 1 teaspoon minced garlic & 1 teaspoon Fresh thyme or any herb \n 2-3 ripe plantains \n Coarse salt & ground pepper \n 6 large eggs \n 1 avocado optional \n optional: 1/2 -1 cup sausage chopped",
                 "steps": "1. Adjust the oven rack to the middle position and preheat oven to 350 degrees F. Grease a 10- inch baking pan or muffin pan, set aside.\n 2. Using a sharp knife cut both ends off the plantain. This will make it easy to grab the skin of the plantains. Slit a shallow line down the long seam of the plantain, peel only as deep as the peel. Remove plantain peel by pulling it back. Slice the plantains into desired shape and size. \n 3. Place them on the baking sheets in a single layer; spray lightly over the plantains using the canola oil spray and bake, turning over slices, after 8 minutes for about 12- 20 minutes or till golden brown, depending on your oven. \n 4. While the plantains is baking, heat a medium sauce pan over medium high heat and drizzle with 1 Tablespoons of canola oil. Add the onions, tomatoes, green pepper and cook for about 4-5 minutes.\n 5. In a large bowl whisk eggs, add sauté vegetable mixture, season with salt and pepper according to preference.\n 6.Pour mixture into a greased 10-inch baking pan. Layer the baked plantains and sprinkle the parsley in the baking pan.\n 7. Bake in the oven for about 30-40 minutes; until mixture is firm in the center.\n 8. Let it cool for a few minutes; top with avocado if desired",
+                "keywords": "vegetarian, healthy",
                 "views": 33, "likes": 20, "image": "bakedPlantainFrittata.jpg"},
-                {"recipe_name": "Shakshuka",
+                {"text": "breakfast", "recipe_name": "Shakshuka",
                 "short_description": "Shakshuka is a popular breakfast in North Africa and the Middle East",
                 "description": "Braising eggs in a flavoursome, aromatic sauce is all the rage. It is warming and comforting, ideal for the morning when you are not normally up for a great culinary challenge.\n In North Africa they have known this dish for many years. There, according to region, they have many variations on this theme, with sauces varying in spiciness, sweetness and sharpness.\n You can add preserved lemon to your shakshuka, harissa paste, olives or a salty ewe's cheese. \n A spicy sausage – such as merguez or chorizo – is also suitable.",
                 "ingredients": "3 tbsp olive oil & 2 large onions, thinly sliced \n 2 red peppers, cut into long slices &2 green peppers, cut into long slices \n 4 garlic cloves, finely chopped \n 1/2 tsp cumin seeds & 1/2 tsp caraway seeds \n 1/2 tsp cayenne pepper & 1 tbsp tomato or red pepper purée \n 2 x 400g tins tomatoes & 1 small bunch fresh coriander, roughly chopped \n 1 small bunch fresh parsley, roughly chopped & 8 free-range eggs \n 85g/3oz feta, crumbled & 8 tbsp thick natural yoghurt or labneh \n salt & freshly ground black pepper",
                 "steps": "1. Preheat oven to 375°F.Heat the oil in a large heavy skillet, preferably cast iron, over medium heat. Add the onions and zucchini, and sauté for 8–10 minutes until tender. Add the garlic and cook for 1 minute, then add the cumin, paprika and cayenne, and cook for 1 more minute.\n 2. Add the tomatoes, salt and pepper and simmer until the tomatoes have thickened, about 10 minutes. Stir in the cheese. \n 3.Gently crack the eggs into the skillet, spreading them evenly over the tomatoes. Season with a pinch of coarse salt, if desired. Transfer the skillet to the oven and bake until eggs are just set, 7–8 minutes (they will continue to cook for a couple of minutes after you remove them from the oven). Sprinkle with the fresh herbs and serve immediately. \n 4. Do Ahead Or Delegate: Halve and slice the onion and zucchini, slice the garlic, combine the dry spices, chop the tomatoes, or fully prepare the recipe without the eggs and refrigerate or freeze it.\n 5.Flavor Booster: Use smoked paprika instead of regular paprika. Serve with hot pepper sauce such as Tabasco, sriracha or harissa, if you have it.",
+                "keywords": "vegetarian, spicy",
                 "views": 33, "likes": 25, "image": "shakshuka.jpg"},
-                {"recipe_name": "Injera",
+                {"text": "breakfast", "recipe_name": "Injera",
                 "short_description": "Injera is a Flat round fermented sourdough bread- bread like no other, with a unique, slightly spongy texture",
                 "description": "Injera is a Flat round fermented sourdough bread- bread like no other, with a unique, slightly spongy texture.\n Always present during mealtime, in countries like Ethiopia, Eritrea, Somalia, Yemen, Djibouti and Sudan with each country having it’s own variation.",
                 "ingredients": "1 cup corn flour \n 2 1/2 cup sorghum or whole wheat \n 1 Tablespoon sugar & 1 Tablespoon dry yeast \n 1 1/4 cup warm water \n 4 cups all purpose flour \n 6 teaspoons baking powder \n 4 teaspoons salt \n 1/4 cup sugar \n 4 cups warm water",
                 "steps": "1. Combine corn flour , sorghum or  whole wheat , sugar yeast and water , mix and let it rise for about an hour.\n 2. In Large bowl combine flour , salt, baking powder and sugar. \n 3. Add the starter mixture to the flour, thoroughly mix and start adding water a little at a time until water has been completely used up, thoroughly miss to eliminate any lumps. You may use the blender to aid in the process. \n 4. Let it rise for about 2 hours.",
+                "keywords": "vegan",
                 "views": 23, "likes": 20, "image": "injera.jpg"}]
 
         europe_recipes = [
-                {"recipe_name": "Bacon and eggs",
+                {"text": "breakfast","recipe_name": "Bacon and eggs",
                 "short_description": "Bacon served with eggs",
                 "description": "Bacon and Eggs",
                 "ingredients": "Bacon and eggs",
                 "steps": "1. Cook the bacon and the eggs",
+                "keywords": "meat",
                 "views": 0, "likes": 0, "image": "bacon.jpg"} ]
 
         asia_recipes = [
-                {"recipe_name": "Hong Kong Wonton Soup", 
+                {"text": "breakfast","recipe_name": "Hong Kong Wonton Soup", 
                 "short_description": "Wontons and dumplings are two similar types of food, "
                 "which are comprised of a square or round wrapper (a dough skin made of flour and water)"
                 "and fillings. Wontons can be boiled in a fragrant and watery broth, steamed in a bamboo "
@@ -217,8 +229,10 @@ def populate():
                 "over high heat. Add white ends of scallions/shallots if leftover from Wonton filling.\n2. Place lid on, bring to simmer then reduce to medium high and simmer" 
                 " for 5 - 10 minutes to allow the flavours to infuse. Pick garlic and ginger out before using.\n3. If using vegetables, blanch in the soup broth and place in serving bowl."
                 "\nASSEMBLE SOUP:\n1. Prepare noodles according to packet directions (if using noodles). Place in serving bowl with cooked wontons and blanched vegetables.\n"
-                "2. Ladle over soup. Serve!", "views": 10, "likes": 5, "image": "HongKong-WontonSoup.jpg"},
-                {"recipe_name": "Japanese Traditional Style Breakfast", 
+                "2. Ladle over soup. Serve!", 
+                "keywords": "meat",
+                "views": 10, "likes": 5, "image": "HongKong-WontonSoup.jpg"},
+                {"text": "breakfast", "recipe_name": "Japanese Traditional Style Breakfast", 
                 "short_description": "A traditional Japanese breakfast is likely different from any other kind of breakfast you'll ever experience. It consists of foods that make up"
                 "a complete meal that one could conceivably enjoy at lunch or dinner.",
                 "description": "Typically, a traditional Japanese breakfast consists of steamed rice, miso soup, a protein such as grilled fish, and various side dishes. Familiar side"
@@ -239,8 +253,9 @@ def populate():
                 "fold the curving section inwards to form a rectangle, and then fold the ends inwards until you have what looks like a little square package. This creates the distinctive layered effect, called tamagoyaki, "
                 "characteristic of a Japanese omelette.\n4. Flip the 'package' over and cook for a further two minutes. Cut into quarters.\nTo serve:\nJapanese etiquette decrees that you place the bowl of rice on your left "
                 "and the bowl of miso soup on your right. Serve the fish on a separate plate, the pickles in a small bowl, and the omelette on another small plate. Now test your hungover skills with chopsticks.",
+                "keywords": "meat, fish",
                 "views": 20, "likes": 13, "image": "JapaneseTraditionalStyleBreakfast.jpg"},
-                {"recipe_name": "Soy Milk and Chinese Fried Dough",
+                {"text": "breakfast", "recipe_name": "Soy Milk and Chinese Fried Dough",
                 "short_description": "This breakfast set usually appears together in Chinese socities. The two components soybean milk and fried dough are the most common breakfast combination. Some locals also like to have "
                 "deep-fried dough sticks with rice congee.",
                 "description": "Soybean milk is made with a blender. You can find freshly blended or boiled soy milk in disposable cups at most breakfast stalls. Deep-fried dough sticks are long, brown, deep-fried sticks of dough."
@@ -263,8 +278,9 @@ def populate():
                 "but you could also use tongs), and quickly roll the dough in a continuous motion for about a minute.\n8. You can fry one to two at a time. Just be sure to take the time to continuously roll the dough in the oil. The youtiao is done once they "
                 "turn light golden brown. Try not to over-fry them as they become unpleasantly crunchy rather than chewy and delicious.\n9. Now, repeat those steps with the remaining you tiao dough. You might want two people manning the process—one to form and place "
                 "the dough into the fryer and one to roll the dough around once it’s in the oil.\nEnjoy these!",
+                "keywords": "vegetarian",
                 "views": 8, "likes": 3, "image": "SoyMilkChineseFriedDough.jpg"},
-                {"recipe_name": "Taiwan Seafood Congee",
+                {"text": "breakfast", "recipe_name": "Taiwan Seafood Congee",
                 "short_description": "Congee is probably the most common mainstay of the Chinese breakfast. It is a mild-flavored rice porridge that has been cooked for a long time with plenty of water to soften the rice. To give the congee some flavor, it is usually "
                 "served with different toppings that vary by region. Here our toppings are a handful of dried scallop and a few pieces of shrimp.",
                 "description": "Seafood congee has such a rich flavor that you can hardly imagine it contains just water, and no chicken stock.\n The star of this dish is dried scallop (conpoy).\nDried scallop is made from the adductor muscles of scallops.Pungent and "
@@ -279,8 +295,9 @@ def populate():
                 "cooking with the pot half covered, until the congee achieves the desired thickness, 15 to 20 minutes. Be careful, the congee will get quite thick and sticky towards the end. Stand close to the pot and stir frequently. It will easily spill if covered too much "
                 "or if the heat is too high. The rice will stick to the bottom if you don't stir enough.\n7. When the congee is cooked, add shrimp and the remaining 1/4 teaspoon ginger. Stir a few times. Stop heat immediately. Add the remaining 1/4 teaspoon salt or salt to taste. "
                 "Stir well. Drizzle with sesame oil and scatter with green onion.\n8. Serve warm.\nThe nutrition facts are calculated based on 1 of the 4 servings generated by this recipe.",
+                "keywords": "meat, fish, seafood",
                 "views": 17, "likes": 10, "image": "TaiwanSeafoodCongee.jpg"},
-                {"recipe_name": "Thai Bananna Pancakes",
+                {"text": "breakfast", "recipe_name": "Thai Bananna Pancakes",
                 "short_description": "Most people know roti as an Indian savoury flatbread to mop up curries, but in Thailand it is often served as a sweet pastry. They are irresistible, especially when stuffed with banana and served with a good drizzle of sweetened condensed milk and a sprinkling of sugar.",
                 "description": "Thai roti is one of THE most popular snacks/desserts amongst visitors to Thailand! It can also served as breakfast.You can see roti carts at many tourist attractions around the country, and nowadays, vendors offer so many different filling options like bananas, "
                 "chocolate sauce, nutella, apples, etc. which, by the way, were not available when I was a kid, so roti has come a long way! If you go to non-touristy parts of Thailand you may still see some old-school roti vendors that still don’t offer many fancy fillings.\nNo one will ever "
@@ -304,18 +321,20 @@ def populate():
                 "don’t put too much or you won’t be able to cover it with the dough. Quickly fold the edges of the roti over the banana; don’t wait to long before folding or the dough will become stiff and hard to fold.\n4. Once the bottom side has browned slightly, flip and brown the other side. Keep flipping it back and forth about "
                 "every minute or so until both sides are well browned and crispy. Total cooking time should be about 4-5 minutes.\n5. If you wish, and add a little piece of butter beside the roti, then move the roti to coat it in this melted butter. Let it cook in this butter for about 30 seconds.\n6. Transfer roti onto a cutting board "
                 "and cut into 12-16 pieces.\n7. Use a bench scraper to place it onto a serving plate. Let it cool off a bit before eating cuz that banana is HOT!\n8. When ready to eat, drizzle condensed milk (or chocolate sauce) and sprinkle on some granulated sugar. Enjoy!",
+                "keywords": "vegetarian, healthy",
                 "views": 20, "likes": 13, "image": "ThaiBananaPancakes.jpg"} ]
         
         oceania_recipes = [
-                {"recipe_name": "Vegemite on Toast",
+                {"text": "breakfast", "recipe_name": "Vegemite on Toast",
                 "short_description": "No Aussie breakfast is complete without vegemite…that ubiquitous yeast mix that the rest of the world loves to hate. It is ours and ours alone. Spread onto a slice of hot toast, it is Australian all the way!",
                 "description": "Vegemite is a yeast extract obtained from the leftovers after brewing beer. It is essentially the same product as Marmite, but many people argue about which is better. For all intents and purposes, they are pretty similar in substance. While Australians will seriously caution against ever eating Vegemite on "
                 "its own, they will equally encourage how delicious it is when used properly. By learning the proper proportional use and what dishes are enhanced with Vegemite, you can learn to enjoy just as much as any Aussie.  If you often eat toast for breakfast but you get tired of the blandness of butter alone, or you want a salty "
                 "alternative to jam, Vegemite is a great alternative. It complements the blandness of butter very well while adding a rich, salty taste. ",
                 "ingredients": "Vegemite\nbread,\nbutter",
                 "steps": "1. Toast bread.\n2. Spead butter.\n3. Spread vegemite sparingly",
+                "keywords": "vegetarian",
                 "views": 18, "likes": 16, "image": "Vegemite.jpg"},
-                {"recipe_name": "Ricotta Hotcakes with Honeycomb Butter",
+                {"text": "breakfast", "recipe_name": "Ricotta Hotcakes with Honeycomb Butter",
                 "short_description": "Super, super tender and moist hotcakes that are sugar free and perfect for breakfast or brunch",
                 "description": "Unlike regular pancake batters where flour forms the bulk, these hotcakes get their body from ricotta and whipped egg whites. It keeps them sublimely light and tender but as I also said this morning whilst digging into a thick stack “They’re hella filling” (it’s all that protein!). I adapted the recipe a tiny "
                 "bit, using less ricotta than stated (just cos 1 1/2 tubs seemed excessive to me) and also by only partially mixing it in. That way you get little nuggets of creamy ricotta every so often. Turns out my suspicions were right about the honeycomb butter, it’s literally crushed honeycomb candy mixed with unsalted butter. For the "
@@ -327,8 +346,9 @@ def populate():
                 "jug and mix just a little (seriously like 3 stirs; you want tasty ricotta lumps). In a large bowl, whisk the egg whites until stiff. Pour the contents of the jug into the large bowl and fold in using a rubber spatula. There should be some lumps of ricotta throughout. Heat a large frying pan over a medium heat with enough vegetable "
                 "oil to coat the pan. Scoop about 1/3 cup of batter into the pan to make 1 hotcake (depending on the size of your pan you can cook around 2 or 3 at a time). Use a metal spatula to check when the underside of the hotcake is golden, then flip and cook on the other side until golden as well. Remove to a plate and serve warm with the "
                 "honeycomb butter, maple syrup and fresh fruit.",
+                "keywords": "vegetarian",
                 "views": 13, "likes": 10, "image": "RicottaHotcakes.jpg"},
-                {"recipe_name": "Corn Fritters with Avocardo Salsa",
+                {"text": "breakfast", "recipe_name": "Corn Fritters with Avocardo Salsa",
                 "short_description": "Not just another corn fritter – these are Bill Granger’s famous corn fritters! This really is restaurant quality food made in your own home. The flavour will knock your socks off!",
                 "description": "These are the legendary Bill Granger Corn Fritters with Avocado Salsa. The extra step that makes these corn fritters really special is blending some of the corn and cilantro (coriander) into the batter - it makes the whole fritter truly taste of corn, rather than just bursts of it when you bite into kernels. This recipe "
                 "makes 12 fritters and serves 4.",
@@ -338,6 +358,7 @@ def populate():
                 "through remaining corn, flour and baking powder until just combined.\n4. Heat 1 tablespoon of the oil in a skillet/fry pan over a medium high heat.\n5. When the oil is hot, drop 2 heaped tablespoons of mixture per fritter into the pan and cook in batches for 1 1/2 minutes each side, or until golden.\n6. Transfer to a baking tray and keep "
                 "warm in the oven while you are making the rest of the fritters.\n7.To serve, stack 3 corn fritters on each plate and top with avocado salsa and extra cilantro/coriander leaves if desired.\nAvocado Salsa:\nCombine all ingredients, toss very gently.\nRecipe Notes:\n1. Fresh corn is best but you can use defrosted frozen or well drained canned "
                 "corn kernels.\n2. Recipe very slightly adapted from this one by Bill Granger. The change I made was to stir through the flour after pureeing the corn because otherwise, there is a risk of over beating the flour which will make the fritters tough.",
+                "keywords": "vegetarian, healthy",
                 "views": 4, "likes": 4, "image": "CornFritters.jpg"}, ]
 
         Continents = {"North America": {"recipes": north_america_recipes},
@@ -350,7 +371,7 @@ def populate():
         for cont, cont_data in Continents.items():
                 c = add_continent(cont)
                 for r in cont_data["recipes"]:
-                        add_recipe(r["recipe_name"], c, r["short_description"], r["description"], r["ingredients"], r["steps"], r["views"], r["likes"], r["image"])
+                        add_recipe(r["recipe_name"], c, r["short_description"], r["description"], r["ingredients"], r["steps"], r["keywords"], r["views"], r["likes"], r["image"])
 
         for cont in Continent.objects.all():
                 for r in Recipe.objects.filter(continent=cont):
@@ -362,12 +383,13 @@ def add_continent(name, views=0):
         c.save()
         return c
 
-def add_recipe(recipe_name, continent, short_description, description, ingredients, steps, views, likes, image):
+def add_recipe(recipe_name, continent, short_description, description, ingredients, steps, keywords, views, likes, image):
         r = Recipe.objects.get_or_create(recipe_name=recipe_name, continent=continent)[0]
         r.short_description = short_description
         r.description = description
         r.ingredients = ingredients
         r.steps = steps
+        r.keywords = keywords
         r.views = views
         r.likes = likes
         r.image = image

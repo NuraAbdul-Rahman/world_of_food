@@ -17,19 +17,23 @@ class Continent(models.Model):
 
 
 class Recipe(models.Model):
+    text = models.CharField(max_length=12)
     recipe_name = models.CharField(max_length=128, unique=True)
     continent = models.ForeignKey(Continent)
     short_description = models.CharField(max_length=1280)
     description = models.CharField(max_length=1280)
     ingredients = models.CharField(max_length=1280)
     steps = models.CharField(max_length=1280)
+    keywords = models.CharField(max_length=500)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     image = models.CharField(max_length=128)
     slug = models.SlugField(unique=True)
+    continent_slug = models.SlugField()
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.recipe_name)
+        self.continent_slug = slugify(self.continent)
         super(Recipe, self).save(*args, **kwargs)
 
     def __str__(self):

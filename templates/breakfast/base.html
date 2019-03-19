@@ -34,7 +34,9 @@
             <ul class="nav navbar-nav">
               <li class="#"><a href="{% url 'home' %}"><strong>Home</strong></a></li>
               <li><a href="{% url 'about' %}"><strong>About</strong></a></li>
+              <li><a href="/search/"><strong>Search Recipes</strong></a></li>
               <li><a href="{% url 'contact_us' %}"><strong>Contact us</strong></a></li>
+              
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}

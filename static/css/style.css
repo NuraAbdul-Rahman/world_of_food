@@ -30,16 +30,16 @@ footer {
 
 #myCarousel {
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
 
 #carousel-pic {
     width: 40%;
-    height: 450px;
+    height: 400px;
 }
 #defaultcarousel-pic{
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
 
 .carousel-inner > .item > img{
@@ -83,6 +83,13 @@ footer {
     position: relative;
     width: 300px;
     height: 300px;
+    
+}
+
+#backButton {
+    float: right;
+    text-decoration: none;
+    padding: 8px 16px;
     
 }
 
@@ -261,4 +268,13 @@ input[type=password]:focus {
     top: 80px; 
     left:10%;
     width: 80%;
+}
+
+#search {
+    margin: 25px;
+}
+
+#noneFound{
+    margin-top: 25px;
+    color: red;
 }

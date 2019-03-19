@@ -1,0 +1,4 @@
+{{ object.recipe_name}}
+{{ object.continent }}
+{{ object.short_description }}
+{{ object.keywords }}

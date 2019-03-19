@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^accounts/register/$', views.BreakfastRegistrationView.as_view(), name='registration_register'),
+    url(r'^search/', include('haystack.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

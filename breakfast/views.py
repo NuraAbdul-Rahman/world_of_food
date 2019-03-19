@@ -10,6 +10,7 @@ from breakfast.forms import UserForm,UserProfileForm,ContinentForm,RecipeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
+
 # from registration.backends.simple.views import RegistrationView
 
 def home(request):
