@@ -22,9 +22,9 @@
             <hr>
             {% csrf_token %}
             {{ form.as_p }}
-            
-              <button type="button" class="cancelbtn" onclick="location.href='{% url 'home' %}'">Cancel</button>
-              <button type="submit" class="signupbtn">Sign In</button>
+            <div class="clearfix">
+            <button type="button" class="cancelbtn" onclick="location.href='{% url 'home' %}'">Cancel</button>
+            <button type="submit" class="signupbtn">Sign In</button>
             </div>
         </form>
         <p>
@@ -32,5 +32,5 @@
           <a href="{% url 'registration_register' %}">Sign Up</a> </p>
       </div> 
   </div>
-</div> 
+<!-- </div>  -->
 {% endblock %}
