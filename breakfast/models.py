@@ -24,14 +24,16 @@ class Recipe(models.Model):
     description = models.CharField(max_length=1280)
     ingredients = models.CharField(max_length=1280)
     steps = models.CharField(max_length=1280)
-    labels = models.CharField(max_length=500)
+    keywords = models.CharField(max_length=500)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     image = models.CharField(max_length=128)
     slug = models.SlugField(unique=True)
+    continent_slug = models.SlugField()
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.recipe_name)
+        self.continent_slug = slugify(self.continent)
         super(Recipe, self).save(*args, **kwargs)
 
     def __str__(self):

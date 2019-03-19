@@ -5,6 +5,7 @@ class ContinentAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 class RecipeAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('recipe_name',), 'continent_slug': ('continent',)}
     list_display = ('recipe_name', 'continent', 'short_description', 'views', 'likes')
 
 admin.site.register(Continent, ContinentAdmin)

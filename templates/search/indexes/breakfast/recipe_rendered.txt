@@ -1,4 +1,3 @@
-<a href="/breakfast/continent/{{ object.continent }}/{{ object.slug }}"><h4>{{ object.recipe_name}}</h4></a>
+<a href="/breakfast/continent/{{ object.continent_slug }}/{{ object.slug }}"><h4>{{ object.recipe_name}}</h4></a>
 <strong>{{ object.continent }}</strong>
 <p>{{ object.short_description }}</p>
-<p>{{ object.keywords }}</p>
