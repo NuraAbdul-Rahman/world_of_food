@@ -1,0 +1,3 @@
+django-registration-redux==1.4
+diango-haystack
+whoosh
