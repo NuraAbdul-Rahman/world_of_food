@@ -5,7 +5,7 @@
     Home
 {% endblock %}
 {% block body_block %}
-{% if messages %}
+<!-- {% if messages %}
   {% for message in messages %}
     {% if message.tag == error %}
 <div class="myAlert-top alert alert-danger" id="ss">
@@ -20,7 +20,7 @@
     <a href="#" class="close" data-dismiss="alert">&times;</a>
     <strong>Success!</strong> Thank you for signing up <a href="{% url 'auth_login' %}">Proceed to Sign In.</a><br/>
 </div>
- {% else %}
+ {% else %} -->
 <div class="container"> 
         <div align="center">
         <form class="formcontainer" id="user_form" method="post" action="{% url 'registration_register' %}">
@@ -40,6 +40,6 @@
         </form>
       </div>
   </div>
- 
+
 {% endif %}
 {% endblock %}
