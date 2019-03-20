@@ -9,15 +9,41 @@ from registration.backends.simple.views import RegistrationView
 from breakfast.forms import UserForm,UserProfileForm,ContinentForm,RecipeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from datetime import datetime
 
+def get_server_side_cookie(request, cookie, default_val=None):
+    val = request.session.get(cookie)
+    if not val:
+        val = default_val
+    return val
 
-# from registration.backends.simple.views import RegistrationView
+def visitor_cookie_handler(request):
+    visits = int(get_server_side_cookie(request, 'visits', '1'))
+
+    last_visit_cookie = get_server_side_cookie(request, 'last_visit', str(datetime.now()) )
+
+    last_visit_time = datetime.strptime(last_visit_cookie[:-7], "%Y-%m-%d %H:%M:%S")
+    
+    if (datetime.now() - last_visit_time).seconds > 0:
+        visits = visits + 1
+
+        request.session['last_visit'] = str(datetime.now())
+    else:
+        visits = 1
+        request.session['last_visit'] = last_visit_cookie
+    
+    request.session['visits'] = visits
 
 def home(request):
+    request.session.set_test_cookie()
     continent_list = Continent.objects.all()
     recipe_list = Recipe.objects.order_by('-likes')[:5]
     context_dict = {'continents': continent_list, 'recipes': recipe_list}
-    return render(request, 'breakfast/home.html', context_dict)
+    
+    visitor_cookie_handler(request)
+    context_dict['visits'] = request.session['visits']
+    response = render(request, 'breakfast/home.html', context_dict)
+    return response
 
 
 def about(request):
@@ -28,7 +54,6 @@ def contact_us(request):
     return render(request, 'breakfast/contact_us.html', {})
 
 def sign_in(request):
-    # return render(request, 'breakfast/sign_in.html', {})
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -56,7 +81,6 @@ def sign_out(request):
 
 
 def sign_up(request):
-    # return render(request, 'breakfast/sign_up.html', {})
     registered = False
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
@@ -150,7 +174,7 @@ def show_continent(request, continent_name_slug):
 
     try:
         continent = Continent.objects.get(slug=continent_name_slug)
-        recipe = Recipe.objects.filter(continent=continent)
+        recipe = Recipe.objects.filter(continent=continent).order_by('-views')
 
         context_dict['recipes'] = recipe
         context_dict['continent'] = continent
