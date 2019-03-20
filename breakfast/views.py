@@ -174,7 +174,7 @@ def show_continent(request, continent_name_slug):
 
     try:
         continent = Continent.objects.get(slug=continent_name_slug)
-        recipe = Recipe.objects.filter(continent=continent).order_by('-views')
+        recipe = Recipe.objects.filter(continent=continent)
 
         context_dict['recipes'] = recipe
         context_dict['continent'] = continent
