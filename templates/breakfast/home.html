@@ -3,8 +3,7 @@
     
     {% block title_block %} 
         Home 
-    {% endblock %} 
-    
+    {% endblock %}   
         {% block body_block %}
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -54,7 +53,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-8 text-center">
-                        <h3>Select a Continent To View Recipes</h3><br>
+                        <h3>Select a Continent To View Recipes</h3>
+                        <br>
                         <img id="mappic" src="{{ MEDIA_URL}}worldMap.jpg" alt="worldMap" usemap="#worldMap">
                         <map name="worldMap">
                          {% if continents %} 
@@ -78,6 +78,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>Getting Started</h3><br>
+                        <br>
                         <div class="well" id="getStarted">
                             <p> Hover your mouse on any of the continents</p>
                             <p>Click on a continent to get to its recipe page</p>

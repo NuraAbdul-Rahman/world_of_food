@@ -12,9 +12,9 @@
         </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{% static "css/style.css" %}">
         <script src="{% static "js/breakfast.js" %}"></script>
@@ -36,7 +36,21 @@
               <li><a href="{% url 'about' %}"><strong>About</strong></a></li>
               <li><a href="/search/"><strong>Search Recipes</strong></a></li>
               <li><a href="{% url 'contact_us' %}"><strong>Contact us</strong></a></li>
-              
+              <!-- <li>
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="about-us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Continents
+                      <span class="caret"></span>
+                      </button>
+                      
+                      <ul class="dropdown-menu" aria-labelledby="about-us">
+                          {% if continents %} 
+                            {% for continent in continents %}
+                              <li><a href="{% url 'show_continent' continent.slug %}">{{continent.name}}</a></li>
+                        {% endfor %} 
+                      {% endif %}
+
+                      </ul>
+              </li>   -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
@@ -46,9 +60,9 @@
               <li><li><a href="{% url 'auth_login' %}"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li></li>
                 {% endif %}
             </ul>
-            <form class="navbar-form navbar-right" role="search" style="width: 500px;">
+            <!-- <form class="navbar-form navbar-right" role="search" style="width: 400px;">
                 <div class="form-group input-group">
-                  <input type="text" class="form-control" placeholder="Search.." style="width: 400px;">
+                  <input type="text" class="form-control" placeholder="Search.." style="width: 300px;">
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="button">
                       <span class="glyphicon glyphicon-search"></span>
@@ -56,7 +70,7 @@
                   </span>        
                 </div>
               </form>
-              <ul></ul>
+              <ul></ul> -->
           </div>
         </div>
       </nav>
@@ -67,9 +81,9 @@
       <div>
         <br> 
       </div>
-      <!-- <footer class="container-fluid text-center">
+      <footer class="container-fluid text-center">
         <p>World of Breakfast</p>
         <p>"Start your day the global way"</p>
-      </footer> -->
+      </footer>
     </body> 
 </html>

@@ -23,8 +23,8 @@
             {% csrf_token %}
             {{ form.as_p }}
             <div class="clearfix">
-            <button type="button" class="cancelbtn" onclick="location.href='{% url 'home' %}'">Cancel</button>
-            <button type="submit" class="signupbtn">Sign In</button>
+            <button id="st" type="button" class="cancelbtn" onclick="location.href='{% url 'home' %}'">Cancel</button>
+            <button id="st" type="submit" class="signupbtn">Sign In</button>
             </div>
         </form>
         <p>
