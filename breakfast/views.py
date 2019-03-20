@@ -10,17 +10,46 @@ from breakfast.forms import UserForm,UserProfileForm,ContinentForm,RecipeForm,Co
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core.mail import send_mail
+from datetime import datetime
 
+def get_server_side_cookie(request, cookie, default_val=None):
+    val = request.session.get(cookie)
+    if not val:
+        val = default_val
+    return val
 
+def visitor_cookie_handler(request):
+    visits = int(get_server_side_cookie(request, 'visits', '1'))
 
+    last_visit_cookie = get_server_side_cookie(request, 'last_visit', str(datetime.now()) )
 
-# from registration.backends.simple.views import RegistrationView
+    last_visit_time = datetime.strptime(last_visit_cookie[:-7], "%Y-%m-%d %H:%M:%S")
+    
+    if (datetime.now() - last_visit_time).seconds > 0:
+        visits = visits + 1
+
+        request.session['last_visit'] = str(datetime.now())
+    else:
+        visits = 1
+        request.session['last_visit'] = last_visit_cookie
+    
+    request.session['visits'] = visits
+
+def base(request):
+    continent_list = Continent.objects.all()
+    context_dict = {'continents': continent_list}
+    return render (request, 'breakfast/base.html, context_dict')
 
 def home(request):
+    request.session.set_test_cookie()
     continent_list = Continent.objects.all()
     recipe_list = Recipe.objects.order_by('-likes')[:5]
     context_dict = {'continents': continent_list, 'recipes': recipe_list}
-    return render(request, 'breakfast/home.html', context_dict)
+    
+    visitor_cookie_handler(request)
+    context_dict['visits'] = request.session['visits']
+    response = render(request, 'breakfast/home.html', context_dict)
+    return response
 
 
 def about(request):
@@ -39,16 +68,11 @@ def contact_us(request):
             send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
             messages.info(request,'Thanks for  contacting us!')
             return HttpResponseRedirect(reverse('contact_us'))
-            # return HttpResponse('Thanks for contacting us!')
-
     else:
         form = ContactForm()
-
     return render(request, 'breakfast/contact_us.html', {'form': form})
-    # return render(request, 'breakfast/contact_us.html', {})
 
 def sign_in(request):
-    # return render(request, 'breakfast/sign_in.html', {})
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -76,7 +100,6 @@ def sign_out(request):
 
 
 def sign_up(request):
-    # return render(request, 'breakfast/sign_up.html', {})
     registered = False
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
@@ -195,7 +218,7 @@ def show_recipe(request, continent_name_slug, recipe_name_slug):
         
     return render(request, 'breakfast/recipe.html', context_dict)
 
-
+@login_required
 def add_recipe(request):
     form = RecipeForm()
     if request.method == 'POST':
@@ -205,17 +228,18 @@ def add_recipe(request):
             return home(request)
         else:
             print(form.errors)
-    return render(request, 'breakfast/recipe.html', {'form': form})
-
-# def contact_us(request):
-#     if request.method == 'POST':
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             # send email code goes here
-#             return HttpResponse('Thanks for contacting us!')
-#     else:
-#         form = ContactForm()
-
-#     return render(request, 'breakfast/contact-us.html', {'form': form})
+    return render(request, 'breakfast/add_recipe.html', {'form': form})
    
-
+@login_required
+def like_recipe(request):
+    recipe_id = None
+    if request.method == 'GET':
+        recipe_id = request.GET['recipe_id']
+        likes = 0
+        if recipe_id:
+            recipe = Recipe.objects.get(id=int(recipe_id))
+            if recipe:
+                likes = recipe.likes + 1
+                recipe.likes = likes
+                recipe.save()
+        return HttpResponse(likes)

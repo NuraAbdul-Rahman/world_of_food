@@ -186,13 +186,76 @@ def populate():
                 "views": 23, "likes": 20, "image": "injera.jpg"}]
 
         europe_recipes = [
-                {"text": "breakfast","recipe_name": "Bacon and eggs",
-                "short_description": "Bacon served with eggs",
-                "description": "Bacon and Eggs",
-                "ingredients": "Bacon and eggs",
-                "steps": "1. Cook the bacon and the eggs",
+                {"text": "breakfast","recipe_name":"Churros",
+                "short_description": "Have you ever tried ‘Churros’? No idea what we’re talking about?",
+                "description": "A ‘Churro’ – sometimes referred to as a Spanish doughnut – \nis a popular fried dough snack which is normally eaten for breakfast accompanied\n by a bowl of thick hot chocolate or a good café con leche. ",
+                "ingredients": " 250ml water, \n2 1/2 tablespoons caster sugar, \n1/2 teaspoon salt, \n 2 tablespoons vegetable oil,\n 125g plain flour,\n 2 litres oil for frying,\n 100g caster sugar, \nor to taste 1 teaspoon ground cinnamon ",
+                "steps": "1. In a small saucepan over medium heat, combine water, \n2 1/2 tablespoons sugar, salt and 2 tablespoons vegetable oil.\n Bring to the boil and remove from heat.\n Stir in flour until mixture forms a ball. "
+                "2. Heat oil for frying in deep-fryer or deep frying pan to 190 C. \nPipe strips of dough into hot oil using a pastry bag. \nFry until golden; drain on kitchen paper. "
+                "3. Combine 100g sugar and cinnamon. Roll warm churros in cinnamon and sugar mixture. ",
+                "keywords": "vegen",
+                "views": 5, "likes": 2, "image": "Eur_Churros.jpg"},  
+                {"text": "breakfast","recipe_name":"Frittata",
+                "short_description": "Filled with onions, potatoes, olives, and cheese, this one-pan meal will be an instant hit",
+                "description": "Frittata is an egg-based Italian dish similar to an omelette or crustless quiche or scrambled eggs\n, enriched with additional ingredients such as meats, cheeses or vegetables. \nThe word frittata is Italian and roughly translates to 'fried'.",
+                "ingredients": "1/4 cup olive oil,\n 1 medium yellow onion, cut into 1/8-inch slices,\n 1-1/2 tsp. salt,\n 1-1/2 pounds red potatoes, \n8 large eggs, beaten, \n1/2 cup chopped green olives,\n1/4 Lbs. aged Manchego cheese, sliced thin",
+                "steps": "1. Preheat oven to 350°F.,"
+                "2. In a large skillet, sauté the onion in 2 Tbsp. of oil and 1/2 tsp. salt until they are translucent.\n Using a spatula, scoop the pieces out of the frying pan into a bowl, and set them aside. "
+                "3. Add 2 more Tbsp. of oil to the pan and turn on medium-high heat. \nCook potatoes in even layers and batches for about 10 minutes per batch, or until the potatoes are soft. \nSalt and pepper the cooking potatoes to taste. As the batches cook and get done, add them to the bowl of cooked onions. "
+                "4. Once all the potatoes are cooked, crack the eggs into the bowl and add the olives. Stir gently with a whisk. "
+                "5. Wipe out the skillet and place it back over medium-high heat. "
+                "6. Heat the remaining olive oil in the skillet and add half of the potato-onion-egg mixture to the heated pan.\n Smooth the layer with the back of a spoon and add the sliced cheese.\n Pour the remaining egg mixture over the cheese. "
+                "7. Cook the eggs without stirring for about 10 minutes, then transfer the skillet to the oven to bake until the eggs are set. This will take about 25 minutes. "
+                "8. After the eggs are set, turn your oven up to broil to brown the top of the tortilla, then take the pan out of the oven and invert to drop the cooked tortilla out. "
+                "9. Cut into wedges and serve hot with coffee and rolls.",
+                "keywords": "vegetarian",
+                "views": 15, "likes": 5, "image": "Eur_Fritatta.jpg"},
+                {"text": "breakfast","recipe_name": "Oatmeal Porridge",
+                "short_description": "This healthy oatmeal recipe is one of the easiest"
+                "and most delicious breakfasts you will ever make!",
+                "description": "This porridge is just right. "
+                "Cooking with half milk, half water is enough to make it feel rich and loving, "
+                "without slogging you down first thing in the morning.",
+                "ingredients": "1. 1 1/2 cups water,\n 1 1/2 teaspoons Maldon,\n or other flaky sea salt,\n 1/2 cup rolled oats\n \n1/2 cup steel-cut oats,\n 2 tablespoons sugaror maple syrup",
+                "steps": "1. Combine the milk, water, and salt in a medium pot and set over high heat. \nAs soon as the liquid comes to a gentle simmer, add both kinds of oats and lower the heat to medium."
+                "2. Cook the oats at a steady simmer, stirring frequently and lowering the heat as necessary to maintain the simmer.\n 3. After about 20 minutes at the simmer, the rolled oats will have turned a bit mushy,\n while the steel-cut oats will be just tender and pop when you bite them.\n"
+                "4. Taste for seasoning - it should be on the salty side. Add sugar or syrup. \nSpoon the porridge into warm bowls and let it sit for a minute. \nThen carefully pour a little cold milk around the edges of each bowl, so it pools all the way round. \nSprinkle a five-fingered pinch of sugar or drizzle the syrup in the center of each and let it melt, then serve right away.",
+                "keywords": "vegetarian",
+                "views": 12, "likes": 6, "image": "Eur_Oatmel_Porridge.jpg"},
+                {"text": "breakfast","recipe_name": "Full English Breakfast",
+                "short_description": "The traditional English breakfast is a national institution.",
+                "description": "Throughout Britain and Ireland, the full breakfast is well known. It is not usually eaten every day but saved for weekends and holidays.",
+                "ingredients": "Per person, allow: 2 sausages \n 2-3 rashers of bacon,\n 2 flat mushrooms,\n 1-2 ripe tomatoes,\n 1 thick slice of black pudding,\n 1 large egg, 1 slice of bread",
+                "steps": "1. Heat the flat grill plate over a low heat, on top of 2 rings/flames if it fits, and brush sparingly with light olive oil."
+                "2. Cook the sausages first. Add the sausages to the hot grill plate the coolest part if there is one and allow to cook slowly for about 15-20 minutes,\n turning occasionally, until golden. After the first 10 minutes, increase the heat to medium before beginning to cook the other ingredients. \nIf you are struggling for space, completely cook the sausages and keep hot on a plate in the oven."
+                "3. Snip a few small cuts into the fatty edge of the bacon. \nPlace the bacon straight on to the grill plate and fry for 2-4 minutes each side or until your preferred crispiness is reached. \nLike the sausages, the cooked bacon can be kept hot on a plate in the oven."
+                "4. For the mushrooms, brush away any dirt using a pastry brush and trim the stalk level with the mushroom top.\n Season with salt and pepper and drizzle over a little olive oil. \nPlace stalk-side up on the grill plate and cook for 1-2 minutes before turning and cooking for a further 3-4 minutes. \nAvoid moving the mushrooms too much while cooking, as this releases the natural juices, making them soggy."
+                "5. For the tomatoes, cut the tomatoes across the centre/or in half lengthways if using plum tomatoes, and with a small, sharp knife remove the green 'eye'. \nSeason with salt and pepper and drizzle with a little olive oil. \nPlace cut-side down on the grill plate and cook without moving for 2 minutes. Gently turn over and season again. \nCook for a further 2-3 minutes until tender but still holding their shape."
+                "6. For the black pudding, cut the black pudding into 3-4 slices and remove the skin. Place on the grill plate and cook for 1½-2 minutes each side until slightly crispy."
+                "7. For 'proper' fried bread it's best to cook it in a separate pan. Ideally, use bread that is a couple of days old. \nHeat a frying pan to a medium heat and cover the base with oil. Add the bread and cook for 2-3 minutes each side until crispy and golden. \nIf the pan becomes too dry, add a little more oil. For a richer flavour, add a knob of butter after you turn the slice."
+                "8. For the fried eggs, break the egg straight into the pan with the fried bread and leave for 30 seconds.\n Add a good knob of butter and lightly splash/baste the egg with the butter when melted. \nCook to your preferred stage, season and gently remove with a fish slice."
+                "9. Once all the ingredients are cooked, serve on warm plates and enjoy straight away with a good squeeze of tomato ketchup or brown sauce.",
                 "keywords": "meat",
-                "views": 0, "likes": 0, "image": "bacon.jpg"} ]
+                "views": 8, "likes": 4, "image": "Eur_English_Breakfast.jpg"},
+                {"text": "breakfast","recipe_name":"Pain au Chocolat",
+                "short_description": "An easy way to start your day",
+                "description": "Pain au chocolat, literally chocolate bread; also known as chocolatine in the south-west part of France and in Canada, \nis a type of viennoiserie sweet roll consisting of a cuboid-shaped piece of yeast-leavened laminated dough, \nsimilar in texture to a puff pastry, with one or two pieces of dark chocolate in the centre ",
+                "ingredients": "500g Very strong white bread flour,\n 1 tsp Salt,\n 1 Easy bake yeast sachet ((7g)), \n75g Unrefined golden caster sugar, \n 270ml Water, \n 350g Butter (unsalted),\n 250g Plain chocolate (70% cocoa)",
+                "steps": "1. Mix together the flour, salt, sugar, yeast and water in a mixing bowl to form a firm dough.\n Knead for 10 minutes by hand or 5 minutes in an electric mixer bowl using a dough hook."
+                "2. Remove the butter from the fridge and warm very slightly so that it can be flattened out into a rough rectangle about 1-2cm thick."
+                "3. Roll out the dough into a rectangle roughly three times the size of the butter. "
+                "4. Place the butter on top of the dough, making sure it only covers two-thirds of it. "
+                "5. Fold the third of the dough that's not covered by the butter over the butter-covered dough. You will be left with a third of the butter-covered dough exposed.\n Fold that back onto the dough, layering the dough and the butter."
+                "6. Roll the butter and dough layers with a rolling pin to press them down. Cover and chill in the refrigerator for 15 minutes. "
+                "7. Take the dough butter mix out of the fridge, place the short end towards you and roll out the dough into a rectangular shape, approximately 15mm thick.\n Repeat the folding "
+                "8. Repeat the folding and chilling process two more times so that you have rolled and folded 4 times. Wrap loosely in cling film and chill in the fridge for a couple of hours or overnight. \nRoll out the chilled dough to a large rectangle the thickness of a pound coin."
+                "9. Cut the dough into 12 x 12cm squares."
+                "10. Using a sharp knife, cut the chocolate into 12 lengths (don't worry if it shatters a little). Arrange a row of chocolate along one edge of each piece of dough and roll the dough over forming a sausage"
+                "11. Place the pain au chocolat on a baking sheet lined with greaseproof paper. Cover with oiled cling film and leave to prove for 1 hour. "
+                "12. Preheat the oven to 220°C (fan 200°C, gas mark 7). Bake the pain au chocolat for 15-20 minutes until risen and golden. Serve warm.",
+                "keywords": "vegetarian",
+                "views": 20, "likes": 10, "image": "Eur_Pain_au_Chocolate.jpg"}
+                ]
 
         asia_recipes = [
                 {"text": "breakfast","recipe_name": "Hong Kong Wonton Soup", 
