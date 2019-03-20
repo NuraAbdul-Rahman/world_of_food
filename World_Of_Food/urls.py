@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^accounts/register/$', views.BreakfastRegistrationView.as_view(), name='registration_register'),
     url(r'^search/', include('haystack.urls')),
+    url(r'^like/$', views.like_recipe, name='like_recipe'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

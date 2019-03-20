@@ -13,6 +13,11 @@ from django.contrib import messages
 
 # from registration.backends.simple.views import RegistrationView
 
+def base(request):
+    continent_list = Continent.objects.all()
+    context_dict = {'continents': continent_list}
+    return render (request, 'breakfast/base.html, context_dict')
+
 def home(request):
     continent_list = Continent.objects.all()
     recipe_list = Recipe.objects.order_by('-likes')[:5]
@@ -175,7 +180,7 @@ def show_recipe(request, continent_name_slug, recipe_name_slug):
         
     return render(request, 'breakfast/recipe.html', context_dict)
 
-
+@login_required
 def add_recipe(request):
     form = RecipeForm()
     if request.method == 'POST':
@@ -185,6 +190,18 @@ def add_recipe(request):
             return home(request)
         else:
             print(form.errors)
-    return render(request, 'breakfast/recipe.html', {'form': form})
+    return render(request, 'breakfast/add_recipe.html', {'form': form})
    
-
+@login_required
+def like_recipe(request):
+    recipe_id = None
+    if request.method == 'GET':
+        recipe_id = request.GET['recipe_id']
+        likes = 0
+        if recipe_id:
+            recipe = Recipe.objects.get(id=int(recipe_id))
+            if recipe:
+                likes = recipe.likes + 1
+                recipe.likes = likes
+                recipe.save()
+        return HttpResponse(likes)
