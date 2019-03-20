@@ -13,12 +13,12 @@ urlpatterns=[
     url(r'^sign_out/$', views.sign_out, name='sign_out'),
     # url(r'^restricted/', views.restricted, name='restricted'),
     url(r'^continent/(?P<continent_name_slug>[\w\-]+)/$',
-        views.show_continent, 
+        views.show_continent,
         name='show_continent'),
    
     url(r'^continent/(?P<continent_name_slug>[\w\-]+)/(?P<recipe_name_slug>[\w\-]+)/$',
         views.show_recipe, 
         name='show_recipe'),
 
-    
+    url(r'^add_recipe/$', views.add_recipe, name='add_recipe'),
 ]

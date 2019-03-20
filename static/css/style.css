@@ -5,6 +5,17 @@
     height: 60px;
     background-color: #00394d;
 }
+
+#toastLogo {
+    height: 50px;
+    width: 50px;
+}
+
+#siteTitle {
+    font-size: 2em;
+    color: #f1f1f1;
+}
+
 .myAcc{
     background-color: #00394d;
 }

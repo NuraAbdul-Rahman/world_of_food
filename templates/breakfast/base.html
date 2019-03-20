@@ -4,6 +4,7 @@
 {% load staticfiles %}
 <html> 
     <head>
+        <link rel="shortcut icon" type="image/png" href="{% static "images/toastFav.ico" %}"/>
         <title> 
             Breakfast -
             {% block title_block %}
@@ -21,19 +22,33 @@
     </head> 
     <body>
       <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
+        <div class="container-fluid">          
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
-            <li class="active"><a class="navbar-brand" href="{% url 'home' %}" style="background-color: #00394d;"><strong>World of Breakfast</strong></a></li>
+            <!--<img id="toastLogo"class="pull-left" src="{% static "images/toast.png" %}" href="{% url 'home' %}">-->
+            <a class="navbar-brand" id="siteTitle"><strong>World of Breakfast</strong></a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
               <li class="#"><a href="{% url 'home' %}"><strong>Home</strong></a></li>
               <li><a href="{% url 'about' %}"><strong>About</strong></a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><strong>Continents</strong><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <!--urls are hard coded here as it was not possible to create a url pattern for base whos scope was all project urls-->
+                <!--but continent names are unlikely to change any time soon, so this is acceptable-->
+                      <li><a href="/breakfast/continent/north-america/">North America</a></li>
+                      <li><a href="/breakfast/continent/latin-america/">Latin America</a></li>
+                      <li><a href="/breakfast/continent/africa/">Africa</a></li>
+                      <li><a href="/breakfast/continent/europe/">Europe</a></li>
+                      <li><a href="/breakfast/continent/asia/">Asia</a></li>
+                      <li><a href="/breakfast/continent/oceania/">Oceania</a></li>
+                      <li><a href="#">Antartica</a></li>
+                </ul>
+              </li>
               <li><a href="/search/"><strong>Search Recipes</strong></a></li>
               <li><a href="{% url 'contact_us' %}"><strong>Contact us</strong></a></li>
               
@@ -46,17 +61,6 @@
               <li><li><a href="{% url 'auth_login' %}"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li></li>
                 {% endif %}
             </ul>
-            <form class="navbar-form navbar-right" role="search" style="width: 500px;">
-                <div class="form-group input-group">
-                  <input type="text" class="form-control" placeholder="Search.." style="width: 400px;">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">
-                      <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                  </span>        
-                </div>
-              </form>
-              <ul></ul>
           </div>
         </div>
       </nav>

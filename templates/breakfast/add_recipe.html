@@ -1,0 +1,28 @@
+{% extends 'breakfast/base.html' %}
+    {% load staticfiles %}
+
+    {% block title_block %}
+        Add Recipe
+    {% endblock %}
+
+    {% block body_block %}
+        <body>
+                <h3>Upload a new recipe</h3>
+            <div>
+                <form id="recipe_form" method="post" action="{% url 'add_recipe' %}">
+                    {% csrf_token %}
+                    {% for hidden in form.hidden_fields %}
+                        {{ hidden }}
+                    {% endfor %}
+                    {% for field in form.visible_fields %}
+                        <div>
+                            {{ field }}
+                            {{ field.help_text }}
+                            {{ field.errors }}
+                        </div>
+                    {% endfor %}
+                    <input type="submit" name="submit" value="Upload Recipe" />
+                </form>
+            </div>
+        </body>
+    {% endblock %}
