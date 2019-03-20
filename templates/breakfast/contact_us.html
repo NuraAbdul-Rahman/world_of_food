@@ -11,6 +11,7 @@
 <div>
 <h1 class="page-header text-center" > Contact Us</h1>
 </div>
+
 <div id="contact" class="container-fluid bg-grey">
         <br>
         <div class="row">
@@ -23,21 +24,35 @@
           </div>
           <div class="col-sm-7 slideanim">
             <div class="row">
+            <form   id="contact_form" method="post">
+                {% csrf_token %}
               <div class="col-sm-6 form-group">
-                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                  <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
               </div>
-              <div class="col-sm-6 form-group">
-                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-              </div>
-            </div>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="8"></textarea><br>
-            <div class="row">
-              <div class="col-sm-12 form-group">
-                <button class="btn btn-primary pull-right" type="submit">Send</button>
-              </div>
-            </div>
+              <textarea class="form-control" id="comments" name="message" placeholder="Message" rows="8"></textarea><br>
+                <div class="col-sm-12 form-group">
+
+                <input class="btn btn-primary pull-right" type="submit" value="Send" />
+                </div>
+            </form>
           </div>
         </div>
       </div>
+       {% if messages %}
+                {% for message in messages %}
+                  <!-- {% if message.tag == error %} -->
+                <div class="myAlert-top alert alert-success" id="ss">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <strong>Success!</strong> {{message}} <a href="{% url 'sign_in' %}"></a><br/>
+                </div>
+                  <!-- {% endif %} -->
+                {% endfor %}
+                {% endif %}
+
+      
 
 {% endblock %}
