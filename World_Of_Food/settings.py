@@ -157,4 +157,6 @@ LOGIN_URL = '/accounts/login/'
 #Media files
 MEDIA_ROOT= MEDIA_DIR
 MEDIA_URL= '/media/'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 

@@ -176,6 +176,14 @@ hr {
     width: 100%;
     opacity: 0.9;
 }
+#st{
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9; 
+}
 
 button:hover {
     opacity: 1;
@@ -195,6 +203,7 @@ button:hover {
 .signupbtn {
     float: left;
     color: white;
+    /* width:50%; */
 }
 
 .signupbtn {
@@ -274,6 +283,14 @@ input[type=password]:focus {
     width: 100%;
     height: 550px;
 }
+#searchdetails{
+    width: 100%;
+    height:300px ;
+}
+#searchBar{
+    width: 100%;
+    height:500px ; 
+}
 .myAlert-top{
     position: fixed;
     top: 80px; 
@@ -289,3 +306,20 @@ input[type=password]:focus {
     margin-top: 25px;
     color: red;
 }
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropup .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+

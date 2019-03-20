@@ -24,6 +24,13 @@
             <p> You also get a chance to engage with our community of users</p>
            </div>
             <p></p>
+            {% if continents %} 
+                            {% for continent in continents %}
+                              <a href="{% url 'show_continent' continent.slug %}">{{continent.name}}</a>
+                      
+                        {% endfor %} 
+                      {% endif %}
+                      
       <div class="col-sm-2"> 
             <img id="about-pic" src="{{ MEDIA_URL}}about1.jpg" alt="Image">  
             <p></p>

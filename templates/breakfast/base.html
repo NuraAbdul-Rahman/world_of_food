@@ -13,9 +13,9 @@
         </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{% static "css/style.css" %}">
         <script src="{% static "js/breakfast.js" %}"></script>
@@ -51,7 +51,6 @@
               </li>
               <li><a href="/search/"><strong>Search Recipes</strong></a></li>
               <li><a href="{% url 'contact_us' %}"><strong>Contact us</strong></a></li>
-              
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
@@ -71,9 +70,9 @@
       <div>
         <br> 
       </div>
-      <!-- <footer class="container-fluid text-center">
+      <footer class="container-fluid text-center">
         <p>World of Breakfast</p>
         <p>"Start your day the global way"</p>
-      </footer> -->
+      </footer>
     </body> 
 </html>
