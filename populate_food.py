@@ -9,13 +9,81 @@ from breakfast.models import Continent, Recipe
 def populate():
 
         north_america_recipes =[
-                {"text": "breakfast", "recipe_name": "Pancakes",
-                "short_description": "Some lovely pancakes",
-                "description": "Loads of lovely pancakes",
-                "ingredients": "panacakes",
-                "steps": "1. Make pancakes.\n2. Eat pancakes",
+                {"text": "breakfast", "recipe_name": "Toasted English Muffin",
+                "short_description": "Having a toasted English muffin can be an easy and fast option for breakfast.",
+                "description": "One of the great things about these is that there are so many different options for toppings"
+                " – so you can really tailor them towards what you like to eat. Some of the simpler options are butter, Nutella or cream cheese,"
+                " but there are also many more interesting and complex alternatives. "
+                "In fact, you can simply treat an English muffin much like a sandwich and use this as a guide for what to put on them.",
+                "ingredients": "250ml milk \n, 2 tablespoons caster sugar,\n 1 (7g) sachet dried active baking yeast, \n"
+                "250ml warm water (45 degrees C),\n  60g melted butter or margarine \n, 750g plain flour, \n  1 teaspoon salt, \n 2 tablespoons polenta (cornmeal)",
+                "steps": " 1.Warm the milk in a small saucepan until it bubbles, then remove from heat. Mix in the sugar, stirring until dissolved. \nLet cool until lukewarm. In a small bowl, dissolve yeast in warm water. Let stand until creamy, about 10 minutes. "
+                "2. In a large bowl, combine the milk, yeast mixture, butter and 1/2 of the flour. Beat until smooth.\n Add salt and rest of flour, or enough to make a soft dough. Knead. Place in greased bowl, cover, and let rise. "
+                "3. Punch down. Roll out to about 1cm thick. Cut rounds with biscuit cutter, drinking glass or empty tuna tin. Sprinkle greaseproof paper with polenta and set the rounds on this to rise. Dust tops of muffins with polenta also. Cover and let rise 30 minutes. "
+                "4. Heat a greased heavy frying pan or griddle. Cook muffins on griddle about 10 minutes on each side on medium heat.\n Keep baked muffins in a warm oven until all have been cooked. Allow to cool and place in plastic bags for storage. To use, split and toast. ",
+                "keywords": "vegan",
+                "views": 2, "likes": 2, "image": "English_Muffin.jpg"}, 
+                {"text": "breakfast", "recipe_name": "Chocolate Chip Muffins",
+                "short_description": "So quick, so easy, so delicious!",
+                "description": "One word: scrumptious! Very moist muffins that are simply delicious and packed with chocolate! Even better the next day. ",
+                "ingredients": " 2 cups all-purpose flour, \n 1/3 cup light-brown sugar, \n 1/3 cup sugar, \n 2 teaspoon baking powder, \n   1/2 teaspoon salt, \n"
+                " 2/3 cup milk, \n 1/2 cup butter - melted and cooled, \n 2 eggs - beaten, \n 1 teaspoon vanilla,\n 1 package (12 oz) chocolate chips, \n"
+                " 1/2 cup walnuts or pecans - chopped",
+                "steps": "1. Preheat oven to 400 F. and grease up twelve muffin cups. "
+                "2. In a large bowl, stir together flour, sugars, baking powder, and salt. "
+                "3. In another bowl, stir together milk, eggs, butter, and vanilla until blended. " 
+                "4. Make a well in center of dry ingredients; add milk mixture and stir just to combine. Stir in chocolate chips and nuts. "
+                "5. Spoon batter into muffin cups; bake 15-20 minutes, or until a knife inserted in center of one muffin comes out clean. "
+                "6. Remove muffin tin to wire rack; cool 5 minutes and remove from tins to finish cooling. Serve warm. ",
                 "keywords": "vegetarian",
-                "views": 0, "likes": 0, "image": "pancakes.jpg"} ]
+                "views": 6, "likes": 7 , "image": "ChocolateMuffins.jpg"},
+                {"text": "breakfast", "recipe_name": "Scrambled Eggs",
+                "short_description": "Scrambled eggs are fast, easy and extremely common as an addition to breakfast.",
+                "description": "The protein from the eggs makes them especially appealing as a breakfast option and the eggs can offer a hearty start to any day."
+                " here are many variations that can also be made with scrambled eggs, such as including ham, cheese or chives as part of the egg mixture. "
+                " While most people use either milk or water to make the eggs, they can also be made using cream, which creates a richer (and less healthy) dish. ",
+                "ingredients": "4 eggs, \n 1/4 cup milk salt and pepper, as desired, \n 2 tsp. butter",
+                "steps": "1. Beat eggs, milk, salt and pepper in medium bowl until blended. "
+                "2. Heat butter in large nonstick skillet over medium heat until hot. Pour in egg mixture. " 
+                "3. As eggs begin to set,  gentrly pull the eggs across the pan with a spatula, forming large soft curds. "
+                "Continue cooking – pulling, lifting and folding eggs – until thickened and no visible liquid egg remains. Do not stir constantly. "
+                "Remove from heat. Serve immediately. ",
+                "keywords": "vegetarian",
+                "views": 10, "likes": 5, "image": "Scrambled_Eggs.jpg"},
+                {"text": "breakfast", "recipe_name": "Quiche",
+                "short_description": "As an egg and cheese based dish, it’s pretty easy to see why quiche can be used as an appealing breakfast food. ",
+                "description": "A classic quiche lorraine recipe is a great stand-by for breakfast, as well as for a summer picnic, and is always best eaten hot or warm. ",
+                "ingredients": " 175g (6oz) unsmoked streaky bacon rashers, rinds removed, cut into strips /n"
+                "1 onion, peeled and chopped"
+                "125g (4½ oz) Gruyère cheese, grated \n"
+                "2 large eggs\n "
+                "250ml (9fl oz) single cream\n"
+                "Salt and freshly ground black pepper\n "
+                "175g (6oz) plain flour, plus extra for dusting \n"
+                "85g (3oz) hard block margarine or chilled butter, cut into cubes \n ",                
+                "steps": "1.  First make the pastry: tip the flour into a large mixing bowl. "
+                "Add the margarine or butter and rub in gently with fingertips until the mixture resembles fine breadcrumbs. " 
+                "Add 3 tablespoons cold water until the pastry comes together in a ball."
+                "2. Roll out the dough on a lightly floured surface and use it to line a 20cm (8in) loose-bottomed flan tin. Ideally, use a fluted tin. "
+                "3. Chill in the fridge for 30 minutes. Meanwhile, preheat the oven to 220˚C. Prick the pastry case all over with a fork, to prevent air bubbles forming during baking. "
+                "Line the base and sides with baking parchment and weigh it down with baking beans. Place on a baking sheet and bake for 10 minutes. "
+                "Remove the beans and paper and bake the empty case for a further 10 minutes, or until the base is lightly browned. Trim the overhanging pastry. "
+                "4. Reduce the oven temperature to 180˚C. Crisp the bacon in a sauté pan over a medium heat for 10 minutes.\n Transfer to the cooled pastry case with a slotted spoon. Leave the juices in the pan. "
+                "Place the onion in the pan and cook over a medium heat for 8 minutes or until golden. Add to the quiche lorraine and top with the cheese. "
+                "In a bowl, combine the eggs, cream, salt and pepper, then pour into the quiche. Bake for 25-30 minutes until golden and just set. \nBe careful not to overcook the quiche, or the filling will become tough and full of holes. ",
+                "keywords": "meat",
+                "views": 3, "likes": 3, "image": "Quiche.jpg"},
+                {"text": "breakfast", "recipe_name": "Banana Bread",
+                "short_description": "A warming banana loaf recipe, made using the ripest bananas.",
+                "description": "A fantastic quick bread, which makes use of over-ripe bananas. "
+                "Its incredibly moist, fruity and utterly delicious. Enjoy for breakfast, elevenses or pop into packed lunches. ",
+                "ingredients": " 1 and 1/4 cups all-purpose flour, \n 2 large eggs, 1 cup sugar ,\n   1/2 teaspoon salt  ,\n  1 teaspoon baking soda, \n"
+                " 3 medium bananas, \n,8 Tablespoons butter or margarine ,\n 1/3 cup chopped walnuts (optional).",
+                "steps": "1.  Cream sugar and butter, mash the bananas and add to the mixture. "
+                "2.Beat and add the eggs. Slowly add the flour, salt, and baking soda. (If desired, fold in the walnuts at this point.) Pour into a loaf pan. "
+                "Bake at 350 degrees F for 40 to 50 minutes.",
+                "keywords": "vegetarian",
+                "views": 5, "likes": 5, "image": "Banana_Bread.jpg"} ]
 
         latin_america_recipes = [
                 {"text": "breakfast", "recipe_name": "Ham and Cheese Empanadas",

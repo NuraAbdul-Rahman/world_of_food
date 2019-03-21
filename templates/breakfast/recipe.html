@@ -11,12 +11,9 @@
                 {% for recipe in recipe %}
                 <div class="col-lg-12 col-md-12 col-sm-12">
                         <div id="backButton">
-                                <button class="btn btn-primary" onclick="goBack()" class="previous">&laquo;  Back to search results</a>
+                                <button onclick="goBack()" class="previous">&laquo;Back to search results</a>
                         </div>
-                        <br>
-
-
-                        <div>
+                         <div>
                                 <h2>{{recipe.recipe_name}}<button class="btn btn-primary" onclick="generate()"><span class="glyphicon glyphicon-print"></span> Print Recipe</button></h2>
                                 <br>
                         </div>
@@ -32,7 +29,7 @@
                                         <span style="font-size:15px;color:white">Add to Favourites</span>
                                       </button>
                                         <p></p>
-                                        <div>
+                                     <div>
                                                 {% if user.is_authenticated %}
                                                 <button id="likes" data-recipeid="{{recipe.id}}"
                                                 class="btn btn-primary btn-sm" onclick="saveLikes()" type="button" >
@@ -44,7 +41,7 @@
 
                                         </div>
                                         <p></p>
-                                        <a href=""><span class ="fa fa-star" style="font-size:18px;">Reviews</span></a>
+                                        <a href="#"><span class ="fa fa-star" style="font-size:18px;">Reviews</span></a>
                                 </div>    
                         </div>
                         
