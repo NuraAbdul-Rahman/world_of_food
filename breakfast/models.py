@@ -64,7 +64,6 @@ class Favourites(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-    # picture = models.ImageField(upload_to='profile_images', blank=True, default_image_path='{{ MEDIA_URL}}blank.png')
     picture =DefaultStaticImageField(blank=True, default_image_path='default.png')
     
     def __str__(self):
