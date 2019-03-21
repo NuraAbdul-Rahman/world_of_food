@@ -6,10 +6,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import PasswordChangeForm
 from registration.backends.simple.views import RegistrationView
-from breakfast.forms import UserForm,UserProfileForm,ContinentForm,RecipeForm,ContactForm
+from breakfast.forms import UserForm,UserProfileForm,ContinentForm,RecipeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.core.mail import send_mail
 from datetime import datetime
 
 def get_server_side_cookie(request, cookie, default_val=None):
@@ -57,20 +56,7 @@ def about(request):
 
 
 def contact_us(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            # send email code goes here
-            sender_name = form.cleaned_data['name']
-            sender_email = form.cleaned_data['email']
-
-            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
-            send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
-            messages.info(request,'Thanks for  contacting us!')
-            return HttpResponseRedirect(reverse('contact_us'))
-    else:
-        form = ContactForm()
-    return render(request, 'breakfast/contact_us.html', {'form': form})
+    return render(request, 'breakfast/contact_us.html', {})
 
 def sign_in(request):
     if request.method == 'POST':
@@ -222,7 +208,7 @@ def show_recipe(request, continent_name_slug, recipe_name_slug):
 def add_recipe(request):
     form = RecipeForm()
     if request.method == 'POST':
-        form = RecipeForm(request.POST)
+        form = RecipeForm(request.POST,request.FILES)
         if form.is_valid():
             form.save(commit=True)
             return home(request)
