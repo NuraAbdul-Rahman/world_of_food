@@ -13,8 +13,8 @@
                         <div id="backButton">
                                 <button onclick="goBack()" class="previous">&laquo;Back to search results</a>
                         </div>
-                        <div>
-                                <h2>{{ recipe.recipe_name }}</h2>
+                         <div>
+                                <h2>{{recipe.recipe_name}}<button class="btn btn-primary" onclick="generate()"><span class="glyphicon glyphicon-print"></span> Print Recipe</button></h2>
                                 <br>
                         </div>
                         
@@ -29,14 +29,16 @@
                                         <span style="font-size:15px;color:white">Add to Favourites</span>
                                       </button>
                                         <p></p>
-                                        <div>
-                                                <strong id="like_count">{{ recipe.likes }}</strong> people like this recipe
+                                     <div>
                                                 {% if user.is_authenticated %}
-                                                <button id="likes" data-catid="{{category.id}}"
-                                                class="btn btn-primary btn-sm" type="button">
+                                                <button id="likes" data-recipeid="{{recipe.id}}"
+                                                class="btn btn-primary btn-sm" onclick="saveLikes()" type="button" >
+                                                <i class="fa fa-thumbs-up"></i> 
                                                         Like
                                                 </button>
                                                 {% endif %}
+                                                <strong id="like_count">{{ recipe.likes }}</strong> people like this recipe
+
                                         </div>
                                         <p></p>
                                         <a href="#"><span class ="fa fa-star" style="font-size:18px;">Reviews</span></a>

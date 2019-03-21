@@ -19,7 +19,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{% static "css/style.css" %}">
         <script src="{% static "js/breakfast.js" %}"></script>
-    </head> 
+        <script src="{% static "js/breakfast-ajax.js" %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+      </head> 
     <body>
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">          
@@ -36,7 +38,7 @@
             <ul class="nav navbar-nav">
               <li class="#"><a href="{% url 'home' %}"><strong>Home</strong></a></li>
               <li><a href="{% url 'about' %}"><strong>About</strong></a></li>
-              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><strong>Continents</strong><span class="caret"></span></a>
+              <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"><strong>Continents</strong><span class="caret" ></span></a>
                 <ul class="dropdown-menu">
                 <!--urls are hard coded here as it was not possible to create a url pattern for base whos scope was all project urls-->
                 <!--but continent names are unlikely to change any time soon, so this is acceptable-->
