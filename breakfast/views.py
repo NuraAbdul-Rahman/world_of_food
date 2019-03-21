@@ -73,6 +73,7 @@ def contact_us(request):
 
     return render(request, 'breakfast/contact_us.html', {'form': form})
 
+
 def sign_in(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -87,7 +88,7 @@ def sign_in(request):
                 return HttpResponseRedirect(reverse('sign_in'))
         else:
             messages.error(request,'Invalid login details supplied. Please check your username and password!')
-            return HttpResponseRedirect(reverse('sign_in'))
+        return HttpResponseRedirect(reverse('sign_in'))
 
     else:
         return render(request, 'breakfast/sign_in.html', {})
@@ -244,3 +245,4 @@ def like_recipe(request):
             recipe.likes = likes
             recipe.save()
     return HttpResponse(likes)
+
