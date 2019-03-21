@@ -46,6 +46,8 @@ INSTALLED_APPS = [
 
     'breakfast',
     'registration',
+    'django_fields',
+
 ]
 
 MIDDLEWARE = [
@@ -159,5 +161,7 @@ LOGIN_URL = '/accounts/login/'
 MEDIA_ROOT= MEDIA_DIR
 MEDIA_URL= '/media/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_IMAGE_PATH = 'default.png'
+
 
 

@@ -1,6 +1,5 @@
 {% extends 'breakfast/base.html' %}
 {% load staticfiles %}
-
 {% block title_block %}
     Recipe
 {% endblock %}
@@ -11,12 +10,12 @@
                 {% for recipe in recipe %}
                 <div class="col-lg-12 col-md-12 col-sm-12">
                         <div id="backButton">
-                                <button class="btn btn-primary" onclick="goBack()" class="previous">&laquo;Back to search results</a>
+                                <button class="btn btn-primary" onclick="goBack()" class="previous">&laquo;Back to search results</a></button>
                                 <button class="btn btn-primary" onclick="generate()"><span class="glyphicon glyphicon-print"></span> Print Recipe</button>
                         </div>
                          <div>
-                                <h2>{{recipe.recipe_name}}</h2>
-                                <br>
+                                <h2>{{recipe.recipe_name}}<h2>
+                            
                         </div>
                         
                         <div class= "col-lg-4 col-md-4 col-sm-4" > 
@@ -24,7 +23,6 @@
                                         <p></p>
                                         <img src="{{ MEDIA_URL}}{{ recipe.image }}" alt="Image" class="img-responsive">
                                         <p></p>
-                                       <!-- <button type="button" class="btn btn-danger><span class="heart fa fa-heart-o" style="font-size:18px;color:red">Add Favourites</span></button> -->
                                        <button class="btn btn-danger">
                                         <i class="fa fa-heart"></i>
                                         <span style="font-size:15px;color:white">Add to Favourites</span>
@@ -32,17 +30,11 @@
                                         <p></p>
                                      <div>
                                                 {% if user.is_authenticated %}
-<<<<<<< HEAD
                                                 <button id="likes" data-recipeid="{{recipe.id}}"
                                                 class="btn btn-primary btn-sm" onclick="saveLikes()" type="button" >
                                                 <i class="fa fa-thumbs-up"></i> 
                                                         Like
                                                 </button>
-=======
-                                                        <button id="likes" data-rid="{{ recipe.id }}" class="btn btn-default likes-button" type="button">
-                                                                Like
-                                                        </button>
->>>>>>> 3dfa2187a16e1c4078cf76e63f299df980d9ded8
                                                 {% endif %}
                                                 <strong id="like_count">{{ recipe.likes }}</strong> people like this recipe
 
@@ -77,13 +69,6 @@
                 <strong>No Recipe!</strong>
         {% endif %}
         </div>
-        <script src="https://utteranc.es/client.js"
-                repo="[https://github.com/bmoyler/world_of_food.git]"
-                issue-term="pathname"
-                theme="github-light"
-                crossorigin="anonymous"
-                async>
-        </script>
 </div>
 
 {% endblock %}

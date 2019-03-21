@@ -21,11 +21,13 @@ class RecipeForm(forms.ModelForm):
 	description = forms.CharField(max_length=1280, help_text="Please enter the description of the recipe.")
 	ingredients = forms.CharField(max_length=1280, help_text="Please enter the ingredients of the recipe.")
 	steps = forms.CharField(max_length=1280, help_text="Please enter the steps of the recipe.")
+	keywords=forms.CharField(max_length=128,help_text="Please enter keyword: example vegan,vegeterian etc")
 	image = forms.ImageField(required=False, help_text="Please upload the picture of the recipe." )
 
 	class Meta:
 		model = Recipe
-		exclude = ('text', 'likes', 'views', 'slug', 'continent_slug')
+		exclude = ('likes','text','continent_slug', 'views', 'slug')
+
 
 class UserForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput())
@@ -33,6 +35,11 @@ class UserForm(forms.ModelForm):
 	class Meta:
 		model = User
 		fields = ('username', 'email', 'password',)
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)
 
 
 class UserProfileForm(forms.ModelForm):

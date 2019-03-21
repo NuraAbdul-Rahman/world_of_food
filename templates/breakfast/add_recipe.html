@@ -6,23 +6,28 @@
     {% endblock %}
 
     {% block body_block %}
-        <body>
-                <h3>Upload a new recipe</h3>
-            <div>
-                <form enctype="multipart/form-data" id="recipe_form" method="POST" action="{% url 'add_recipe' %}">
+    <div class="container"> 
+            <div align="center">
+                <form class="formcontainer" enctype="multipart/form-data" id="recipe_form" method="POST" action="{% url 'add_recipe' %}">
+                    <h1>Upload a new recipe</h1>
+                    <p style="text-align: center;">Please fill in this form to add a new recipe.</p>
+                    <hr>
                     {% csrf_token %}
                     {% for hidden in form.hidden_fields %}
                         {{ hidden }}
                     {% endfor %}
                     {% for field in form.visible_fields %}
                         <div>
-                            {{ field }}
-                            {{ field.help_text }}
                             {{ field.errors }}
+                            <strong>{{ field.help_text }}</strong>
+                            {{ field }}
+                            <!-- {{ form.as_p }} -->
                         </div>
                     {% endfor %}
-                    <input type="submit" name="submit" value="Upload Recipe" />
+                    <br>
+                    <input class="btn btn-primary" type="submit" name="submit" value="Upload Recipe" />
                 </form>
             </div>
-        </body>
+        </div>
+        </div>
     {% endblock %}

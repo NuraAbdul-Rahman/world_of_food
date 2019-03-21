@@ -7,10 +7,12 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import PasswordChangeForm
 from registration.backends.simple.views import RegistrationView
-from breakfast.forms import UserForm,UserProfileForm,ContinentForm,RecipeForm
+from breakfast.forms import UserForm,UserProfileForm,ContinentForm,RecipeForm,ContactForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from datetime import datetime
+from django.core.mail import send_mail
+
 
 def get_server_side_cookie(request, cookie, default_val=None):
     val = request.session.get(cookie)
@@ -67,9 +69,12 @@ def contact_us(request):
             send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
             messages.info(request,'Thanks for  contacting us!')
             return HttpResponseRedirect(reverse('contact_us'))
+
     else:
         form = ContactForm()
-        return render(request, 'breakfast/contact_us.html', {'form': form})
+
+    return render(request, 'breakfast/contact_us.html', {'form': form})
+
 
 def sign_in(request):
     if request.method == 'POST':
@@ -233,7 +238,6 @@ def add_recipe(request):
 def like_recipe(request):
     rid = None
     if request.method == 'GET':
-<<<<<<< HEAD
         rid = request.GET['recipe.id']
     likes = 0
     if rid:
@@ -243,14 +247,4 @@ def like_recipe(request):
             recipe.likes = likes
             recipe.save()
     return HttpResponse(likes)
-=======
-        recipe_id = request.GET['recipe_id']
-        likes = 0
-        if recipe_id:
-            recipe = Recipe.objects.get(id=int(recipe_id))
-            if recipe:
-                likes = Recipe.likes + 1
-                recipe.likes = likes
-                recipe.save()
-        return HttpResponse(likes)
->>>>>>> 3dfa2187a16e1c4078cf76e63f299df980d9ded8
+
