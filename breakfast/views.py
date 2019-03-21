@@ -55,9 +55,21 @@ def home(request):
 def about(request):
     return render(request, 'breakfast/about.html', {})
 
-
 def contact_us(request):
-    return render(request, 'breakfast/contact_us.html', {})
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # send email code goes here
+            sender_name = form.cleaned_data['name']
+            sender_email = form.cleaned_data['email']
+
+            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
+            send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
+            messages.info(request,'Thanks for  contacting us!')
+            return HttpResponseRedirect(reverse('contact_us'))
+    else:
+        form = ContactForm()
+        return render(request, 'breakfast/contact_us.html', {'form': form})
 
 def sign_in(request):
     if request.method == 'POST':
@@ -73,7 +85,7 @@ def sign_in(request):
                 return HttpResponseRedirect(reverse('sign_in'))
         else:
             messages.error(request,'Invalid login details supplied. Please check your username and password!')
-            return HttpResponseRedirect(reverse('sign_in'))
+        return HttpResponseRedirect(reverse('sign_in'))
 
     else:
         return render(request, 'breakfast/sign_in.html', {})
@@ -221,6 +233,7 @@ def add_recipe(request):
 def like_recipe(request):
     rid = None
     if request.method == 'GET':
+<<<<<<< HEAD
         rid = request.GET['recipe.id']
     likes = 0
     if rid:
@@ -230,3 +243,14 @@ def like_recipe(request):
             recipe.likes = likes
             recipe.save()
     return HttpResponse(likes)
+=======
+        recipe_id = request.GET['recipe_id']
+        likes = 0
+        if recipe_id:
+            recipe = Recipe.objects.get(id=int(recipe_id))
+            if recipe:
+                likes = Recipe.likes + 1
+                recipe.likes = likes
+                recipe.save()
+        return HttpResponse(likes)
+>>>>>>> 3dfa2187a16e1c4078cf76e63f299df980d9ded8

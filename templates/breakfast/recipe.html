@@ -12,9 +12,10 @@
                 <div class="col-lg-12 col-md-12 col-sm-12">
                         <div id="backButton">
                                 <button class="btn btn-primary" onclick="goBack()" class="previous">&laquo;Back to search results</a>
+                                <button class="btn btn-primary" onclick="generate()"><span class="glyphicon glyphicon-print"></span> Print Recipe</button>
                         </div>
                          <div>
-                                <h2>{{recipe.recipe_name}}<button class="btn btn-primary" onclick="generate()"><span class="glyphicon glyphicon-print"></span> Print Recipe</button></h2>
+                                <h2>{{recipe.recipe_name}}</h2>
                                 <br>
                         </div>
                         
@@ -31,11 +32,17 @@
                                         <p></p>
                                      <div>
                                                 {% if user.is_authenticated %}
+<<<<<<< HEAD
                                                 <button id="likes" data-recipeid="{{recipe.id}}"
                                                 class="btn btn-primary btn-sm" onclick="saveLikes()" type="button" >
                                                 <i class="fa fa-thumbs-up"></i> 
                                                         Like
                                                 </button>
+=======
+                                                        <button id="likes" data-rid="{{ recipe.id }}" class="btn btn-default likes-button" type="button">
+                                                                Like
+                                                        </button>
+>>>>>>> 3dfa2187a16e1c4078cf76e63f299df980d9ded8
                                                 {% endif %}
                                                 <strong id="like_count">{{ recipe.likes }}</strong> people like this recipe
 
@@ -70,7 +77,7 @@
                 <strong>No Recipe!</strong>
         {% endif %}
         </div>
-       <script src="https://utteranc.es/client.js"
+        <script src="https://utteranc.es/client.js"
                 repo="[https://github.com/bmoyler/world_of_food.git]"
                 issue-term="pathname"
                 theme="github-light"
