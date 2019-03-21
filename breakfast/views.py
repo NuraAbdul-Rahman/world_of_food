@@ -233,6 +233,7 @@ def add_recipe(request):
 def like_recipe(request):
     rid = None
     if request.method == 'GET':
+<<<<<<< HEAD
         rid = request.GET['recipe.id']
     likes = 0
     if rid:
@@ -242,3 +243,14 @@ def like_recipe(request):
             recipe.likes = likes
             recipe.save()
     return HttpResponse(likes)
+=======
+        recipe_id = request.GET['recipe_id']
+        likes = 0
+        if recipe_id:
+            recipe = Recipe.objects.get(id=int(recipe_id))
+            if recipe:
+                likes = Recipe.likes + 1
+                recipe.likes = likes
+                recipe.save()
+        return HttpResponse(likes)
+>>>>>>> 3dfa2187a16e1c4078cf76e63f299df980d9ded8
