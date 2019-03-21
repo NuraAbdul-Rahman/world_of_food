@@ -239,7 +239,7 @@ def like_recipe(request):
         if recipe_id:
             recipe = Recipe.objects.get(id=int(recipe_id))
             if recipe:
-                likes = recipe.likes + 1
+                likes = Recipe.likes + 1
                 recipe.likes = likes
                 recipe.save()
         return HttpResponse(likes)

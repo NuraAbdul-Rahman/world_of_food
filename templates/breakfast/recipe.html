@@ -32,10 +32,9 @@
                                         <div>
                                                 <strong id="like_count">{{ recipe.likes }}</strong> people like this recipe
                                                 {% if user.is_authenticated %}
-                                                <button id="likes" data-catid="{{category.id}}"
-                                                class="btn btn-primary btn-sm" type="button">
-                                                        Like
-                                                </button>
+                                                        <button id="likes" data-rid="{{ recipe.id }}" class="btn btn-default likes-button" type="button">
+                                                                Like
+                                                        </button>
                                                 {% endif %}
                                         </div>
                                         <p></p>
@@ -68,7 +67,7 @@
                 <strong>No Recipe!</strong>
         {% endif %}
         </div>
-       <script src="https://utteranc.es/client.js"
+        <script src="https://utteranc.es/client.js"
                 repo="[https://github.com/bmoyler/world_of_food.git]"
                 issue-term="title"
                 label="Review recipe"
