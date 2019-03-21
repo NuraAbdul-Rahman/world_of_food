@@ -47,11 +47,11 @@ INSTALLED_APPS = [
     'breakfast',
     'registration',
     'django_fields',
-    'django.contrib.sites', 
-    'allauth', 
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.github',
+    # 'django.contrib.sites', 
+    # 'allauth', 
+    # 'allauth.account',
+    # 'allauth.socialaccount',
+    # 'allauth.socialaccount.providers.github',
 ]
 
 MIDDLEWARE = [

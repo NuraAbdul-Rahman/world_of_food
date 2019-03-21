@@ -1,20 +1,9 @@
 {% extends 'breakfast/base.html' %}
 {% load staticfiles %}
-{% load socialaccount %}
-
 {% block title_block %}
     Home
 {% endblock %}
 {% block body_block %}
-<br>
-{% if messages %}
-  {% for message in messages %}
-<div class="myAlert-top alert alert-danger" id="ss">
-  <a href="#" class="close" data-dismiss="alert">&times;</a>
-  <strong>Error!</strong> {{message}} <br/>
-</div>
-  {% endfor %}
-{% endif %}
 <div class="container"> 
         <div align="center">
         <form id="login_form" class="formcontainer" action="." method="POST">
@@ -24,7 +13,6 @@
             {% csrf_token %}
             {{ form.as_p }}
             <div class="clearfix">
-            <button class="btn btn-primary" type="button"  onclick="location.href='{% provider_login_url 'github' %}'">Sign In via GitHub</button>
             <button id="st" type="button" class="cancelbtn" onclick="location.href='{% url 'home' %}'">Cancel</button>
             <button id="st" type="submit" class="signupbtn">Sign In</button>
             </div>
