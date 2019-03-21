@@ -232,14 +232,14 @@ def add_recipe(request):
    
 @login_required
 def like_recipe(request):
-    recipe_id = None
+    rid = None
     if request.method == 'GET':
-        recipe_id = request.GET['recipe_id']
-        likes = 0
-        if recipe_id:
-            recipe = Recipe.objects.get(id=int(recipe_id))
-            if recipe:
-                likes = recipe.likes + 1
-                recipe.likes = likes
-                recipe.save()
-        return HttpResponse(likes)
+        rid = request.GET['recipe.id']
+    likes = 0
+    if rid:
+        recipe = Recipe.objects.get(id=int(rid))
+        if recipe:
+            likes = recipe.likes + 1
+            recipe.likes = likes
+            recipe.save()
+    return HttpResponse(likes)

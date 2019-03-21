@@ -21,4 +21,6 @@ urlpatterns=[
         name='show_recipe'),
 
     url(r'^add_recipe/$', views.add_recipe, name='add_recipe'),
+    url(r'^like/$', views.like_recipe, name='like_recipe'),
+
 ]

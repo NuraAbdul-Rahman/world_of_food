@@ -1,3 +1,11 @@
+var base64Img = null;
+margins = {
+  top: 70,
+  bottom: 40,
+  left: 30,
+  width: 550
+};
+
 function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
@@ -22,3 +30,8 @@ function openForm() {
   $(document).ready(function() {
     $(".dropdown-toggle").dropdown();
 });
+
+generate = function()
+{
+  window.print();
+};

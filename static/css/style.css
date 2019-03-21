@@ -322,4 +322,33 @@ input[type=password]:focus {
   font-family: inherit;
   margin: 0;
 }
+#dropdown-toggle{
+    background-color: inherit;
 
+}
+.page-break {
+    page-break-after: always;
+    page-break-inside: avoid;
+    clear:both;
+  }
+  .page-break-before {
+    page-break-before: always;
+    page-break-inside: avoid;
+    clear:both;
+  }
+  #html-2-pdfwrapper{
+    position: absolute; 
+    left: 20px; 
+    top: 50px; 
+    bottom: 0; 
+    overflow: auto; 
+    width: 600px;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    width: 500px;
+  }
