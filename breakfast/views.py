@@ -61,7 +61,6 @@ def contact_us(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            # send email code goes here
             sender_name = form.cleaned_data['name']
             sender_email = form.cleaned_data['email']
 
@@ -69,8 +68,6 @@ def contact_us(request):
             send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
             messages.info(request,'Thanks for  contacting us!')
             return HttpResponseRedirect(reverse('contact_us'))
-            # return HttpResponse('Thanks for contacting us!')
-
     else:
         form = ContactForm()
 

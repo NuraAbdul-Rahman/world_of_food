@@ -1,5 +1,6 @@
 {% extends 'breakfast/base.html' %}
 {% load staticfiles %}
+{% load socialaccount %}
 
 {% block title_block %}
     Home
@@ -23,6 +24,7 @@
             {% csrf_token %}
             {{ form.as_p }}
             <div class="clearfix">
+            <button class="btn btn-primary" type="button"  onclick="location.href='{% provider_login_url 'github' %}'">Sign In via GitHub</button>
             <button id="st" type="button" class="cancelbtn" onclick="location.href='{% url 'home' %}'">Cancel</button>
             <button id="st" type="submit" class="signupbtn">Sign In</button>
             </div>

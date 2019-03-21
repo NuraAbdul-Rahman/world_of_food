@@ -46,7 +46,11 @@ INSTALLED_APPS = [
     'breakfast',
     'registration',
     'django_fields',
-
+    'django.contrib.sites', 
+    'allauth', 
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
 ]
 
 MIDDLEWARE = [
@@ -156,6 +160,7 @@ ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL = '/breakfast/'
 LOGIN_URL = '/accounts/login/'
+SITE_ID = 1
 #Media files
 MEDIA_ROOT= MEDIA_DIR
 MEDIA_URL= '/media/'

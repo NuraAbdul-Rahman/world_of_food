@@ -15,7 +15,6 @@ function openForm() {
     
   }
   function openWin() {
-    //window.open("sign_up");
    Location.href="{% url 'sign_up' %}";
    
   }

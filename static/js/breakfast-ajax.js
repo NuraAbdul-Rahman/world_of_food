@@ -1,5 +1,4 @@
 
-
 function saveLikes() {
     var rid;
     rid = $(this).attr("data-recipeid");
