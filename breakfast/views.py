@@ -69,12 +69,12 @@ def contact_us(request):
             send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
             messages.info(request,'Thanks for  contacting us!')
             return HttpResponseRedirect(reverse('contact_us'))
-            # return HttpResponse('Thanks for contacting us!')
 
     else:
         form = ContactForm()
 
     return render(request, 'breakfast/contact_us.html', {'form': form})
+
 
 def sign_in(request):
     if request.method == 'POST':
@@ -90,7 +90,7 @@ def sign_in(request):
                 return HttpResponseRedirect(reverse('sign_in'))
         else:
             messages.error(request,'Invalid login details supplied. Please check your username and password!')
-            return HttpResponseRedirect(reverse('sign_in'))
+        return HttpResponseRedirect(reverse('sign_in'))
 
     else:
         return render(request, 'breakfast/sign_in.html', {})
@@ -247,3 +247,4 @@ def like_recipe(request):
             recipe.likes = likes
             recipe.save()
     return HttpResponse(likes)
+

@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 {% load breakfast_template_tags %} 
 {% load staticfiles %}
+
+
 <html> 
     <head>
         <link rel="shortcut icon" type="image/png" href="{% static "images/toastFav.ico" %}"/>
@@ -18,11 +20,18 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
         <script src="{% static "js/breakfast.js" %}"></script>
         <script src="{% static "js/breakfast-ajax.js" %}"></script>
+<<<<<<< HEAD
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
       </head> 
+=======
+    </head> 
+>>>>>>> 3dfa2187a16e1c4078cf76e63f299df980d9ded8
     <body>
+      <div id="fb-root"></div>
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">          
           <div class="navbar-header">
@@ -74,6 +83,10 @@
       <footer class="container-fluid text-center">
         <p>World of Breakfast</p>
         <p>"Start your day the global way"</p>
+        <div>
+          <span class="fb-like" data-href="https://nobackteeth.com" data-layout="button" data-action="recommend" data-size="small" data-show-faces="false" data-share="false"></span>
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+        </div>
       </footer>
     </body> 
 </html>

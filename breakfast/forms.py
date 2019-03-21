@@ -28,6 +28,7 @@ class RecipeForm(forms.ModelForm):
 		model = Recipe
 		exclude = ('likes','text','continent_slug', 'views', 'slug')
 
+
 class UserForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput())
 
