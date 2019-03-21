@@ -44,12 +44,10 @@
       </div>
        {% if messages %}
                 {% for message in messages %}
-                  <!-- {% if message.tag == error %} -->
                 <div class="myAlert-top alert alert-success" id="ss">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
-                <strong>Success!</strong> {{message}} <a href="{% url 'sign_in' %}"></a><br/>
+                <strong>Success!</strong> {{message}} <br/>
                 </div>
-                  <!-- {% endif %} -->
                 {% endfor %}
                 {% endif %}
 

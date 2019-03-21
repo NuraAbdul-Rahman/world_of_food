@@ -1,6 +1,8 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
+from django_fields import DefaultStaticImageField
+
 
 
 class Continent(models.Model):
@@ -62,7 +64,8 @@ class Favourites(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-    picture = models.ImageField(upload_to='profile_images', blank=True)
+    # picture = models.ImageField(upload_to='profile_images', blank=True, default_image_path='{{ MEDIA_URL}}blank.png')
+    picture =DefaultStaticImageField(blank=True, default_image_path='default.png')
     
     def __str__(self):
         return self.user.username

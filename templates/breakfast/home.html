@@ -32,6 +32,9 @@
                             <div class="carousel-caption">
                                 <h3>{{ recipe.recipe_name }}</h3>
                                 <h4>{{ recipe.continent }}</h4>
+                                <br>
+                                <a href="{% url 'show_recipe' recipe.continent_slug recipe.slug %}" class="btn btn-info" role="button">Find out more ></a>
+                                
                             </div>
                         </div>
                     {% endfor %} 
@@ -88,7 +91,6 @@
                         </div>
                     </div>
                     <form>
-                        <!-- <button type="button" class="btn btn-primary" onclick="openWin()">Sign Up</button> -->
                     <button type="button" class="btn btn-primary" value="Sign up" onclick="location.href='{% url 'registration_register' %}'">Sign Up</button>
                     </form>
                 </div>
