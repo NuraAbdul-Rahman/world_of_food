@@ -10,7 +10,7 @@
 function saveLikes() {
     // JQuery code to be added in here.
     // $('#likes').click(function(){
-    print("hey");
+    // print("hey");
     var rid;
     rid = $(this).attr("data-recipeid");
     $.get('/breakfast/like/', {id: rid}, function(data){
