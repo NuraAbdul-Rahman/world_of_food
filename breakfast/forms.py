@@ -25,7 +25,7 @@ class RecipeForm(forms.ModelForm):
 
 	class Meta:
 		model = Recipe
-		exclude = ('likes', 'views', 'slug')
+		exclude = ('text', 'likes', 'views', 'slug', 'continent_slug')
 
 class UserForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput())
